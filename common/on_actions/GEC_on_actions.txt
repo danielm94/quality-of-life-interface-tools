@@ -1,3 +1,0 @@
-on_startup = {
-	GEC_set_all_trade_node_flags = yes
-}

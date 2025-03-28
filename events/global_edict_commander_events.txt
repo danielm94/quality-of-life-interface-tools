@@ -12,11 +12,11 @@ country_event = {
 	option = {
 		name = global_edicts_commander_events.1.a
 		highlight = yes
-		GEC_advancement_effort_only_with_growth = yes
+		edict_commander_advancement_effort_only_with_growth = yes
 	}
 	option = {
 		name = global_edicts_commander_events.1.b
-		GEC_set_edict_every_state = {
+		edict_commander_set_edict_every_state = {
 			edict = edict_advancement_effort
 		}
 	}
@@ -42,12 +42,12 @@ country_event = {
 		name = global_edicts_commander_events.2.a
 		highlight = yes
 		hidden_effect = {
-			GEC_centralization_effort_only_with_excess_autonomy = yes
+			edict_commander_centralization_effort_only_with_excess_autonomy = yes
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.2.b
-		GEC_set_edict_every_state = {
+		edict_commander_set_edict_every_state = {
 			edict = edict_centralization_effort
 		}
 	}
@@ -73,7 +73,7 @@ country_event = {
 		name = global_edicts_commander_events.3.a
 		highlight = yes
 		hidden_effect = {
-			GEC_defensive_edict_only_with_forts = yes
+			edict_commander_defensive_edict_only_with_forts = yes
 		}
 	}
 	option = {
@@ -89,7 +89,7 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.3.c
-		GEC_set_edict_every_state = {
+		edict_commander_set_edict_every_state = {
 			edict = edict_defensive_edict
 		}
 	}
@@ -128,7 +128,7 @@ country_event = {
 						limit = {
 							has_siege = yes
 						}
-						GEC_set_edict_for_state = {
+						edict_commander_set_edict_for_state = {
 							edict = edict_defensive_edict
 						}
 					}
@@ -138,7 +138,7 @@ country_event = {
 								has_rebels_in_province = yes
 							}
 						}
-						GEC_set_edict_for_state = {
+						edict_commander_set_edict_for_state = {
 							edict = edict_defensive_edict
 						}
 					}
@@ -161,7 +161,7 @@ country_event = {
 												}
 											}
 										}
-										GEC_set_edict_for_state = {
+										edict_commander_set_edict_for_state = {
 											edict = edict_defensive_edict
 										}
 									}
@@ -255,7 +255,7 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.5.dee
-		GEC_set_edict_every_state = {
+		edict_commander_set_edict_every_state = {
 			edict = edict_encourage_development
 		}
 	}
@@ -311,7 +311,7 @@ country_event = {
 			}
 		}
 		event_target:cheapest_development_cost = {
-			GEC_set_edict_for_state = {
+			edict_commander_set_edict_for_state = {
 				edict = edict_encourage_development
 			}
 		}
@@ -338,15 +338,15 @@ country_event = {
 		name = global_edicts_commander_events.7.a
 		highlight = yes
 		hidden_effect = {
-			GEC_calculate_manpower_in_states = yes
-			GEC_increase_enlistment_highest_manpower_state = yes
+			edict_commander_calculate_manpower_in_states = yes
+			edict_commander_increase_enlistment_highest_manpower_state = yes
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.7.b
 		highlight = yes
 		hidden_effect = {
-			GEC_calculate_manpower_in_states = yes
+			edict_commander_calculate_manpower_in_states = yes
 			set_variable = {
 				which = i
 				value = 5
@@ -358,7 +358,7 @@ country_event = {
 						value = 1
 					}
 				}
-				GEC_increase_enlistment_highest_manpower_state = yes
+				edict_commander_increase_enlistment_highest_manpower_state = yes
 				subtract_variable = {
 					which = i
 					value = 1
@@ -370,7 +370,7 @@ country_event = {
 		name = global_edicts_commander_events.7.c
 		highlight = yes
 		hidden_effect = {
-			GEC_calculate_manpower_in_states = yes
+			edict_commander_calculate_manpower_in_states = yes
 			set_variable = {
 				which = i
 				value = 10
@@ -382,7 +382,7 @@ country_event = {
 						value = 1
 					}
 				}
-				GEC_increase_enlistment_highest_manpower_state = yes
+				edict_commander_increase_enlistment_highest_manpower_state = yes
 				subtract_variable = {
 					which = i
 					value = 1
@@ -394,7 +394,7 @@ country_event = {
 		name = global_edicts_commander_events.7.dee
 		highlight = yes
 		hidden_effect = {
-			GEC_calculate_manpower_in_states = yes
+			edict_commander_calculate_manpower_in_states = yes
 			set_variable = {
 				which = i
 				value = 25
@@ -406,7 +406,7 @@ country_event = {
 						value = 1
 					}
 				}
-				GEC_increase_enlistment_highest_manpower_state = yes
+				edict_commander_increase_enlistment_highest_manpower_state = yes
 				subtract_variable = {
 					which = i
 					value = 1
@@ -416,7 +416,7 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.7.e
-		GEC_set_edict_every_state = {
+		edict_commander_set_edict_every_state = {
 			edict = edict_promote_military_recruitment
 		}
 	}

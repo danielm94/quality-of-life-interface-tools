@@ -1,0 +1,12 @@
+﻿l_english:
+ global_edicts_commander_trade_config_events.1.t: "Config"
+ global_edicts_commander_trade_config_events.1.d: "[ROOT.GetName]"
+ global_edicts_commander_trade_config_events.1.a: "Enable All Trade Nodes"
+ global_edicts_commander_trade_config_events.1.b: "Disable All Trade Nodes"
+ global_edicts_commander_trade_config_events.1.c: "Configure Europe's Trade Nodes - [FROM.edict_commander_europe_trade_flags_status_loc]"
+ global_edicts_commander_trade_config_events.1.dee: "Configure Asia's Trade Nodes [FROM.edict_commander_asia_trade_flags_status_loc]"
+ global_edicts_commander_trade_config_events.1.e: "Configure Africa's Trade Nodes [FROM.edict_commander_africa_trade_flags_status_loc]"
+ global_edicts_commander_trade_config_events.1.f: "Configure North America's Trade Nodes [FROM.edict_commander_north_america_trade_flags_status_loc]"
+ global_edicts_commander_trade_config_events.1.g: "Configure South America's Trade Nodes [FROM.edict_commander_south_america_trade_flags_status_loc]"
+ global_edicts_commander_trade_config_events.1.h: "Configure Oceanias Trade Nodes [FROM.edict_commander_oceania_trade_flags_status_loc]"
+ global_edicts_commander_trade_config_events.1.i: "Go Back"

@@ -1,0 +1,3 @@
+on_startup = {
+	edict_commander_set_all_trade_node_flags = yes
+}

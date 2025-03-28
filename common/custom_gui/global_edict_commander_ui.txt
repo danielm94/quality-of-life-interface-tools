@@ -65,7 +65,7 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict_every_state = {
+			edict_commander_set_edict_every_state = {
 				edict = no_edict
 			}
 		}
@@ -206,7 +206,7 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict_every_state = {
+			edict_commander_set_edict_every_state = {
 				edict = edict_protect_trade
 			}
 		}
@@ -227,7 +227,7 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict_every_state = {
+			edict_commander_set_edict_every_state = {
 				edict = edict_religious_unity
 			}
 		}
@@ -252,7 +252,7 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict_every_state = {
+			edict_commander_set_edict_every_state = {
 				edict = edict_feudal_de_jure_law
 			}
 		}
@@ -275,7 +275,7 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict_every_state = {
+			edict_commander_set_edict_every_state = {
 				edict = edict_religion_enforced
 			}
 		}
@@ -298,7 +298,7 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict_every_state = {
+			edict_commander_set_edict_every_state = {
 				edict = edict_of_absolutism
 			}
 		}
@@ -321,7 +321,7 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict_every_state = {
+			edict_commander_set_edict_every_state = {
 				edict = feudal_taxes_state_edict
 			}
 		}
@@ -344,7 +344,7 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict_every_state = {
+			edict_commander_set_edict_every_state = {
 				edict = religious_tolerance_state_edict
 			}
 		}
@@ -367,7 +367,7 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict_every_state = {
+			edict_commander_set_edict_every_state = {
 				edict = state_integration_state_edict
 			}
 		}
@@ -390,7 +390,7 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict_every_state = {
+			edict_commander_set_edict_every_state = {
 				edict = urbanization_state_edict
 			}
 		}
@@ -412,7 +412,7 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict_every_state = {
+			edict_commander_set_edict_every_state = {
 				edict = french_infrastructure_network
 			}
 		}
@@ -434,7 +434,7 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict_every_state = {
+			edict_commander_set_edict_every_state = {
 				edict = protect_trade_empowered
 			}
 		}
@@ -457,7 +457,7 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict_every_state = {
+			edict_commander_set_edict_every_state = {
 				edict = chinese_industrialization
 			}
 		}
