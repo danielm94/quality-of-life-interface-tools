@@ -1,15 +1,365 @@
-GEC_set_edict = {
-	every_owned_province = {
+GEC_add_country_cooldown = {
+	add_country_modifier = {
+		name = edict_commander_cooldown
+		duration = 365
+		hidden = yes
+	}
+}
+
+GEC_add_cooldown_to_state = {
+	every_province_in_state = {
 		limit = {
 			is_state = yes
+			owned_by = FROM
+			can_change_state_edict = yes
 		}
-		set_state_edict = $E$
-	}
-	FROM = {
-		add_country_modifier = {
+		log = "Adding cooldown to province"
+		add_province_modifier = {
 			name = edict_commander_cooldown
 			duration = 365
 			hidden = yes
 		}
 	}
+}
+
+GEC_set_edict_for_state = {
+	set_state_edict = $edict$
+	GEC_add_cooldown_to_state = yes
+}
+
+GEC_set_edict_every_state = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+		}
+		GEC_set_edict_for_state = {
+			edict = $edict$
+		}
+	}
+}
+
+GEC_advancement_effort_only_with_growth = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			current_institution_growth = 0.001
+			can_change_state_edict = yes
+		}
+		GEC_set_edict_every_state = {
+			edict = edict_advancement_effort
+		}
+	}
+}
+
+GEC_centralization_effort_only_with_excess_autonomy = {
+	export_to_variable = {
+		which = minimum_autonomy
+		value = modifier:min_autonomy
+		who = ROOT
+	}
+	export_to_variable = {
+		which = minimum_autonomy_in_territories
+		value = modifier:min_autonomy_in_territories
+		who = ROOT
+	}
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+		}
+		set_variable = {
+			which = autonomy_floor
+			value = 0
+		}
+		#Check if it's a half state
+		if = {
+			limit = {
+				NOT = {
+					is_state_core = owner
+				}
+			}
+			set_variable = {
+				which = autonomy_floor
+				value = 50
+			}
+		}
+		set_variable = {
+			which = minimum_autonomy_in_territories
+			which = ROOT
+		}
+		multiply_variable = {
+			which = minimum_autonomy_in_territories
+			value = 100
+		}
+		change_variable = {
+			which = autonomy_floor
+			which = minimum_autonomy_in_territories
+		}
+		#If autonomy floor is <0, set it to 0.
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = autonomy_floor
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				which = autonomy_floor
+				value = 0
+			}
+		}
+		set_variable = {
+			which = minimum_autonomy
+			which = ROOT
+		}
+		#If country minimum autonomy is > our current floor, set the current floor to the minimum autonomy
+		if = {
+			limit = {
+				check_variable = {
+					which = minimum_autonomy
+					which = autonomy_floor
+				}
+			}
+			set_variable = {
+				which = autonomy_floor
+				which = minimum_autonomy
+			}
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		set_variable = {
+			which = autonomy_floor_to_check
+			which = autonomy_floor
+		}
+		change_variable = {
+			which = autonomy_floor_to_check
+			value = 0.001
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = curr_autonomy
+					which = autonomy_floor_to_check
+				}
+			}
+			GEC_set_edict_for_state = {
+				edict = edict_centralization_effort
+			}
+		}
+	}
+}
+
+GEC_defensive_edict_only_with_forts = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			has_fort_building_trigger = yes
+			can_change_state_edict = yes
+		}
+		GEC_set_edict_for_state = {
+			edict = edict_defensive_edict
+		}
+	}
+}
+
+GEC_encourage_development_edict_cheapest_state = {
+	every_owned_province = {
+		limit = {
+			can_change_state_edict = yes
+		}
+		export_to_variable = {
+			which = province_dev_cost_flat
+			value = modifier:local_development_cost
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = cheapest_development_cost
+				}
+			}
+			save_global_event_target_as = cheapest_development_cost
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = province_dev_cost_flat
+							which = event_target:cheapest_development_cost
+						}
+					}
+				}
+				save_global_event_target_as = cheapest_development_cost
+			}
+		}
+	}
+	event_target:cheapest_development_cost = {
+		GEC_set_edict_for_state = {
+			edict = edict_encourage_development
+		}
+	}
+	clear_global_event_target = cheapest_development_cost
+}
+
+GEC_calculate_manpower_in_states = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			NOT = {
+				has_province_flag = calculated_manpower_already
+			}
+		}
+		set_variable = {
+			which = manpower_total
+			value = 0
+		}
+		export_to_variable = {
+			which = manpower_base
+			value = trigger_value:base_manpower
+			who = this
+		}
+		set_variable = {
+			which = manpower_total
+			value = 250
+		}
+		multiply_variable = {
+			which = manpower_total
+			which = manpower_base
+		}
+		export_to_variable = {
+			which = manpower_mod
+			value = modifier:local_manpower_modifier
+		}
+		multiply_variable = {
+			which = manpower_total
+			which = manpower_mod
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		set_variable = {
+			which = autonomy_to_multiply
+			value = 100
+		}
+		subtract_variable = {
+			which = autonomy_to_multiply
+			which = curr_autonomy
+		}
+		divide_variable = {
+			which = autonomy_to_multiply
+			value = 100
+		}
+		multiply_variable = {
+			which = manpower_total
+			which = autonomy_to_multiply
+		}
+		set_province_flag = calculated_manpower_already
+		every_province_in_state = {
+			limit = {
+				NOT = {
+					has_province_flag = calculated_manpower_already
+				}
+			}
+			export_to_variable = {
+				which = manpower_base
+				value = trigger_value:base_manpower
+				who = this
+			}
+			set_variable = {
+				which = manpower_total
+				value = 250
+			}
+			multiply_variable = {
+				which = manpower_total
+				which = manpower_base
+			}
+			export_to_variable = {
+				which = manpower_mod
+				value = modifier:local_manpower_modifier
+			}
+			multiply_variable = {
+				which = manpower_total
+				which = manpower_mod
+			}
+			export_to_variable = {
+				which = curr_autonomy
+				value = local_autonomy
+			}
+			set_variable = {
+				which = autonomy_to_multiply
+				value = 100
+			}
+			subtract_variable = {
+				which = autonomy_to_multiply
+				which = curr_autonomy
+			}
+			divide_variable = {
+				which = autonomy_to_multiply
+				value = 100
+			}
+			multiply_variable = {
+				which = manpower_total
+				which = autonomy_to_multiply
+			}
+			set_province_flag = calculated_manpower_already
+			PREV = {
+				change_variable = {
+					which = manpower_total
+					which = PREV
+				}
+			}
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = manpower_total
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		limit = {
+			has_province_flag = calculated_manpower_already
+		}
+		clr_province_flag = calculated_manpower_already
+	}
+}
+
+GEC_increase_enlistment_highest_manpower_state = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_manpower_state
+				}
+			}
+			save_global_event_target_as = highest_manpower_state
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = manpower_total
+						which = event_target:highest_manpower_state
+					}
+				}
+				save_global_event_target_as = highest_manpower_state
+			}
+		}
+	}
+	event_target:highest_manpower_state = {
+		GEC_set_edict_for_state = {
+			edict = edict_promote_military_recruitment
+		}
+	}
+	clear_global_event_target = highest_manpower_state
 }

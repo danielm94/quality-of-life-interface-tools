@@ -1,0 +1,429 @@
+namespace = global_edicts_commander_events
+#Advancement
+country_event = {
+	id = global_edicts_commander_events.1
+	title = global_edicts_commander_events.1.t
+	desc = global_edicts_commander_events.1.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = edict_event_enabled
+	}
+	option = {
+		name = global_edicts_commander_events.1.a
+		highlight = yes
+		GEC_advancement_effort_only_with_growth = yes
+	}
+	option = {
+		name = global_edicts_commander_events.1.b
+		GEC_set_edict_every_state = {
+			edict = edict_advancement_effort
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.1.c
+	}
+	after = {
+		clr_country_flag = edict_event_enabled
+	}
+}
+
+#Centralization
+country_event = {
+	id = global_edicts_commander_events.2
+	title = global_edicts_commander_events.2.t
+	desc = global_edicts_commander_events.2.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = edict_event_enabled
+	}
+	option = {
+		name = global_edicts_commander_events.2.a
+		highlight = yes
+		hidden_effect = {
+			GEC_centralization_effort_only_with_excess_autonomy = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.2.b
+		GEC_set_edict_every_state = {
+			edict = edict_centralization_effort
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.2.c
+	}
+	after = {
+		clr_country_flag = edict_event_enabled
+	}
+}
+
+#Defensive
+country_event = {
+	id = global_edicts_commander_events.3
+	title = global_edicts_commander_events.3.t
+	desc = global_edicts_commander_events.3.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = edict_event_enabled
+	}
+	option = {
+		name = global_edicts_commander_events.3.a
+		highlight = yes
+		hidden_effect = {
+			GEC_defensive_edict_only_with_forts = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.3.b
+		highlight = yes
+		custom_tooltip = global_edicts_commander_events.3.b.tt
+		hidden_effect = {
+			set_country_flag = def_edict_event_enabled
+			country_event = {
+				id = global_edicts_commander_events.4
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.3.c
+		GEC_set_edict_every_state = {
+			edict = edict_defensive_edict
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.3.dee
+	}
+	after = {
+		clr_country_flag = edict_event_enabled
+	}
+}
+
+#So error.log doesn't shit itself talking about missing event targets.
+country_event = {
+	id = global_edicts_commander_events.4
+	title = global_edicts_commander_events.3.t
+	desc = global_edicts_commander_events.3.d
+	hidden = yes
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = def_edict_event_enabled
+	}
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					is_state = yes
+					any_province_in_state = {
+						has_fort_building_trigger = yes
+					}
+					can_change_state_edict = yes
+				}
+				save_event_target_as = province_to_check
+				event_target:province_to_check = {
+					if = {
+						limit = {
+							has_siege = yes
+						}
+						GEC_set_edict_for_state = {
+							edict = edict_defensive_edict
+						}
+					}
+					else_if = {
+						limit = {
+							any_neighbor_province = {
+								has_rebels_in_province = yes
+							}
+						}
+						GEC_set_edict_for_state = {
+							edict = edict_defensive_edict
+						}
+					}
+					else_if = {
+						limit = {
+							owner = {
+								is_at_war = yes
+							}
+						}
+						owner = {
+							every_war_enemy_country = {
+								save_event_target_as = war_enemy
+								event_target:province_to_check = {
+									if = {
+										limit = {
+											any_neighbor_province = {
+												num_of_units_in_province = {
+													amount = 1
+													who = event_target:war_enemy
+												}
+											}
+										}
+										GEC_set_edict_for_state = {
+											edict = edict_defensive_edict
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.3.a
+	}
+	after = {
+		clr_country_flag = def_edict_event_enabled
+	}
+}
+
+#Encourage Development
+country_event = {
+	id = global_edicts_commander_events.5
+	title = global_edicts_commander_events.5.t
+	desc = global_edicts_commander_events.5.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = edict_event_enabled
+	}
+	option = {
+		name = global_edicts_commander_events.5.a
+		highlight = yes
+		hidden_effect = {
+			set_country_flag = find_cheapest_state_to_dev
+			country_event = {
+				id = global_edicts_commander_events.6
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.5.b
+		highlight = yes
+		hidden_effect = {
+			set_country_flag = find_cheapest_state_to_dev
+			set_variable = {
+				which = i
+				value = 5
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				country_event = {
+					id = global_edicts_commander_events.6
+				}
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.5.c
+		highlight = yes
+		hidden_effect = {
+			set_country_flag = find_cheapest_state_to_dev
+			set_variable = {
+				which = i
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				country_event = {
+					id = global_edicts_commander_events.6
+				}
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.5.dee
+		GEC_set_edict_every_state = {
+			edict = edict_encourage_development
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.5.e
+	}
+	after = {
+		clr_country_flag = edict_event_enabled
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.6
+	title = global_edicts_commander_events.5.t
+	desc = global_edicts_commander_events.5.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		has_country_flag = find_cheapest_state_to_dev
+	}
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					can_change_state_edict = yes
+				}
+				export_to_variable = {
+					which = province_dev_cost
+					value = modifier:local_development_cost
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_saved_global_event_target = cheapest_development_cost
+						}
+					}
+					save_global_event_target_as = cheapest_development_cost
+				}
+				else = {
+					if = {
+						limit = {
+							NOT = {
+								check_variable = {
+									which = province_dev_cost
+									which = event_target:cheapest_development_cost
+								}
+							}
+						}
+						save_global_event_target_as = cheapest_development_cost
+					}
+				}
+			}
+		}
+		event_target:cheapest_development_cost = {
+			GEC_set_edict_for_state = {
+				edict = edict_encourage_development
+			}
+		}
+		clear_global_event_target = cheapest_development_cost
+	}
+	option = {
+		name = global_edicts_commander_events.6.a
+	}
+	after = {
+		clr_country_flag = find_cheapest_state_to_dev
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.7
+	title = global_edicts_commander_events.7.t
+	desc = global_edicts_commander_events.7.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = edict_event_enabled
+	}
+	option = {
+		name = global_edicts_commander_events.7.a
+		highlight = yes
+		hidden_effect = {
+			GEC_calculate_manpower_in_states = yes
+			GEC_increase_enlistment_highest_manpower_state = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.7.b
+		highlight = yes
+		hidden_effect = {
+			GEC_calculate_manpower_in_states = yes
+			set_variable = {
+				which = i
+				value = 5
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				GEC_increase_enlistment_highest_manpower_state = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.7.c
+		highlight = yes
+		hidden_effect = {
+			GEC_calculate_manpower_in_states = yes
+			set_variable = {
+				which = i
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				GEC_increase_enlistment_highest_manpower_state = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.7.dee
+		highlight = yes
+		hidden_effect = {
+			GEC_calculate_manpower_in_states = yes
+			set_variable = {
+				which = i
+				value = 25
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				GEC_increase_enlistment_highest_manpower_state = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.7.e
+		GEC_set_edict_every_state = {
+			edict = edict_promote_military_recruitment
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.7.f
+	}
+	after = {
+		clr_country_flag = edict_event_enabled
+	}
+}

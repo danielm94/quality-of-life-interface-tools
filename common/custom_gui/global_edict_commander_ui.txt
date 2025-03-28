@@ -65,8 +65,8 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = no_edict
+			GEC_set_edict_every_state = {
+				edict = no_edict
 			}
 		}
 	}
@@ -86,8 +86,11 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = edict_advancement_effort
+			hidden_effect = {
+				set_country_flag = edict_event_enabled
+				country_event = {
+					id = global_edicts_commander_events.1
+				}
 			}
 		}
 	}
@@ -107,8 +110,11 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = edict_centralization_effort
+			hidden_effect = {
+				set_country_flag = edict_event_enabled
+				country_event = {
+					id = global_edicts_commander_events.2
+				}
 			}
 		}
 	}
@@ -128,8 +134,11 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = edict_defensive_edict
+			hidden_effect = {
+				set_country_flag = edict_event_enabled
+				country_event = {
+					id = global_edicts_commander_events.3
+				}
 			}
 		}
 	}
@@ -149,8 +158,11 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = edict_encourage_development
+			hidden_effect = {
+				set_country_flag = edict_event_enabled
+				country_event = {
+					id = global_edicts_commander_events.5
+				}
 			}
 		}
 	}
@@ -170,8 +182,11 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = edict_promote_military_recruitment
+			hidden_effect = {
+				set_country_flag = edict_event_enabled
+				country_event = {
+					id = global_edicts_commander_events.7
+				}
 			}
 		}
 	}
@@ -191,8 +206,8 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = edict_protect_trade
+			GEC_set_edict_every_state = {
+				edict = edict_protect_trade
 			}
 		}
 	}
@@ -212,8 +227,8 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = edict_religious_unity
+			GEC_set_edict_every_state = {
+				edict = edict_religious_unity
 			}
 		}
 	}
@@ -237,8 +252,8 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = edict_feudal_de_jure_law
+			GEC_set_edict_every_state = {
+				edict = edict_feudal_de_jure_law
 			}
 		}
 	}
@@ -260,8 +275,8 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = edict_religion_enforced
+			GEC_set_edict_every_state = {
+				edict = edict_religion_enforced
 			}
 		}
 	}
@@ -283,8 +298,8 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = edict_of_absolutism
+			GEC_set_edict_every_state = {
+				edict = edict_of_absolutism
 			}
 		}
 	}
@@ -306,8 +321,8 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = feudal_taxes_state_edict
+			GEC_set_edict_every_state = {
+				edict = feudal_taxes_state_edict
 			}
 		}
 	}
@@ -329,8 +344,8 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = religious_tolerance_state_edict
+			GEC_set_edict_every_state = {
+				edict = religious_tolerance_state_edict
 			}
 		}
 	}
@@ -352,8 +367,8 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = state_integration_state_edict
+			GEC_set_edict_every_state = {
+				edict = state_integration_state_edict
 			}
 		}
 	}
@@ -375,8 +390,8 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = urbanization_state_edict
+			GEC_set_edict_every_state = {
+				edict = urbanization_state_edict
 			}
 		}
 	}
@@ -397,8 +412,8 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = french_infrastructure_network
+			GEC_set_edict_every_state = {
+				edict = french_infrastructure_network
 			}
 		}
 	}
@@ -419,8 +434,8 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = protect_trade_empowered
+			GEC_set_edict_every_state = {
+				edict = protect_trade_empowered
 			}
 		}
 	}
@@ -442,8 +457,8 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			GEC_set_edict = {
-				E = chinese_industrialization
+			GEC_set_edict_every_state = {
+				edict = chinese_industrialization
 			}
 		}
 	}
