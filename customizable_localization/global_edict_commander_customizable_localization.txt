@@ -179,6 +179,25 @@ defined_text = {
 }
 
 defined_text = {
+	name = edict_commander_wien_loc
+	text = {
+		localisation_key = edict_commander.enabled
+		trigger = {
+			has_global_flag = edict_commander_wien_trade_edicts
+		}
+	}
+	text = {
+		localisation_key = edict_commander.disabled
+		trigger = {
+			NOT = {
+				has_global_flag = edict_commander_wien_trade_edicts
+			}
+		}
+	}
+}
+
+
+defined_text = {
 	name = edict_commander_ragusa_loc
 	text = {
 		localisation_key = edict_commander.enabled
@@ -1353,14 +1372,14 @@ defined_text = {
 	text = {
 		localisation_key = edict_commander.enabled
 		trigger = {
-			has_global_flag = edict_commander_cuiba_trade_edicts
+			has_global_flag = edict_commander_cuiaba_trade_edicts
 		}
 	}
 	text = {
 		localisation_key = edict_commander.disabled
 		trigger = {
 			NOT = {
-				has_global_flag = edict_commander_cuiba_trade_edicts
+				has_global_flag = edict_commander_cuiaba_trade_edicts
 			}
 		}
 	}
