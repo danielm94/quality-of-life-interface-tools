@@ -87,7 +87,6 @@ custom_button = {
 	effect = {
 		FROM = {
 			hidden_effect = {
-				set_country_flag = edict_event_enabled
 				country_event = {
 					id = global_edicts_commander_events.1
 				}
@@ -111,7 +110,6 @@ custom_button = {
 	effect = {
 		FROM = {
 			hidden_effect = {
-				set_country_flag = edict_event_enabled
 				country_event = {
 					id = global_edicts_commander_events.2
 				}
@@ -135,7 +133,6 @@ custom_button = {
 	effect = {
 		FROM = {
 			hidden_effect = {
-				set_country_flag = edict_event_enabled
 				country_event = {
 					id = global_edicts_commander_events.3
 				}
@@ -159,7 +156,6 @@ custom_button = {
 	effect = {
 		FROM = {
 			hidden_effect = {
-				set_country_flag = edict_event_enabled
 				country_event = {
 					id = global_edicts_commander_events.5
 				}
@@ -183,7 +179,6 @@ custom_button = {
 	effect = {
 		FROM = {
 			hidden_effect = {
-				set_country_flag = edict_event_enabled
 				country_event = {
 					id = global_edicts_commander_events.7
 				}
@@ -206,8 +201,10 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			edict_commander_set_edict_every_state = {
-				edict = edict_protect_trade
+			hidden_effect = {
+				country_event = {
+					id = global_edicts_commander_events.8
+				}
 			}
 		}
 	}
