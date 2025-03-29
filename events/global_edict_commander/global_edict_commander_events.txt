@@ -129,6 +129,9 @@ country_event = {
 						has_fort_building_trigger = yes
 					}
 					can_change_state_edict = yes
+					NOT = {
+						has_state_edict = edict_defensive_edict
+					}
 				}
 				save_event_target_as = province_to_check
 				event_target:province_to_check = {
@@ -291,6 +294,10 @@ country_event = {
 			every_owned_province = {
 				limit = {
 					can_change_state_edict = yes
+					is_state = yes
+					NOT = {
+						has_state_edict = edict_encourage_development
+					}
 				}
 				export_to_variable = {
 					which = province_dev_cost
