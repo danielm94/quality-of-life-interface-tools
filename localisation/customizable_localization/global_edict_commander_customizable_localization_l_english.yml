@@ -3,4 +3,4 @@
  edict_commander.disabled:0 "§RDisabled§!"
  edict_commander.all_enabled:0 "§GAll Enabled§!"
  edict_commander.some_enabled:0 "§YSome Enabled§!"
- edict_commander.all_disabled:0 "§YAll Disabled§!"
+ edict_commander.all_disabled:0 "§RAll Disabled§!"
