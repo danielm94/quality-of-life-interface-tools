@@ -60,3 +60,15 @@
 
  global_edicts_commander_events.10.t:0 "Feudal De Jure Law"
  global_edicts_commander_events.10.d:0 "How would you like to apply the Feudal De Jure Law Edict?"
+ global_edicts_commander_events.10.a:0 "Apply the edict to every state that has unrest."
+ global_edicts_commander_events.10.b:0 "Apply the edict to the state that has the highest total unrest."
+ global_edicts_commander_events.10.c:0 "Apply the edict to the top 5 states with the highest total unrest."
+ global_edicts_commander_events.10.dee:0 "Apply the edict to the top 10 states with the highest total unrest."
+ global_edicts_commander_events.10.e:0 "Apply the edict to every state."
+ global_edicts_commander_events.10.f:0 "Nevermind."
+
+ global_edicts_commander_events.11.t:0 "Religion Enforced"
+ global_edicts_commander_events.11.d:0 "How would you like to apply the Religion Enforced Edict?"
+ global_edicts_commander_events.11.a:0 "Apply the edict to every state that has a center of reformation."
+ global_edicts_commander_events.11.b:0 "Apply the edict to every state."
+ global_edicts_commander_events.11.c:0 "Nevermind"

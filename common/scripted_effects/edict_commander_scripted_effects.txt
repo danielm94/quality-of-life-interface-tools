@@ -1012,3 +1012,114 @@ edict_commander_enforce_religious_unity_easiest_to_convert = {
 	}
 	clear_global_event_target = easiest_province_to_convert
 }
+
+edict_commander_feudal_de_jure_law_calculate_state_unrest = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			unrest = 0.001
+			NOT = {
+				has_province_flag = calculated_unrest_already
+			}
+		}
+		export_to_variable = {
+			which = local_unrest
+			value = unrest
+		}
+		set_variable = {
+			which = state_unrest
+			which = local_unrest
+		}
+		set_province_flag = calculated_unrest_already
+		every_province_in_state = {
+			limit = {
+				can_change_state_edict = yes
+				unrest = 0.001
+				NOT = {
+					has_province_flag = calculated_unrest_already
+				}
+			}
+			export_to_variable = {
+				which = local_unrest
+				value = unrest
+			}
+			set_variable = {
+				which = state_unrest
+				which = local_unrest
+			}
+			set_province_flag = calculated_unrest_already
+			PREV = {
+				change_variable = {
+					which = state_unrest
+					which = PREV
+				}
+			}
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = state_unrest
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		safe_clr_province_flag = {
+			flag = calculated_unrest_already
+		}
+	}
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			unrest = 0.001
+		}
+	}
+}
+edict_commander_feudal_de_jure_law_any_with_unrest = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			unrest = 0.001
+		}
+
+		edict_commander_set_edict_for_state = {
+			edict = edict_feudal_de_jure_law
+		}
+	}
+}
+edict_commander_feudal_de_jure_law_highest_unrest_state = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			unrest = 0.001
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_unrest_state
+				}
+			}
+			save_global_event_target_as = highest_unrest_state
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = state_unrest
+						which = event_target:highest_unrest_state
+					}
+				}
+				save_global_event_target_as = highest_unrest_state
+			}
+		}
+	}
+	event_target:highest_unrest_state = {
+		edict_commander_set_edict_for_state = {
+			edict = edict_feudal_de_jure_law
+		}
+	}
+	clear_global_event_target = highest_unrest_state
+}

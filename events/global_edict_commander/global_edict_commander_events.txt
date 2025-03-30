@@ -688,6 +688,121 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.10.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_feudal_de_jure_law_any_with_unrest = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.10.b
+		highlight = yes
+		hidden_effect = {
+			edict_commander_feudal_de_jure_law_calculate_state_unrest = yes
+			edict_commander_feudal_de_jure_law_highest_unrest_state = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.10.c
+		highlight = yes
+		hidden_effect = {
+			edict_commander_feudal_de_jure_law_calculate_state_unrest = yes
+			set_variable = {
+				which = i
+				value = 5
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_feudal_de_jure_law_highest_unrest_state = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.10.dee
+		highlight = yes
+		hidden_effect = {
+			edict_commander_feudal_de_jure_law_calculate_state_unrest = yes
+			set_variable = {
+				which = i
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_feudal_de_jure_law_highest_unrest_state = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.10.e
+		hidden_effect = {
+			edict_commander_set_edict_every_state = {
+				edict = edict_feudal_de_jure_law
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.10.f
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+country_event = {
+	id = global_edicts_commander_events.11
+	title = global_edicts_commander_events.11.t
+	desc = global_edicts_commander_events.11.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.11.a
+		highlight = yes
+		hidden_effect = {
+			every_owned_province = {
+				limit ={
+					is_state = yes
+					can_change_state_edict = yes
+					is_reformation_center = yes
+				}
+				edict_commander_set_edict_for_state = {
+					edict = edict_religion_enforced
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.11.b
+		hidden_effect = {
+			edict_commander_set_edict_every_state = {
+				edict = edict_religion_enforced
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.11.c
 	}
 	after = {
 		safe_clr_country_flag = {

@@ -1,3 +1,5 @@
+#TODO: Refactor potential for all buttons once you redo the UI
+
 custom_window = {
 	name = global_edicts_window
 	potential = {
@@ -251,8 +253,10 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			edict_commander_set_edict_every_state = {
-				edict = edict_feudal_de_jure_law
+			hidden_effect = {
+				country_event = {
+					id = global_edicts_commander_events.10
+				}
 			}
 		}
 	}
@@ -273,9 +277,11 @@ custom_button = {
 	trigger = {
 	}
 	effect = {
-		FROM = {
-			edict_commander_set_edict_every_state = {
-				edict = edict_religion_enforced
+		hidden_effect = {
+			FROM ={
+				country_event = {
+					id = global_edicts_commander_events.11
+				}
 			}
 		}
 	}
