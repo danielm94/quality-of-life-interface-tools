@@ -1,6 +1,6 @@
 ﻿l_english:
- global_edicts_commander_trade_config_events.1.t: "Config"
- global_edicts_commander_trade_config_events.1.d: "Desc"
+ global_edicts_commander_trade_config_events.1.t: "Advanced Configuration Settings"
+ global_edicts_commander_trade_config_events.1.d: "You can control which trade nodes are included or excluded when applying the Protect Trade state edict. States that are within a §RDisabled§! trade node will not have the edict applied to them. This is "
  global_edicts_commander_trade_config_events.1.a: "Enable All Trade Nodes"
  global_edicts_commander_trade_config_events.1.b: "Disable All Trade Nodes"
  global_edicts_commander_trade_config_events.1.c: "Configure Europe's Trade Nodes: [edict_commander_europe_trade_flags_status_loc]"
@@ -12,8 +12,7 @@
  global_edicts_commander_trade_config_events.1.back: "Go Back"
  
  
- global_edicts_commander_trade_config_events.2.t: "Europe"
- global_edicts_commander_trade_config_events.2.d: "Europe"
+ global_edicts_commander_trade_config_events.2.t: "Configure European Trade Nodes"
  global_edicts_commander_trade_config_events.2.a: "Enable All (Europe)"
  global_edicts_commander_trade_config_events.2.b: "Disable All (Europe)"
  global_edicts_commander_trade_config_events.2.opt_english_channel: "English Channel: [edict_commander_english_channel_loc]"
@@ -42,8 +41,7 @@
  global_edicts_commander_trade_config_events.2.back: "Go Back"
 
  
- global_edicts_commander_trade_config_events.3.t: "Configure Asian Trade Edicts"
- global_edicts_commander_trade_config_events.3.d: "Manage which Asian trade nodes the Edict Commander should apply to."
+ global_edicts_commander_trade_config_events.3.t: "Configure Asian Trade Nodes"
 
  global_edicts_commander_trade_config_events.3.back: "Go Back"
  global_edicts_commander_trade_config_events.3.a: "Enable All (Asia)"
@@ -76,8 +74,7 @@
  global_edicts_commander_trade_config_events.3.opt_chengdu: "Chengdu: [edict_commander_chengdu_loc]"
  global_edicts_commander_trade_config_events.3.opt_lhasa: "Lhasa: [edict_commander_lhasa_loc]"
 
- global_edicts_commander_trade_config_events.4.t: "Configure African Trade Edicts"
- global_edicts_commander_trade_config_events.4.d: "Manage which African trade nodes the Edict Commander should apply to."
+ global_edicts_commander_trade_config_events.4.t: "Configure African Trade Nodes"
 
  global_edicts_commander_trade_config_events.4.back: "Go Back"
  global_edicts_commander_trade_config_events.4.a: "Enable All (Africa)"
@@ -97,8 +94,7 @@
  global_edicts_commander_trade_config_events.4.opt_zambezi: "Zambezi: [edict_commander_zambezi_loc]"
  global_edicts_commander_trade_config_events.4.opt_cape_of_good_hope: "Cape of Good Hope: [edict_commander_cape_of_good_hope_loc]"
 
- global_edicts_commander_trade_config_events.5.t: "Configure North American Trade Edicts"
- global_edicts_commander_trade_config_events.5.d: "Manage which North American trade nodes the Edict Commander should apply to."
+ global_edicts_commander_trade_config_events.5.t: "Configure North American Trade Nodes"
  global_edicts_commander_trade_config_events.5.back: "Go Back"
 
  global_edicts_commander_trade_config_events.5.a: "Enable All (North America)"
@@ -115,8 +111,7 @@
  global_edicts_commander_trade_config_events.5.opt_caribbean: "Caribbean: [edict_commander_caribbean_loc]"
  global_edicts_commander_trade_config_events.5.opt_panama: "Panama: [edict_commander_panama_loc]"
 
- global_edicts_commander_trade_config_events.6.t: "Configure South American Trade Edicts"
- global_edicts_commander_trade_config_events.6.d: "Manage which South American trade nodes the Edict Commander should apply to."
+ global_edicts_commander_trade_config_events.6.t: "Configure South American Trade Nodes"
  global_edicts_commander_trade_config_events.6.back: "Go Back"
 
  global_edicts_commander_trade_config_events.6.a: "Enable All (South America)"
@@ -129,8 +124,7 @@
  global_edicts_commander_trade_config_events.6.opt_rio_de_la_plata: "Rio de la Plata: [edict_commander_rio_de_la_plata_loc]"
  global_edicts_commander_trade_config_events.6.opt_patagonia: "Patagonia: [edict_commander_patagonia_loc]"
 
- global_edicts_commander_trade_config_events.7.t: "Configure Oceanian Trade Edicts"
- global_edicts_commander_trade_config_events.7.d: "Manage which Oceanian trade nodes the Edict Commander should apply to."
+ global_edicts_commander_trade_config_events.7.t: "Configure Oceanian Trade Nodes"
  global_edicts_commander_trade_config_events.7.back: "Go Back"
 
  global_edicts_commander_trade_config_events.7.a: "Enable All (Oceania)"

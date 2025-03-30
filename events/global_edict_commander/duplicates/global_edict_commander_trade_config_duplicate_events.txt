@@ -16,6 +16,11 @@ country_event = {
 		safe_clr_country_flag = {
 			flag = remain_in_trade_config_menu
 		}
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_events.8
+			}
+		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.1.a
@@ -112,7 +117,7 @@ country_event = {
 country_event = {
 	id = global_edicts_commander_trade_config_duplicate_events.2
 	title = global_edicts_commander_trade_config_events.2.t
-	desc = global_edicts_commander_trade_config_events.2.d
+	desc = global_edicts_commander_trade_config_events.1.d
 	picture = MERCHANTS_TALKING_eventPicture
 	is_triggered_only = yes
 	immediate = {
@@ -345,7 +350,7 @@ country_event = {
 country_event = {
 	id = global_edicts_commander_trade_config_duplicate_events.3
 	title = global_edicts_commander_trade_config_events.3.t
-	desc = global_edicts_commander_trade_config_events.3.d
+	desc = global_edicts_commander_trade_config_events.1.d
 	picture = MERCHANTS_TALKING_eventPicture
 	is_triggered_only = yes
 	immediate = {
@@ -602,7 +607,7 @@ country_event = {
 country_event = {
 	id = global_edicts_commander_trade_config_duplicate_events.4
 	title = global_edicts_commander_trade_config_events.4.t
-	desc = global_edicts_commander_trade_config_events.4.d
+	desc = global_edicts_commander_trade_config_events.1.d
 	picture = MERCHANTS_TALKING_eventPicture
 	is_triggered_only = yes
 	immediate = {
@@ -755,25 +760,26 @@ country_event = {
 country_event = {
 	id = global_edicts_commander_trade_config_duplicate_events.5
 	title = global_edicts_commander_trade_config_events.5.t
-	desc = global_edicts_commander_trade_config_events.5.d
+	desc = global_edicts_commander_trade_config_events.1.d
 	picture = MERCHANTS_TALKING_eventPicture
 	is_triggered_only = yes
-
 	immediate = {
-		safe_set_country_flag = { flag = remain_in_trade_config_north_america_menu }
+		safe_set_country_flag = {
+			flag = remain_in_trade_config_north_america_menu
+		}
 	}
-
 	option = {
 		name = global_edicts_commander_trade_config_events.5.back
 		highlight = yes
 		hidden_effect = {
-			safe_clr_country_flag = { flag = remain_in_trade_config_north_america_menu }
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_north_america_menu
+			}
 			country_event = {
 				id = global_edicts_commander_trade_config_events.1
 			}
 		}
 	}
-
 	option = {
 		name = global_edicts_commander_trade_config_events.5.a
 		highlight = yes
@@ -788,68 +794,86 @@ country_event = {
 			edict_commander_clear_north_america_trade_node_flags = yes
 		}
 	}
-
 	option = {
 		name = global_edicts_commander_trade_config_events.5.opt_california
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_california_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_california_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.5.opt_hudson_bay
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_hudson_bay_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_hudson_bay_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.5.opt_gulf_of_st_lawrence
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_gulf_of_st_lawrence_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_gulf_of_st_lawrence_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.5.opt_mississippi_river
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_mississippi_river_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_mississippi_river_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.5.opt_ohio
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_ohio_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_ohio_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.5.opt_chesapeake
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_chesapeake_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_chesapeake_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.5.opt_rio_grande
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_rio_grande_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_rio_grande_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.5.opt_mexico
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_mexico_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_mexico_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.5.opt_caribbean
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_caribbean_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_caribbean_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.5.opt_panama
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_panama_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_panama_trade_edicts
+			}
 		}
 	}
-
 	after = {
 		if = {
 			limit = {
@@ -865,27 +889,28 @@ country_event = {
 country_event = {
 	id = global_edicts_commander_trade_config_duplicate_events.6
 	title = global_edicts_commander_trade_config_events.6.t
-	desc = global_edicts_commander_trade_config_events.6.d
+	desc = global_edicts_commander_trade_config_events.1.d
 	picture = MERCHANTS_TALKING_eventPicture
 	is_triggered_only = yes
-
 	immediate = {
-		safe_set_country_flag = { flag = remain_in_trade_config_south_america_menu }
+		safe_set_country_flag = {
+			flag = remain_in_trade_config_south_america_menu
+		}
 	}
-
 	option = {
 		name = global_edicts_commander_trade_config_events.6.back
 		highlight = yes
 		hidden_effect = {
-			safe_clr_country_flag = { flag = remain_in_trade_config_south_america_menu }
+			safe_clr_country_flag = {
+				flag = remain_in_trade_config_south_america_menu
+			}
 			country_event = {
 				id = global_edicts_commander_trade_config_events.1
 			}
 		}
 	}
-
 	option = {
-		name = global_edicts_commander_trade_config_events.6.a 
+		name = global_edicts_commander_trade_config_events.6.a
 		highlight = yes
 		hidden_effect = {
 			edict_commander_set_south_america_trade_node_flags = yes
@@ -898,44 +923,54 @@ country_event = {
 			edict_commander_clear_south_america_trade_node_flags = yes
 		}
 	}
-
 	option = {
 		name = global_edicts_commander_trade_config_events.6.opt_lima
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_lima_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_lima_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.6.opt_amazonas
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_amazonas_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_amazonas_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.6.opt_cuiba
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_cuiaba_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_cuiaba_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.6.opt_brazil
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_brazil_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_brazil_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.6.opt_rio_de_la_plata
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_rio_de_la_plata_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_rio_de_la_plata_trade_edicts
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_trade_config_events.6.opt_patagonia
 		hidden_effect = {
-			safe_toggle_global_flag = { flag = edict_commander_patagonia_trade_edicts }
+			safe_toggle_global_flag = {
+				flag = edict_commander_patagonia_trade_edicts
+			}
 		}
 	}
-
 	after = {
 		if = {
 			limit = {
@@ -951,7 +986,7 @@ country_event = {
 country_event = {
 	id = global_edicts_commander_trade_config_duplicate_events.7
 	title = global_edicts_commander_trade_config_events.7.t
-	desc = global_edicts_commander_trade_config_events.7.d
+	desc = global_edicts_commander_trade_config_events.1.d
 	picture = MERCHANTS_TALKING_eventPicture
 	is_triggered_only = yes
 	immediate = {
