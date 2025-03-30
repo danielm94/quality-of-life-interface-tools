@@ -462,26 +462,94 @@ country_event = {
 	option = {
 		name = global_edicts_commander_events.8.a
 		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_trade_power_in_states = yes
+			edict_commander_protect_trade_highest_trade_power_state = yes
+		}
 	}
 	option = {
 		name = global_edicts_commander_events.8.b
 		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_trade_power_in_states = yes
+			set_variable = {
+				which = i
+				value = 5
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_protect_trade_highest_trade_power_state = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
 	}
 	option = {
 		name = global_edicts_commander_events.8.c
 		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_trade_power_in_states = yes
+			set_variable = {
+				which = i
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_protect_trade_highest_trade_power_state = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
 	}
 	option = {
 		name = global_edicts_commander_events.8.dee
 		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_trade_power_in_states = yes
+			edict_commander_protect_trade_highest_trade_power_state_for_each_node = yes
+		}
 	}
 	option = {
 		name = global_edicts_commander_events.8.e
 		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_trade_power_in_states = yes
+			set_variable = {
+				which = i
+				value = 3
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_protect_trade_highest_trade_power_state_for_each_node = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
 	}
 	option = {
 		name = global_edicts_commander_events.8.f
-		edict_commander_set_edict_every_state = {
+		edict_commander_protect_trade_every_state = {
 			edict = edict_protect_trade
 		}
 	}
@@ -495,6 +563,131 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.8.h
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.9
+	title = global_edicts_commander_events.9.t
+	desc = global_edicts_commander_events.9.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.a
+		highlight = yes
+		custom_tooltip = global_edicts_commander_events.9.a.tt
+		hidden_effect = {
+			edict_commander_calculate_religion_strength = yes
+			edict_commander_enforce_religious_unity_all_states_that_can_convert = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.b
+		custom_tooltip = global_edicts_commander_events.9.a.tt
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_religion_strength = yes
+			edict_commander_enforce_religious_unity_states_with_missionary = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.c
+		custom_tooltip = global_edicts_commander_events.9.a.tt
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_religion_strength = yes
+			edict_commander_enforce_religious_unity_easiest_to_convert = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.dee
+		custom_tooltip = global_edicts_commander_events.9.a.tt
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_religion_strength = yes
+			set_variable = {
+				which = i
+				value = 5
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_enforce_religious_unity_easiest_to_convert = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.e
+		custom_tooltip = global_edicts_commander_events.9.a.tt
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_religion_strength = yes
+			set_variable = {
+				which = i
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_enforce_religious_unity_easiest_to_convert = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.f
+		edict_commander_set_edict_every_state = {
+			edict = edict_religious_unity
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.9.g
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.10
+	title = global_edicts_commander_events.10.t
+	desc = global_edicts_commander_events.10.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.10.a
 	}
 	after = {
 		safe_clr_country_flag = {
