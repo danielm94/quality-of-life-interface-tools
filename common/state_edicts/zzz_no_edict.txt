@@ -12,7 +12,4 @@ no_edict = {
         factor = 0
     }
     color = {255 255 255}
-    on_state_edict_enacted = {
-		edict_commander_add_cooldown_to_state = yes
-	}
 }
