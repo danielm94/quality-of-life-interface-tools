@@ -17,6 +17,45 @@ safe_clr_global_flag = {
 		clr_global_flag = $flag$
 	}
 }
+safe_clr_country_flag = {
+	if = {
+		limit = {
+			has_country_flag = $flag$
+		}
+		clr_country_flag = $flag$
+	}
+}
+
+safe_set_country_flag = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = $flag$
+			}
+		}
+		set_country_flag = $flag$
+	}
+}
+
+safe_clr_province_flag = {
+	if = {
+		limit = {
+			has_province_flag = $flag$
+		}
+		clr_province_flag = $flag$
+	}
+}
+
+safe_set_province_flag = {
+	if = {
+		limit = {
+			NOT = {
+				has_province_flag = $flag$
+			}
+		}
+		set_province_flag = $flag$
+	}
+}
 
 safe_toggle_global_flag = {
 	if = {
@@ -46,26 +85,6 @@ edict_commander_clear_all_trade_node_flags = {
 	edict_commander_clear_north_america_trade_node_flags = yes
 	edict_commander_clear_oceania_trade_node_flags = yes
 	edict_commander_clear_south_america_trade_node_flags = yes
-}
-
-safe_clr_country_flag = {
-	if = {
-		limit = {
-			has_country_flag = $flag$
-		}
-		clr_country_flag = $flag$
-	}
-}
-
-safe_set_country_flag = {
-	if = {
-		limit = {
-			NOT = {
-				has_country_flag = $flag$
-			}
-		}
-		set_country_flag = $flag$
-	}
 }
 
 edict_commander_set_europe_trade_node_flags = {
