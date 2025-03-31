@@ -275,6 +275,166 @@ country_event = {
 }
 
 country_event = {
+	id = global_edicts_commander_events.6
+	title = global_edicts_commander_events.6.t
+	desc = global_edicts_commander_events.6.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_find_cheapest_province_to_develop = {
+				edict = chinese_industrialization
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.b
+		highlight = yes
+		hidden_effect = {
+			set_variable = {
+				which = i
+				value = 6
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_find_cheapest_province_to_develop = {
+					edict = chinese_industrialization
+				}
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.c
+		highlight = yes
+		hidden_effect = {
+			set_variable = {
+				which = i
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_find_cheapest_province_to_develop = {
+					edict = chinese_industrialization
+				}
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.dee
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_province_production_score = yes
+			edict_commander_calculate_state_production_score = yes
+			edict_commander_find_highest_production_score = {
+				edict = chinese_industrialization
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.e
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_province_production_score = yes
+			edict_commander_calculate_state_production_score = yes
+			set_variable = {
+				which = i
+				value = 5
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_find_highest_production_score = {
+					edict = chinese_industrialization
+				}
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.f
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_province_production_score = yes
+			edict_commander_calculate_state_production_score = yes
+			set_variable = {
+				which = i
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_find_highest_production_score = {
+					edict = chinese_industrialization
+				}
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.g
+		edict_commander_set_edict_every_state = {
+			edict = chinese_industrialization
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.h
+		custom_tooltip = global_edicts_commander_events.6.h.tt
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_events.5
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.6.i
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
 	id = global_edicts_commander_events.7
 	title = global_edicts_commander_events.7.t
 	desc = global_edicts_commander_events.7.d

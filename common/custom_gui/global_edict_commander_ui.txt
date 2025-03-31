@@ -472,9 +472,11 @@ custom_button = {
 	trigger = {
 	}
 	effect = {
-		FROM = {
-			edict_commander_set_edict_every_state = {
-				edict = chinese_industrialization
+		FROM ={
+			hidden_effect = {
+				country_event = {
+					id = global_edicts_commander_events.6
+				}
 			}
 		}
 	}

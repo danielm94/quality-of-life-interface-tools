@@ -27,6 +27,20 @@
  global_edicts_commander_events.5.dee:0 "Apply the edict to every state."
  global_edicts_commander_events.5.e:0 "Nevermind."
 
+ global_edicts_commander_events.6.t:0 "Rapid Industrialization"
+ global_edicts_commander_events.6.d:0 "How would you like to apply the Rapid Industrialization Edict?"
+ global_edicts_commander_events.6.a:0 "Apply the edict to the state with the lowest development cost."
+ global_edicts_commander_events.6.b:0 "Apply the edict to the top 5 cheapest states to develop."
+ global_edicts_commander_events.6.c:0 "Apply the edict to the top 10 cheapest states to develop."
+ global_edicts_commander_events.6.dee:0 "Apply the edict to the state with the most total goods produced."
+ global_edicts_commander_events.6.e:0 "Apply the edict to the top 5 states with the most total goods produced."
+ global_edicts_commander_events.6.f:0 "Apply the edict to the top 10 states with the most total goods produced."
+ global_edicts_commander_events.6.g:0 "Apply the edict to every state."
+ global_edicts_commander_events.6.h:0 "I want to use the Encourage Development edict instead."
+ global_edicts_commander_events.6.h.tt:0 "Rapid Industrialization is better than Encourage Development in every way just so you know."
+ global_edicts_commander_events.6.i:0 "Nevermind."
+
+
  global_edicts_commander_events.7.t:0 "Increased Enlistment"
  global_edicts_commander_events.7.d:0 "How would you like to apply the Increased Enlistment Edict?"
  global_edicts_commander_events.7.a:0 "Apply the edict to the state with the highest manpower"
