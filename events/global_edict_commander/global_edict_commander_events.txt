@@ -1,5 +1,5 @@
 namespace = global_edicts_commander_events
-#Advancement
+
 country_event = {
 	id = global_edicts_commander_events.1
 	title = global_edicts_commander_events.1.t
@@ -32,7 +32,7 @@ country_event = {
 	}
 }
 
-#Centralization
+
 country_event = {
 	id = global_edicts_commander_events.2
 	title = global_edicts_commander_events.2.t
@@ -66,8 +66,7 @@ country_event = {
 		}
 	}
 }
-
-#Defensive
+e
 country_event = {
 	id = global_edicts_commander_events.3
 	title = global_edicts_commander_events.3.t
@@ -189,7 +188,6 @@ country_event = {
 	}
 }
 
-#Encourage Development
 country_event = {
 	id = global_edicts_commander_events.5
 	title = global_edicts_commander_events.5.t
@@ -205,9 +203,8 @@ country_event = {
 		name = global_edicts_commander_events.5.a
 		highlight = yes
 		hidden_effect = {
-			set_country_flag = find_cheapest_state_to_dev
-			country_event = {
-				id = global_edicts_commander_events.6
+			edict_commander_find_cheapest_province_to_develop = {
+				edict = edict_encourage_development
 			}
 		}
 	}
@@ -215,7 +212,6 @@ country_event = {
 		name = global_edicts_commander_events.5.b
 		highlight = yes
 		hidden_effect = {
-			set_country_flag = find_cheapest_state_to_dev
 			set_variable = {
 				which = i
 				value = 5
@@ -227,8 +223,8 @@ country_event = {
 						value = 1
 					}
 				}
-				country_event = {
-					id = global_edicts_commander_events.6
+				edict_commander_find_cheapest_province_to_develop = {
+					edict = edict_encourage_development
 				}
 				subtract_variable = {
 					which = i
@@ -241,7 +237,6 @@ country_event = {
 		name = global_edicts_commander_events.5.c
 		highlight = yes
 		hidden_effect = {
-			set_country_flag = find_cheapest_state_to_dev
 			set_variable = {
 				which = i
 				value = 10
@@ -253,8 +248,8 @@ country_event = {
 						value = 1
 					}
 				}
-				country_event = {
-					id = global_edicts_commander_events.6
+				edict_commander_find_cheapest_province_to_develop = {
+					edict = edict_encourage_development
 				}
 				subtract_variable = {
 					which = i
@@ -276,68 +271,6 @@ country_event = {
 		safe_clr_country_flag = {
 			flag = edict_event_enabled
 		}
-	}
-}
-
-country_event = {
-	id = global_edicts_commander_events.6
-	title = global_edicts_commander_events.5.t
-	desc = global_edicts_commander_events.5.d
-	picture = COURT_eventPicture
-	is_triggered_only = yes
-	hidden = yes
-	trigger = {
-		has_country_flag = find_cheapest_state_to_dev
-	}
-	immediate = {
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					can_change_state_edict = yes
-					is_state = yes
-					NOT = {
-						has_state_edict = edict_encourage_development
-					}
-				}
-				export_to_variable = {
-					which = province_dev_cost
-					value = modifier:local_development_cost
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_saved_global_event_target = cheapest_development_cost
-						}
-					}
-					save_global_event_target_as = cheapest_development_cost
-				}
-				else = {
-					if = {
-						limit = {
-							NOT = {
-								check_variable = {
-									which = province_dev_cost
-									which = event_target:cheapest_development_cost
-								}
-							}
-						}
-						save_global_event_target_as = cheapest_development_cost
-					}
-				}
-			}
-		}
-		event_target:cheapest_development_cost = {
-			edict_commander_set_edict_for_state = {
-				edict = edict_encourage_development
-			}
-		}
-		clear_global_event_target = cheapest_development_cost
-	}
-	option = {
-		name = global_edicts_commander_events.6.a
-	}
-	after = {
-		clr_country_flag = find_cheapest_state_to_dev
 	}
 }
 

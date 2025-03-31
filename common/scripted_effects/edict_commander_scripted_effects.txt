@@ -1762,3 +1762,49 @@ edict_commander_french_infrastructure_network_all_enabled_regions = {
 		}
 	}
 }
+
+edict_commander_find_cheapest_province_to_develop = {
+	every_owned_province = {
+		limit = {
+			can_change_state_edict = yes
+			is_state = yes
+			NOT = {
+				OR = {
+					has_state_edict = edict_encourage_development
+					has_state_edict = chinese_industrialization
+				}
+			}
+		}
+		export_to_variable = {
+			which = province_dev_cost
+			value = modifier:local_development_cost
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = cheapest_development_cost
+				}
+			}
+			save_global_event_target_as = cheapest_development_cost
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = province_dev_cost
+							which = event_target:cheapest_development_cost
+						}
+					}
+				}
+				save_global_event_target_as = cheapest_development_cost
+			}
+		}
+	}
+	event_target:cheapest_development_cost = {
+		edict_commander_set_edict_for_state = {
+			edict = $edict$
+		}
+	}
+	clear_global_event_target = cheapest_development_cost
+}
