@@ -464,7 +464,9 @@ country_event = {
 		highlight = yes
 		hidden_effect = {
 			edict_commander_calculate_trade_power_in_states = yes
-			edict_commander_protect_trade_highest_trade_power_state = yes
+			edict_commander_protect_trade_highest_trade_power_state = {
+				edict = edict_protect_trade
+			}
 		}
 	}
 	option = {
@@ -483,7 +485,9 @@ country_event = {
 						value = 1
 					}
 				}
-				edict_commander_protect_trade_highest_trade_power_state = yes
+				edict_commander_protect_trade_highest_trade_power_state = {
+					edict = edict_protect_trade
+				}
 				subtract_variable = {
 					which = i
 					value = 1
@@ -507,7 +511,9 @@ country_event = {
 						value = 1
 					}
 				}
-				edict_commander_protect_trade_highest_trade_power_state = yes
+				edict_commander_protect_trade_highest_trade_power_state = {
+					edict = edict_protect_trade
+				}
 				subtract_variable = {
 					which = i
 					value = 1
@@ -520,7 +526,9 @@ country_event = {
 		highlight = yes
 		hidden_effect = {
 			edict_commander_calculate_trade_power_in_states = yes
-			edict_commander_protect_trade_highest_trade_power_state_for_each_node = yes
+			edict_commander_protect_trade_highest_trade_power_state_for_each_node = {
+				edict = edict_protect_trade
+			}
 		}
 	}
 	option = {
@@ -539,7 +547,9 @@ country_event = {
 						value = 1
 					}
 				}
-				edict_commander_protect_trade_highest_trade_power_state_for_each_node = yes
+				edict_commander_protect_trade_highest_trade_power_state_for_each_node = {
+					edict = edict_protect_trade
+				}
 				subtract_variable = {
 					which = i
 					value = 1
@@ -1156,6 +1166,183 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.15.e
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.16
+	title = global_edicts_commander_events.16.t
+	desc = global_edicts_commander_events.16.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.16.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_french_infrastructure_network_all_enabled_regions = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.16.b
+		hidden_effect = {
+			edict_commander_set_edict_every_state = {
+				edict = french_infrastructure_network
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.16.c
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_movement_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.16.dee
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.17
+	title = global_edicts_commander_events.17.t
+	desc = global_edicts_commander_events.17.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_trade_power_in_states = yes
+			edict_commander_protect_trade_highest_trade_power_state = {
+				edict = protect_trade_empowered
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.b
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_trade_power_in_states = yes
+			set_variable = {
+				which = i
+				value = 5
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_protect_trade_highest_trade_power_state = {
+					edict = protect_trade_empowered
+				}
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.c
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_trade_power_in_states = yes
+			set_variable = {
+				which = i
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_protect_trade_highest_trade_power_state = {
+					edict = protect_trade_empowered
+				}
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.dee
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_trade_power_in_states = yes
+			edict_commander_protect_trade_highest_trade_power_state_for_each_node = {
+				edict = protect_trade_empowered
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.e
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_trade_power_in_states = yes
+			set_variable = {
+				which = i
+				value = 3
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_protect_trade_highest_trade_power_state_for_each_node = {
+					edict = protect_trade_empowered
+				}
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.f
+		edict_commander_protect_trade_every_state = {
+			edict = protect_trade_empowered
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.g
+		hidden_effect = {
+			country_event = {
+				id = global_edicts_commander_trade_config_events.1
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.17.h
 	}
 	after = {
 		safe_clr_country_flag = {
