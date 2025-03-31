@@ -17,8 +17,18 @@ country_event = {
 			flag = remain_in_trade_config_menu
 		}
 		hidden_effect = {
-			country_event = {
-				id = global_edicts_commander_events.8
+			if = {
+				limit = {
+					has_country_flag = fra_improve_trade_power_state_edict_flag
+				}
+				country_event = {
+					id = global_edicts_commander_events.17
+				}
+			}
+			else = {
+				country_event = {
+					id = global_edicts_commander_events.8
+				}
 			}
 		}
 	}
