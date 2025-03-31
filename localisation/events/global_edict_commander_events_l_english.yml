@@ -98,3 +98,11 @@
  global_edicts_commander_events.14.dee:0 "Apply the edict to the top 10 states with the highest total separatism."
  global_edicts_commander_events.14.e:0 "Apply the edict to every state."
  global_edicts_commander_events.14.f:0 "Nevermind"
+
+ global_edicts_commander_events.15.t:0 "Urbanization Edict"
+ global_edicts_commander_events.15.d:0 "How would you like to apply the Urbanization Edict?"
+ global_edicts_commander_events.15.a:0 "Apply the edict to the state with the most total goods produced."
+ global_edicts_commander_events.15.b:0 "Apply the edict to the top 5 states with the most total goods produced."
+ global_edicts_commander_events.15.c:0 "Apply the edict to the top 10 states with the most total goods produced."
+ global_edicts_commander_events.15.dee:0 "Apply the edict to every state."
+ global_edicts_commander_events.15.e:0 "Nevermind."

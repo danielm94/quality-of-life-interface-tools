@@ -1069,3 +1069,97 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = global_edicts_commander_events.15
+	title = global_edicts_commander_events.15.t
+	desc = global_edicts_commander_events.15.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.15.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_province_production_score = yes
+			edict_commander_calculate_state_production_score = yes
+			edict_commander_find_highest_production_score = {
+				edict = urbanization_state_edict
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.15.b
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_province_production_score = yes
+			edict_commander_calculate_state_production_score = yes
+			set_variable = {
+				which = i
+				value = 5
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_find_highest_production_score = {
+					edict = urbanization_state_edict
+				}
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.15.c
+		highlight = yes
+		hidden_effect = {
+			edict_commander_calculate_province_production_score = yes
+			edict_commander_calculate_state_production_score = yes
+			set_variable = {
+				which = i
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_find_highest_production_score = {
+					edict = urbanization_state_edict
+				}
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.15.dee
+		hidden_effect = {
+			edict_commander_set_edict_every_state = {
+				edict = urbanization_state_edict
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.15.e
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
