@@ -766,6 +766,7 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
 	id = global_edicts_commander_events.11
 	title = global_edicts_commander_events.11.t
@@ -781,16 +782,7 @@ country_event = {
 		name = global_edicts_commander_events.11.a
 		highlight = yes
 		hidden_effect = {
-			every_owned_province = {
-				limit ={
-					is_state = yes
-					can_change_state_edict = yes
-					is_reformation_center = yes
-				}
-				edict_commander_set_edict_for_state = {
-					edict = edict_religion_enforced
-				}
-			}
+			edict_commander_religion_enforced_all_states_with_center = yes
 		}
 	}
 	option = {
@@ -803,6 +795,95 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.11.c
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.12
+	title = global_edicts_commander_events.12.t
+	desc = global_edicts_commander_events.12.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.12.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_edict_of_absolutism_any_devastation = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.12.b
+		hidden_effect = {
+			edict_commander_edict_of_absolutism_calculate_state_devastation = yes
+			edict_commander_edict_of_absolutism_highest_devastation = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.12.c
+		hidden_effect = {
+			edict_commander_edict_of_absolutism_calculate_state_devastation = yes
+			set_variable = {
+				which = i
+				value = 5
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_edict_of_absolutism_highest_devastation = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.12.dee
+		hidden_effect = {
+			edict_commander_edict_of_absolutism_calculate_state_devastation = yes
+			set_variable = {
+				which = i
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_edict_of_absolutism_highest_devastation = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.12.e
+		hidden_effect = {
+			edict_commander_set_edict_every_state = {
+				edict = edict_of_absolutism
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.12.f
 	}
 	after = {
 		safe_clr_country_flag = {

@@ -1022,6 +1022,9 @@ edict_commander_feudal_de_jure_law_calculate_state_unrest = {
 			NOT = {
 				has_province_flag = calculated_unrest_already
 			}
+			NOT = {
+				has_state_edict = edict_feudal_de_jure_law
+			}
 		}
 		export_to_variable = {
 			which = local_unrest
@@ -1068,33 +1071,33 @@ edict_commander_feudal_de_jure_law_calculate_state_unrest = {
 			flag = calculated_unrest_already
 		}
 	}
-	every_owned_province = {
-		limit = {
-			is_state = yes
-			can_change_state_edict = yes
-			unrest = 0.001
-		}
-	}
 }
+
 edict_commander_feudal_de_jure_law_any_with_unrest = {
 	every_owned_province = {
 		limit = {
 			is_state = yes
 			can_change_state_edict = yes
 			unrest = 0.001
+			NOT = {
+				has_state_edict = edict_feudal_de_jure_law
+			}
 		}
-
 		edict_commander_set_edict_for_state = {
 			edict = edict_feudal_de_jure_law
 		}
 	}
 }
+
 edict_commander_feudal_de_jure_law_highest_unrest_state = {
 	every_owned_province = {
 		limit = {
 			is_state = yes
 			can_change_state_edict = yes
 			unrest = 0.001
+			NOT = {
+				has_state_edict = edict_feudal_de_jure_law
+			}
 		}
 		if = {
 			limit = {
@@ -1122,4 +1125,134 @@ edict_commander_feudal_de_jure_law_highest_unrest_state = {
 		}
 	}
 	clear_global_event_target = highest_unrest_state
+}
+
+edict_commander_religion_enforced_all_states_with_center = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			is_reformation_center = yes
+			NOT = {
+				has_state_edict = edict_religion_enforced
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_religion_enforced
+		}
+	}
+}
+
+edict_commander_edict_of_absolutism_any_devastation = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			devastation = 0.001
+			NOT = {
+				has_state_edict = edict_of_absolutism
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_of_absolutism
+		}
+	}
+}
+
+edict_commander_edict_of_absolutism_calculate_state_devastation = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_of_absolutism
+			}
+			NOT = {
+				has_province_flag = calculated_devastation_already
+			}
+		}
+		export_to_variable = {
+			which = local_devastation
+			value = trigger_value:devastation
+		}
+		set_variable = {
+			which = state_devastation
+			which = local_devastation
+		}
+		set_province_flag = calculated_devastation_already
+		every_province_in_state = {
+			limit = {
+				NOT = {
+					has_province_flag = calculated_devastation_already
+				}
+			}
+			export_to_variable = {
+				which = local_devastation
+				value = trigger_value:devastation
+			}
+			set_variable = {
+				which = state_devastation
+				which = local_devastation
+			}
+			set_province_flag = calculated_devastation_already
+			PREV = {
+				change_variable = {
+					which = state_devastation
+					which = PREV
+				}
+			}
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = state_devastation
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		safe_clr_province_flag = {
+			flag = calculated_devastation_already
+		}
+	}
+}
+
+edict_commander_edict_of_absolutism_highest_devastation = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_of_absolutism
+			}
+			check_variable = {
+				which = state_devastation
+				value = 0.001
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_devastation_state
+				}
+			}
+			save_global_event_target_as = highest_devastation_state
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = state_devastation
+						which = event_target:highest_devastation_state
+					}
+				}
+				save_global_event_target_as = highest_devastation_state
+			}
+		}
+	}
+	event_target:highest_devastation_state = {
+		edict_commander_set_edict_for_state = {
+			edict = edict_of_absolutism
+		}
+	}
+	clear_global_event_target = highest_devastation_state
 }

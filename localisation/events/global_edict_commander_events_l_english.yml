@@ -72,3 +72,12 @@
  global_edicts_commander_events.11.a:0 "Apply the edict to every state that has a center of reformation."
  global_edicts_commander_events.11.b:0 "Apply the edict to every state."
  global_edicts_commander_events.11.c:0 "Nevermind"
+
+ global_edicts_commander_events.12.t:0 "Edict of Absolutism"
+ global_edicts_commander_events.12.d:0 "How would you like to apply the Edict of Absolutism?"
+ global_edicts_commander_events.12.a:0 "Apply the edict to every state with devastation."
+ global_edicts_commander_events.12.b:0 "Apply the edict to the state with the most devastation."
+ global_edicts_commander_events.12.c:0 "Apply the edict to the top 5 states with the most devastation."
+ global_edicts_commander_events.12.dee:0 "Apply the edict to the top 10 states with the most devastation."
+ global_edicts_commander_events.12.e:0 "Apply the edict to every state."
+ global_edicts_commander_events.12.f:0 "Nevermind"
