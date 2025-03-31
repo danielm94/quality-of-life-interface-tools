@@ -123,4 +123,4 @@
  global_edicts_commander_events.17.e:0 "Apply the edict to the top 3 states with the most trade power in every trade node."
  global_edicts_commander_events.17.f:0 "Apply the edict to every state."
  global_edicts_commander_events.17.g:0 "Advanced Configuration Settings"
- global_edicts_commander_events.17.i:0 "Nevermind"
+ global_edicts_commander_events.17.h:0 "Nevermind"
