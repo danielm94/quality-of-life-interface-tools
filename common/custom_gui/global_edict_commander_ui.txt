@@ -1,5 +1,4 @@
 #TODO: Refactor potential for all buttons once you redo the UI
-
 custom_window = {
 	name = global_edicts_window
 	potential = {
@@ -278,7 +277,7 @@ custom_button = {
 	}
 	effect = {
 		hidden_effect = {
-			FROM ={
+			FROM = {
 				country_event = {
 					id = global_edicts_commander_events.11
 				}
@@ -303,7 +302,7 @@ custom_button = {
 	}
 	effect = {
 		hidden_effect = {
-			FROM ={
+			FROM = {
 				country_event = {
 					id = global_edicts_commander_events.12
 				}
@@ -328,7 +327,7 @@ custom_button = {
 	}
 	effect = {
 		hidden_effect = {
-			FROM ={
+			FROM = {
 				country_event = {
 					id = global_edicts_commander_events.13
 				}
@@ -361,8 +360,8 @@ custom_button = {
 }
 
 custom_button = {
-	name = global_edicts_local_seperatism_button
-	tooltip = global_edicts_local_seperatism_button_tt
+	name = global_edicts_local_separatism_button
+	tooltip = global_edicts_local_separatism_button_tt
 	potential = {
 		FROM = {
 			NOT = {
@@ -376,8 +375,10 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			edict_commander_set_edict_every_state = {
-				edict = state_integration_state_edict
+			hidden_effect = {
+				country_event = {
+					id = global_edicts_commander_events.14
+				}
 			}
 		}
 	}

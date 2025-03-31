@@ -89,3 +89,12 @@
  global_edicts_commander_events.13.c:0 "Apply the edict to the top 10 states with the highest total tax income."
  global_edicts_commander_events.13.dee:0 "Apply the edict to every state."
  global_edicts_commander_events.13.e:0 "Nevermind."
+
+ global_edicts_commander_events.14.t:0 "State Integration Edict"
+ global_edicts_commander_events.14.d:0 "How would you like to apply the State Integration Edict?"
+ global_edicts_commander_events.14.a:0 "Apply the edict to every state with separatism."
+ global_edicts_commander_events.14.b:0 "Apply the edict to the state with the highest total separatism."
+ global_edicts_commander_events.14.c:0 "Apply the edict to the top 5 states with the highest total separatism."
+ global_edicts_commander_events.14.dee:0 "Apply the edict to the top 10 states with the highest total separatism."
+ global_edicts_commander_events.14.e:0 "Apply the edict to every state."
+ global_edicts_commander_events.14.f:0 "Nevermind"

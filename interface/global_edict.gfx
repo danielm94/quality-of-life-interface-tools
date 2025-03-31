@@ -105,7 +105,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_global_edicts_local_seperatism_button"
+		name = "GFX_global_edicts_local_separatism_button"
 		texturefile = "gfx/interface/local_years_of_nationalism.dds"
 		loadType = "INGAME"
 		transparencecheck = yes

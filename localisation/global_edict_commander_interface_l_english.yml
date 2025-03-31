@@ -14,7 +14,7 @@
  global_edicts_devastation_button_tt: "Edict of Absolutism\nMonthly Devstation: §G-0.25%§!"
  global_edicts_taxes_button_tt: "Feudal Taxes Edict\nLocal Tax Modifier: §G+50.0%§!"
  global_edicts_local_religious_unity_button_tt: "Religious Tolerance Edict\nLocal Religious Unity Contribution: §Y-50.0%§!"
- global_edicts_local_seperatism_button_tt: "State Integration Edict\nYears of Separatism: §G-10§!"
+ global_edicts_local_separatism_button_tt: "State Integration Edict\nYears of Separatism: §G-10§!"
  global_edicts_goods_produced_button_tt: "Urbanization Edict\nLocal Goods Produced Modifier: §G+33.0%§!"
  global_edicts_movement_button_tt: "French Infrastructure Network\nFriendly Movement Speed: §G+20.0%§!"
  global_edicts_french_trade_button_tt: "§BProt§Wect T§Rrade\nLocal Trade Power §G+75.0%§!"

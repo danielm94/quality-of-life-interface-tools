@@ -977,3 +977,95 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = global_edicts_commander_events.14
+	title = global_edicts_commander_events.14.t
+	desc = global_edicts_commander_events.14.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.14.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_state_integration_edict_any_with_separatism = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.14.b
+		highlight = yes
+		hidden_effect = {
+			edict_commander_state_integration_edict_calculate_state_nationalism = yes
+			edict_commander_state_integration_edict_highest_separatism_state = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.14.c
+		highlight = yes
+		hidden_effect = {
+			edict_commander_state_integration_edict_calculate_state_nationalism = yes
+			set_variable = {
+				which = i
+				value = 5
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_state_integration_edict_highest_separatism_state = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.14.dee
+		highlight = yes
+		hidden_effect = {
+			edict_commander_state_integration_edict_calculate_state_nationalism = yes
+			set_variable = {
+				which = i
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_state_integration_edict_highest_separatism_state = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.14.e
+		hidden_effect = {
+			edict_commander_set_edict_every_state = {
+				edict = state_integration_state_edict
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.14.f
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
