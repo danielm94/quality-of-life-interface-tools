@@ -327,9 +327,11 @@ custom_button = {
 	trigger = {
 	}
 	effect = {
-		FROM = {
-			edict_commander_set_edict_every_state = {
-				edict = feudal_taxes_state_edict
+		hidden_effect = {
+			FROM ={
+				country_event = {
+					id = global_edicts_commander_events.13
+				}
 			}
 		}
 	}

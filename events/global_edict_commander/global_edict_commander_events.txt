@@ -891,3 +891,89 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = global_edicts_commander_events.13
+	title = global_edicts_commander_events.13.t
+	desc = global_edicts_commander_events.13.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.13.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_feudal_taxes_state_edict_calculate_province_monthly_tax = yes
+			edict_commander_feudal_taxes_state_edict_calculate_state_monthly_tax = yes
+			edict_commander_feudal_taxes_state_edict_find_highest_tax_state = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.13.b
+		hidden_effect = {
+			edict_commander_feudal_taxes_state_edict_calculate_province_monthly_tax = yes
+			edict_commander_feudal_taxes_state_edict_calculate_state_monthly_tax = yes
+			set_variable = {
+				which = i
+				value = 5
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_feudal_taxes_state_edict_find_highest_tax_state = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.13.c
+		hidden_effect = {
+			edict_commander_feudal_taxes_state_edict_calculate_province_monthly_tax = yes
+			edict_commander_feudal_taxes_state_edict_calculate_state_monthly_tax = yes
+			set_variable = {
+				which = i
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_feudal_taxes_state_edict_find_highest_tax_state = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.13.dee
+		hidden_effect = {
+			edict_commander_set_edict_every_state = {
+				edict = feudal_taxes_state_edict
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.13.e
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}

@@ -1256,3 +1256,163 @@ edict_commander_edict_of_absolutism_highest_devastation = {
 	}
 	clear_global_event_target = highest_devastation_state
 }
+
+edict_commander_feudal_taxes_state_edict_calculate_province_monthly_tax = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = feudal_taxes_state_edict
+			}
+		}
+		export_to_variable = {
+			which = local_yearly_tax_income
+			value = modifier:tax_income
+		}
+		export_to_variable = {
+			which = local_base_tax
+			value = trigger_value:base_tax
+		}
+		set_variable = {
+			which = local_monthly_tax_income
+			which = local_yearly_tax_income
+		}
+		change_variable = {
+			which = local_monthly_tax_income
+			which = local_base_tax
+		}
+		divide_variable = {
+			which = local_monthly_tax_income
+			value = 12
+		}
+		export_to_variable = {
+			which = local_tax_mod
+			value = modifier:local_tax_modifier
+		}
+		export_to_variable = {
+			which = global_tax_mod
+			value = modifier:global_tax_modifier
+			who = ROOT
+		}
+		set_variable = {
+			which = tax_modifier
+			which = global_tax_mod
+		}
+		change_variable = {
+			which = tax_modifier
+			which = local_tax_mod
+		}
+		multiply_variable = {
+			which = local_monthly_tax_income
+			which = tax_modifier
+		}
+		export_to_variable = {
+			which = local_autonomy_raw
+			value = local_autonomy
+		}
+		set_variable = {
+			which = local_autonomy
+			value = 100
+		}
+		subtract_variable = {
+			which = local_autonomy
+			which = local_autonomy_raw
+		}
+		divide_variable = {
+			which = local_autonomy
+			value = 100
+		}
+		multiply_variable = {
+			which = local_monthly_tax_income
+			which = local_autonomy
+		}
+	}
+}
+
+edict_commander_feudal_taxes_state_edict_calculate_state_monthly_tax = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = feudal_taxes_state_edict
+			}
+			NOT = {
+				has_province_flag = calculated_tax_already
+			}
+		}
+		set_variable = {
+			which = state_monthly_tax_income
+			which = local_monthly_tax_income
+		}
+		set_province_flag = calculated_tax_already
+		every_province_in_state = {
+			limit = {
+				NOT = {
+					has_province_flag = calculated_tax_already
+				}
+			}
+			set_variable = {
+				which = state_monthly_tax_income
+				which = local_monthly_tax_income
+			}
+			PREV = {
+				change_variable = {
+					which = state_monthly_tax_income
+					which = PREV
+				}
+			}
+			set_province_flag = calculated_tax_already
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = state_monthly_tax_income
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		limit = {
+			has_province_flag = calculated_tax_already
+		}
+		clr_province_flag = calculated_tax_already
+	}
+}
+
+edict_commander_feudal_taxes_state_edict_find_highest_tax_state = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = feudal_taxes_state_edict
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_tax_state
+				}
+			}
+			save_global_event_target_as = highest_tax_state
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = state_monthly_tax_income
+						which = event_target:highest_tax_state
+					}
+				}
+				save_global_event_target_as = highest_tax_state
+			}
+		}
+	}
+	event_target:highest_tax_state = {
+		edict_commander_set_edict_for_state = {
+			edict = feudal_taxes_state_edict
+		}
+	}
+	clear_global_event_target = highest_tax_state
+}

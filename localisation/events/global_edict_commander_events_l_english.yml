@@ -81,3 +81,11 @@
  global_edicts_commander_events.12.dee:0 "Apply the edict to the top 10 states with the most devastation."
  global_edicts_commander_events.12.e:0 "Apply the edict to every state."
  global_edicts_commander_events.12.f:0 "Nevermind"
+
+ global_edicts_commander_events.13.t:0 "Feudal Taxes Edict"
+ global_edicts_commander_events.13.d:0 "How would you like to apply the Feudal Taxes Edict?"
+ global_edicts_commander_events.13.a:0 "Apply the edict to the state with the highest total tax income."
+ global_edicts_commander_events.13.b:0 "Apply the edict to the top 5 states with the highest total tax income."
+ global_edicts_commander_events.13.c:0 "Apply the edict to the top 10 states with the highest total tax income."
+ global_edicts_commander_events.13.dee:0 "Apply the edict to every state."
+ global_edicts_commander_events.13.e:0 "Nevermind."
