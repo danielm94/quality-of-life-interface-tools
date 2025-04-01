@@ -66,7 +66,7 @@ country_event = {
 		}
 	}
 }
-e
+
 country_event = {
 	id = global_edicts_commander_events.3
 	title = global_edicts_commander_events.3.t
@@ -1436,6 +1436,95 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.17.h
+	}
+	after = {
+		safe_clr_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+}
+
+country_event = {
+	id = global_edicts_commander_events.18
+	title = global_edicts_commander_events.18.t
+	desc = global_edicts_commander_events.18.d
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		safe_set_country_flag = {
+			flag = edict_event_enabled
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.18.a
+		highlight = yes
+		hidden_effect = {
+			edict_commander_edict_of_governance_calculate_province_gov_cost = yes
+			edict_commander_edict_of_governance_calculate_state_gov_cost = yes
+			edict_commander_edict_of_governance_highest_governing_cost_state = yes
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.18.b
+		highlight = yes
+		hidden_effect = {
+			edict_commander_edict_of_governance_calculate_province_gov_cost = yes
+			edict_commander_edict_of_governance_calculate_state_gov_cost = yes
+			
+			set_variable = {
+				which = i
+				value = 5
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_edict_of_governance_highest_governing_cost_state = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.18.c
+		highlight = yes
+		hidden_effect = {
+			edict_commander_edict_of_governance_calculate_province_gov_cost = yes
+			edict_commander_edict_of_governance_calculate_state_gov_cost = yes
+			set_variable = {
+				which = i
+				value = 10
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = i
+						value = 1
+					}
+				}
+				edict_commander_edict_of_governance_highest_governing_cost_state = yes
+				subtract_variable = {
+					which = i
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.18.dee
+		hidden_effect = {
+			edict_commander_set_edict_every_state = {
+				edict = edict_of_governance
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.18.e
 	}
 	after = {
 		safe_clr_country_flag = {

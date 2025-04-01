@@ -35,6 +35,16 @@ edict_commander_set_edict_every_state = {
 	}
 }
 
+edict_commander_clear_all_state_edicts = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+		}
+		set_state_edict = no_edict
+	}
+}
+
 edict_commander_advancement_effort_only_with_growth = {
 	every_owned_province = {
 		limit = {
@@ -1715,9 +1725,6 @@ edict_commander_find_highest_production_score = {
 					has_state_edict = urbanization_state_edict
 				}
 			}
-			NOT = {
-				has_province_flag = calculated_production_score_already
-			}
 		}
 		if = {
 			limit = {
@@ -1807,4 +1814,127 @@ edict_commander_find_cheapest_province_to_develop = {
 		}
 	}
 	clear_global_event_target = cheapest_development_cost
+}
+
+edict_commander_edict_of_governance_calculate_province_gov_cost = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_of_governance
+			}
+		}
+		export_to_variable = {
+			which = dev
+			value = development
+		}
+		set_variable = {
+			which = local_governing_cost
+			which = dev
+		}
+		set_variable = {
+			which = local_governing_cost_modifier
+			value = 1
+		}
+		export_to_variable = {
+			which = local_governing_cost_modifier_raw
+			value = modifier:local_governing_cost
+		}
+		change_variable = {
+			which = local_governing_cost_modifier
+			which = local_governing_cost_modifier_raw
+		}
+		multiply_variable = {
+			which = local_governing_cost
+			which = local_governing_cost_modifier
+		}
+	}
+}
+
+edict_commander_edict_of_governance_calculate_state_gov_cost = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_of_governance
+			}
+			NOT = {
+				has_province_flag = calculated_gov_cost_already
+			}
+		}
+		set_variable = {
+			which = state_governing_cost
+			which = local_governing_cost
+		}
+		set_province_flag = calculated_gov_cost_already
+		every_province_in_state = {
+			limit = {
+				NOT = {
+					has_province_flag = calculated_gov_cost_already
+				}
+			}
+			set_variable = {
+				which = state_governing_cost
+				which = local_governing_cost
+			}
+			PREV = {
+				change_variable = {
+					which = state_governing_cost
+					which = PREV
+				}
+			}
+			set_province_flag = calculated_gov_cost_already
+		}
+		every_province_in_state = {
+			set_variable = {
+				which = state_governing_cost
+				which = PREV
+			}
+		}
+	}
+	every_owned_province = {
+		limit = {
+			has_province_flag = calculated_gov_cost_already
+		}
+		clr_province_flag = calculated_gov_cost_already
+	}
+}
+
+edict_commander_edict_of_governance_highest_governing_cost_state = {
+	every_owned_province = {
+		limit = {
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_of_governance
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_saved_global_event_target = highest_governing_cost_province
+				}
+			}
+			save_global_event_target_as = highest_governing_cost_province
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = state_governing_cost
+						which = event_target:highest_governing_cost_province
+					}
+				}
+				save_global_event_target_as = highest_governing_cost_province
+			}
+		}
+	}
+	event_target:highest_governing_cost_province = {
+		edict_commander_set_edict_for_state = {
+			edict = edict_of_governance
+		}
+	}
+	clear_global_event_target = highest_governing_cost_province
 }

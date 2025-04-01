@@ -128,8 +128,8 @@
  global_edicts_commander_events.16.c:0 "Advanced Options"
  global_edicts_commander_events.16.dee:0 "Nevermind."
 
- global_edicts_commander_events.17.t:0 "@FRA §BProt§!§Wect T§!§Rrade§! @FRA"
- global_edicts_commander_events.17.d:0 "How would you like to apply the Protect Trade Edict?"
+ global_edicts_commander_events.17.t:0 "Promote Trade"
+ global_edicts_commander_events.17.d:0 "How would you like to apply the Promote Trade Edict?"
  global_edicts_commander_events.17.a:0 "Apply the edict to the state with the most trade power"
  global_edicts_commander_events.17.b:0 "Apply the edict to the top 5 states with the most trade power."
  global_edicts_commander_events.17.c:0 "Apply the edict to the top 10 states with the most trade power."
@@ -138,3 +138,11 @@
  global_edicts_commander_events.17.f:0 "Apply the edict to every state."
  global_edicts_commander_events.17.g:0 "Advanced Configuration Settings"
  global_edicts_commander_events.17.h:0 "Nevermind"
+
+ global_edicts_commander_events.18.t:0 "Edict of Governance"
+ global_edicts_commander_events.18.d:0 "How would you like to apply the Edict of Governance?"
+ global_edicts_commander_events.18.a:0 "Apply the edict to the state with the highest governing cost."
+ global_edicts_commander_events.18.b:0 "Apply the edict to the top 5 states with the highest governing cost."
+ global_edicts_commander_events.18.c:0 "Apply the edict to the top 10 states with the highest governing cost."
+ global_edicts_commander_events.18.dee:0 "Apply the edict to every state."
+ global_edicts_commander_events.18.e:0 "Nevermind."
