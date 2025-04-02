@@ -3,58 +3,55 @@ on_startup = {
 	set_all_movement_edict_flags = yes
 }
 
+on_institution_embracement = {
+	if = {
+		limit = {
+			ai = no
+			is_lacking_institutions = no
+		}
+		every_owned_province = {
+			limit = {
+				is_state = yes
+				has_state_edict = edict_advancement_effort
+				can_change_state_edict = yes
+			}
+			set_state_edict = no_edict
+		}
+	}
+}
+
 on_province_religion_converted = {
 	if = {
 		limit = {
 			owner = {
 				ai = no
 			}
-			is_state = yes
-			has_state_edict = edict_religious_unity
-			religion = owner
 		}
 		owner = {
-			save_event_target_as = province_owner
+			edict_commander_calculate_religion_strength = yes
+			edict_commander_enforce_religious_unity_easiest_to_convert = yes
 		}
-		set_variable = {
-			which = remove_the_edict
-			value = 1
-		}
-		every_province_in_state = {
-			limit = {
-				owned_by = event_target:province_owner
-			}
-			save_event_target_as = province_to_check
-			if = {
+		#Clean up edict
+		owner = {
+			every_owned_province = {
 				limit = {
-					NOT = {
-						religion = event_target:province_owner
-					}
-					NOT = {
-						event_target:province_owner = {
-							has_harmonized_with = event_target:province_to_check
+					is_state = yes
+					has_state_edict = edict_religious_unity
+					can_change_state_edict = yes
+					all_province_in_state = {
+						OR = {
+							religion = owner
+							owner = {
+								has_harmonized_with = PREV
+							}
+							owner = {
+								secondary_religion = PREV
+							}
 						}
 					}
-					NOT = {
-						event_target:province_owner = {
-							secondary_religion = event_target:province_to_check
-						}
-					}
 				}
-				set_variable = {
-					which = remove_the_edict
-					value = 0
-				}
+				set_state_edict = no_edict
 			}
-		}
-		if = {
-			limit = {
-				check_variable = {
-					which = remove_the_edict
-					value = 1
-				}
-			}
-			set_state_edict = no_edict
 		}
 	}
 }
@@ -65,19 +62,36 @@ on_siege_lost_province = {
 			owner = {
 				ai = no
 			}
-			NOT = {
-				has_state_edict = edict_defensive_edict
-			}
 		}
 		if = {
 			limit = {
-				any_province_in_state = {
-					has_fort_building_trigger = yes
-					controlled_by = owner
+				NOT = {
+					has_state_edict = edict_defensive_edict
 				}
 			}
-			edict_commander_set_edict_for_state = {
-				edict = edict_defensive_edict
+			if = {
+				limit = {
+					any_province_in_state = {
+						has_fort_building_trigger = yes
+						controlled_by = owner
+					}
+				}
+				edict_commander_set_edict_for_state = {
+					edict = edict_defensive_edict
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = {
+						any_province_in_state = {
+							has_fort_building_trigger = yes
+							controlled_by = owner
+						}
+					}
+				}
+				set_state_edict = no_edict
 			}
 		}
 	}
