@@ -48,7 +48,6 @@ country_event = {
 		name = global_edicts_commander_events.2.a
 		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_autonomy_floor_for_states = yes
 			edict_commander_centralization_effort_only_with_excess_autonomy = yes
 		}
 	}
