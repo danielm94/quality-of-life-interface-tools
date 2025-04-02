@@ -6,6 +6,9 @@ on_startup = {
 on_province_religion_converted = {
 	if = {
 		limit = {
+			owner = {
+				ai = no
+			}
 			is_state = yes
 			has_state_edict = edict_religious_unity
 			religion = owner
@@ -21,10 +24,21 @@ on_province_religion_converted = {
 			limit = {
 				owned_by = event_target:province_owner
 			}
+			save_event_target_as = province_to_check
 			if = {
 				limit = {
 					NOT = {
 						religion = event_target:province_owner
+					}
+					NOT = {
+						event_target:province_owner = {
+							has_harmonized_with = event_target:province_to_check
+						}
+					}
+					NOT = {
+						event_target:province_owner = {
+							secondary_religion = event_target:province_to_check
+						}
 					}
 				}
 				set_variable = {
@@ -65,6 +79,60 @@ on_siege_lost_province = {
 			edict_commander_set_edict_for_state = {
 				edict = edict_defensive_edict
 			}
+		}
+	}
+}
+
+on_adm_development = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+			}
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_encourage_development
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_encourage_development
+		}
+	}
+}
+
+on_dip_development = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+			}
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_encourage_development
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_encourage_development
+		}
+	}
+}
+
+on_mil_development = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+			}
+			is_state = yes
+			can_change_state_edict = yes
+			NOT = {
+				has_state_edict = edict_encourage_development
+			}
+		}
+		edict_commander_set_edict_for_state = {
+			edict = edict_encourage_development
 		}
 	}
 }
