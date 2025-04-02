@@ -1,5 +1,4 @@
 namespace = global_edicts_commander_events
-
 country_event = {
 	id = global_edicts_commander_events.1
 	title = global_edicts_commander_events.1.t
@@ -31,7 +30,6 @@ country_event = {
 		}
 	}
 }
-
 
 country_event = {
 	id = global_edicts_commander_events.2
@@ -1470,7 +1468,6 @@ country_event = {
 		hidden_effect = {
 			edict_commander_edict_of_governance_calculate_province_gov_cost = yes
 			edict_commander_edict_of_governance_calculate_state_gov_cost = yes
-			
 			set_variable = {
 				which = i
 				value = 5
