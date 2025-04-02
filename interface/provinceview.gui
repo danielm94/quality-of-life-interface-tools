@@ -3026,21 +3026,21 @@ guiTypes = {
 				guiButtonType = {
 					name = "global_edicts_no_edicts_button"
 					scripted=yes
-					position = { x = 40 y = 622 }
+					position = { x = 45 y = 618 }
 					quadTextureSprite ="GFX_global_edicts_no_edicts_button"
 					shortcut="DEL"
 				}	
 				guiButtonType = {
 					name = "global_edicts_lock_state_button"
 					scripted = yes
-					position = { x = 141 y = 622 }
+					position = { x = 141 y = 618 }
 					quadTextureSprite = "GFX_global_edicts_lock_state_button"
 					shortcut="Shift+W"
 				}
 				guiButtonType = {
 					name = "global_edicts_settings_button"
 					scripted = yes
-					position = { x = 257 y = 622 }
+					position = { x = 252 y = 618 }
 					quadTextureSprite = "GFX_global_edicts_settings_button"
 				}
 			}
