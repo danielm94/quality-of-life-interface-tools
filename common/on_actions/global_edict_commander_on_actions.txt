@@ -11,7 +11,7 @@ on_province_religion_converted = {
 			religion = owner
 		}
 		owner = {
-			save_event_target_as = dude
+			save_event_target_as = province_owner
 		}
 		set_variable = {
 			which = remove_the_edict
@@ -19,12 +19,12 @@ on_province_religion_converted = {
 		}
 		every_province_in_state = {
 			limit = {
-				owned_by = event_target:dude
+				owned_by = event_target:province_owner
 			}
 			if = {
 				limit = {
 					NOT = {
-						religion = event_target:dude
+						religion = event_target:province_owner
 					}
 				}
 				set_variable = {
@@ -41,6 +41,30 @@ on_province_religion_converted = {
 				}
 			}
 			set_state_edict = no_edict
+		}
+	}
+}
+
+on_siege_lost_province = {
+	if = {
+		limit = {
+			owner = {
+				ai = no
+			}
+			NOT = {
+				has_state_edict = edict_defensive_edict
+			}
+		}
+		if = {
+			limit = {
+				any_province_in_state = {
+					has_fort_building_trigger = yes
+					controlled_by = owner
+				}
+			}
+			edict_commander_set_edict_for_state = {
+				edict = edict_defensive_edict
+			}
 		}
 	}
 }
