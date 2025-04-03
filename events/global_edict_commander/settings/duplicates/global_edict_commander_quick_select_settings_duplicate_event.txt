@@ -1,6 +1,6 @@
-namespace = global_edict_commander_quick_select_settings_event
+namespace = global_edict_commander_quick_select_settings_duplicate_event
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.1
+	id = global_edict_commander_quick_select_settings_duplicate_event.1
 	title = global_edict_commander_quick_select_settings_event.1.t
 	desc = global_edict_commander_quick_select_settings_event.1.d
 	picture = BIG_BOOK_eventPicture
@@ -542,7 +542,7 @@ country_event = {
 
 # Advancement Effort Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.2
+	id = global_edict_commander_quick_select_settings_duplicate_event.2
 	title = global_edict_commander_quick_select_settings_event.2.t
 	desc = global_edict_commander_quick_select_settings_event.2.d
 	picture = BIG_BOOK_eventPicture
@@ -654,7 +654,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.2
+				id = global_edict_commander_quick_select_settings_event.2
 			}
 		}
 	}
@@ -662,7 +662,7 @@ country_event = {
 
 # Centralization Effort Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.3
+	id = global_edict_commander_quick_select_settings_duplicate_event.3
 	title = global_edict_commander_quick_select_settings_event.3.t
 	desc = global_edict_commander_quick_select_settings_event.3.d
 	picture = BIG_BOOK_eventPicture
@@ -774,7 +774,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.3
+				id = global_edict_commander_quick_select_settings_event.3
 			}
 		}
 	}
@@ -782,7 +782,7 @@ country_event = {
 
 # Defensive Edict Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.4	# Corresponds to global_edicts_commander_events.3
+	id = global_edict_commander_quick_select_settings_duplicate_event.4	# Corresponds to global_edicts_commander_events.3
 	title = global_edict_commander_quick_select_settings_event.4.t
 	desc = global_edict_commander_quick_select_settings_event.4.d
 	picture = BIG_BOOK_eventPicture
@@ -927,7 +927,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.4
+				id = global_edict_commander_quick_select_settings_event.4
 			}
 		}
 	}
@@ -935,7 +935,7 @@ country_event = {
 
 # Encourage Development Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.5	# Corresponds to global_edicts_commander_events.5
+	id = global_edict_commander_quick_select_settings_duplicate_event.5	# Corresponds to global_edicts_commander_events.5
 	title = global_edict_commander_quick_select_settings_event.5.t
 	desc = global_edict_commander_quick_select_settings_event.5.d
 	picture = BIG_BOOK_eventPicture
@@ -1109,7 +1109,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.5
+				id = global_edict_commander_quick_select_settings_event.5
 			}
 		}
 	}
@@ -1117,7 +1117,7 @@ country_event = {
 
 # Rapid Industrialization Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.6	# Corresponds to global_edicts_commander_events.6
+	id = global_edict_commander_quick_select_settings_duplicate_event.6	# Corresponds to global_edicts_commander_events.6
 	title = global_edict_commander_quick_select_settings_event.6.t
 	desc = global_edict_commander_quick_select_settings_event.6.d
 	picture = BIG_BOOK_eventPicture
@@ -1384,7 +1384,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.6
+				id = global_edict_commander_quick_select_settings_event.6
 			}
 		}
 	}
@@ -1392,7 +1392,7 @@ country_event = {
 
 # Increased Enlistment Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.7	# Corresponds to global_edicts_commander_events.7
+	id = global_edict_commander_quick_select_settings_duplicate_event.7	# Corresponds to global_edicts_commander_events.7
 	title = global_edict_commander_quick_select_settings_event.7.t
 	desc = global_edict_commander_quick_select_settings_event.7.d
 	picture = BIG_BOOK_eventPicture
@@ -1597,7 +1597,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.7
+				id = global_edict_commander_quick_select_settings_event.7
 			}
 		}
 	}
@@ -1605,7 +1605,7 @@ country_event = {
 
 # Protect Trade Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.8	# Corresponds to global_edicts_commander_events.8
+	id = global_edict_commander_quick_select_settings_duplicate_event.8	# Corresponds to global_edicts_commander_events.8
 	title = global_edict_commander_quick_select_settings_event.8.t
 	desc = global_edict_commander_quick_select_settings_event.8.d
 	picture = BIG_BOOK_eventPicture
@@ -1841,7 +1841,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.8
+				id = global_edict_commander_quick_select_settings_event.8
 			}
 		}
 	}
@@ -1849,7 +1849,7 @@ country_event = {
 
 # Enforce Religious Unity Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.9	# Corresponds to global_edicts_commander_events.9
+	id = global_edict_commander_quick_select_settings_duplicate_event.9	# Corresponds to global_edicts_commander_events.9
 	title = global_edict_commander_quick_select_settings_event.9.t
 	desc = global_edict_commander_quick_select_settings_event.9.d
 	picture = BIG_BOOK_eventPicture
@@ -2087,7 +2087,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.9
+				id = global_edict_commander_quick_select_settings_event.9
 			}
 		}
 	}
@@ -2095,7 +2095,7 @@ country_event = {
 
 # Feudal De Jure Law Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.10	# Corresponds to global_edicts_commander_events.10
+	id = global_edict_commander_quick_select_settings_duplicate_event.10	# Corresponds to global_edicts_commander_events.10
 	title = global_edict_commander_quick_select_settings_event.10.t
 	desc = global_edict_commander_quick_select_settings_event.10.d
 	picture = BIG_BOOK_eventPicture
@@ -2300,7 +2300,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.10
+				id = global_edict_commander_quick_select_settings_event.10
 			}
 		}
 	}
@@ -2308,7 +2308,7 @@ country_event = {
 
 # Religion Enforced Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.11	# Corresponds to global_edicts_commander_events.11
+	id = global_edict_commander_quick_select_settings_duplicate_event.11	# Corresponds to global_edicts_commander_events.11
 	title = global_edict_commander_quick_select_settings_event.11.t
 	desc = global_edict_commander_quick_select_settings_event.11.d
 	picture = BIG_BOOK_eventPicture
@@ -2420,7 +2420,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.11
+				id = global_edict_commander_quick_select_settings_event.11
 			}
 		}
 	}
@@ -2428,7 +2428,7 @@ country_event = {
 
 # Edict of Absolutism Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.12	# Corresponds to global_edicts_commander_events.12
+	id = global_edict_commander_quick_select_settings_duplicate_event.12	# Corresponds to global_edicts_commander_events.12
 	title = global_edict_commander_quick_select_settings_event.12.t
 	desc = global_edict_commander_quick_select_settings_event.12.d
 	picture = BIG_BOOK_eventPicture
@@ -2633,7 +2633,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.12
+				id = global_edict_commander_quick_select_settings_event.12
 			}
 		}
 	}
@@ -2641,7 +2641,7 @@ country_event = {
 
 # Feudal Taxes Edict Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.13	# Corresponds to global_edicts_commander_events.13
+	id = global_edict_commander_quick_select_settings_duplicate_event.13	# Corresponds to global_edicts_commander_events.13
 	title = global_edict_commander_quick_select_settings_event.13.t
 	desc = global_edict_commander_quick_select_settings_event.13.d
 	picture = BIG_BOOK_eventPicture
@@ -2815,7 +2815,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.13
+				id = global_edict_commander_quick_select_settings_event.13
 			}
 		}
 	}
@@ -2823,7 +2823,7 @@ country_event = {
 
 # State Integration Edict Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.14	# Corresponds to global_edicts_commander_events.14
+	id = global_edict_commander_quick_select_settings_duplicate_event.14	# Corresponds to global_edicts_commander_events.14
 	title = global_edict_commander_quick_select_settings_event.14.t
 	desc = global_edict_commander_quick_select_settings_event.14.d
 	picture = BIG_BOOK_eventPicture
@@ -3028,7 +3028,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.14
+				id = global_edict_commander_quick_select_settings_event.14
 			}
 		}
 	}
@@ -3036,7 +3036,7 @@ country_event = {
 
 # Urbanization Edict Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.15	# Corresponds to global_edicts_commander_events.15
+	id = global_edict_commander_quick_select_settings_duplicate_event.15	# Corresponds to global_edicts_commander_events.15
 	title = global_edict_commander_quick_select_settings_event.15.t
 	desc = global_edict_commander_quick_select_settings_event.15.d
 	picture = BIG_BOOK_eventPicture
@@ -3210,7 +3210,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.15
+				id = global_edict_commander_quick_select_settings_event.15
 			}
 		}
 	}
@@ -3218,7 +3218,7 @@ country_event = {
 
 # French Infrastructure Network Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.16	# Corresponds to global_edicts_commander_events.16
+	id = global_edict_commander_quick_select_settings_duplicate_event.16	# Corresponds to global_edicts_commander_events.16
 	title = global_edict_commander_quick_select_settings_event.16.t
 	desc = global_edict_commander_quick_select_settings_event.16.d
 	picture = BIG_BOOK_eventPicture
@@ -3330,7 +3330,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.16
+				id = global_edict_commander_quick_select_settings_event.16
 			}
 		}
 	}
@@ -3338,7 +3338,7 @@ country_event = {
 
 # Promote Trade Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.17	# Corresponds to global_edicts_commander_events.17
+	id = global_edict_commander_quick_select_settings_duplicate_event.17	# Corresponds to global_edicts_commander_events.17
 	title = global_edict_commander_quick_select_settings_event.17.t
 	desc = global_edict_commander_quick_select_settings_event.17.d
 	picture = BIG_BOOK_eventPicture
@@ -3574,7 +3574,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.17
+				id = global_edict_commander_quick_select_settings_event.17
 			}
 		}
 	}
@@ -3582,7 +3582,7 @@ country_event = {
 
 # Edict of Governance Quick Select Settings
 country_event = {
-	id = global_edict_commander_quick_select_settings_event.18	# Corresponds to global_edicts_commander_events.18
+	id = global_edict_commander_quick_select_settings_duplicate_event.18	# Corresponds to global_edicts_commander_events.18
 	title = global_edict_commander_quick_select_settings_event.18.t
 	desc = global_edict_commander_quick_select_settings_event.18.d
 	picture = BIG_BOOK_eventPicture
@@ -3756,7 +3756,7 @@ country_event = {
 				has_country_flag = remain_in_quick_select_settings
 			}
 			country_event = {
-				id = global_edict_commander_quick_select_settings_duplicate_event.18
+				id = global_edict_commander_quick_select_settings_event.18
 			}
 		}
 	}
