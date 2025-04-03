@@ -118,5 +118,44 @@ spriteTypes = {
 		texturefile = "gfx/interface/buttons/edict_settings.dds"
 		loadType = "INGAME"
 	}
-
+	frameAnimatedSpriteType = {
+		name = "GFX_global_edicts_frame_glow"
+		texturefile = "gfx/interface/buttons/animated_edict_frame.dds"
+		noOfFrames = 90
+		transparencecheck = yes
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+		alwaystransparent = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_global_edicts_frame_glow_fra"
+		texturefile = "gfx/interface/buttons/animated_edict_frame_fra.dds"
+		noOfFrames = 90
+		transparencecheck = yes
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+		alwaystransparent = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_global_edicts_frame_glow_hab"
+		texturefile = "gfx/interface/buttons/animated_edict_frame_hab.dds"
+		noOfFrames = 90
+		transparencecheck = yes
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+		alwaystransparent = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_global_edicts_frame_glow_qng"
+		texturefile = "gfx/interface/buttons/animated_edict_frame_qng.dds"
+		noOfFrames = 90
+		transparencecheck = yes
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+		alwaystransparent = yes
+	}
 }
