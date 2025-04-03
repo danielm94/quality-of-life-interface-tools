@@ -1,0 +1,1663 @@
+# Hidden Events Containing Edict Application Logic
+namespace = global_edict_commander_option_events
+# Corresponds to global_edicts_commander_events.1.a
+country_event = {
+	id = global_edict_commander_option_events.1
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_advancement_effort_only_with_growth = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.1.b
+country_event = {
+	id = global_edict_commander_option_events.2
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = edict_advancement_effort
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.2.a
+country_event = {
+	id = global_edict_commander_option_events.3
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_centralization_effort_only_with_excess_autonomy = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.2.b
+country_event = {
+	id = global_edict_commander_option_events.4
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = edict_centralization_effort
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.3.a
+country_event = {
+	id = global_edict_commander_option_events.5
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_defensive_edict_only_with_forts = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.3.b (Moved logic from original event 4)
+country_event = {
+	id = global_edict_commander_option_events.6
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_province = {
+			limit = {
+				is_state = yes
+				can_change_state_edict = yes
+				NOT = {
+					has_state_edict = edict_defensive_edict
+				}
+				any_province_in_state = {
+					has_fort_building_trigger = yes
+				}
+			}
+			save_event_target_as = province_to_check
+			event_target:province_to_check = {
+				if = {
+					limit = {
+						has_siege = yes
+					}
+					edict_commander_set_edict_for_state = {
+						edict = edict_defensive_edict
+					}
+				}
+				else_if = {
+					limit = {
+						any_neighbor_province = {
+							has_rebels_in_province = yes
+						}
+					}
+					edict_commander_set_edict_for_state = {
+						edict = edict_defensive_edict
+					}
+				}
+				else_if = {
+					limit = {
+						owner = {
+							is_at_war = yes
+						}
+					}
+					owner = {
+						every_war_enemy_country = {
+							save_event_target_as = war_enemy
+							event_target:province_to_check = {
+								if = {
+									limit = {
+										any_neighbor_province = {
+											num_of_units_in_province = {
+												amount = 1
+												who = event_target:war_enemy
+											}
+										}
+									}
+									edict_commander_set_edict_for_state = {
+										edict = edict_defensive_edict
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.3.c
+country_event = {
+	id = global_edict_commander_option_events.7
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = edict_defensive_edict
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.5.a
+country_event = {
+	id = global_edict_commander_option_events.8
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_find_cheapest_province_to_develop = {
+			edict = edict_encourage_development
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.5.b
+country_event = {
+	id = global_edict_commander_option_events.9
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		set_variable = {
+			which = i
+			value = 5
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_find_cheapest_province_to_develop = {
+				edict = edict_encourage_development
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.5.c
+country_event = {
+	id = global_edict_commander_option_events.10
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		set_variable = {
+			which = i
+			value = 10
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_find_cheapest_province_to_develop = {
+				edict = edict_encourage_development
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.5.dee
+country_event = {
+	id = global_edict_commander_option_events.11
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = edict_encourage_development
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.6.a
+country_event = {
+	id = global_edict_commander_option_events.12
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_find_cheapest_province_to_develop = {
+			edict = chinese_industrialization
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.6.b
+country_event = {
+	id = global_edict_commander_option_events.13
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		set_variable = {
+			which = i
+			value = 5
+		}
+		# Corrected from 6 in original
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_find_cheapest_province_to_develop = {
+				edict = chinese_industrialization
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.6.c
+country_event = {
+	id = global_edict_commander_option_events.14
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		set_variable = {
+			which = i
+			value = 10
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_find_cheapest_province_to_develop = {
+				edict = chinese_industrialization
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.6.dee
+country_event = {
+	id = global_edict_commander_option_events.15
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_province_production_score = yes
+		edict_commander_calculate_state_production_score = yes
+		edict_commander_find_highest_production_score = {
+			edict = chinese_industrialization
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.6.e
+country_event = {
+	id = global_edict_commander_option_events.16
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_province_production_score = yes
+		edict_commander_calculate_state_production_score = yes
+		set_variable = {
+			which = i
+			value = 5
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_find_highest_production_score = {
+				edict = chinese_industrialization
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.6.f
+country_event = {
+	id = global_edict_commander_option_events.17
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_province_production_score = yes
+		edict_commander_calculate_state_production_score = yes
+		set_variable = {
+			which = i
+			value = 10
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_find_highest_production_score = {
+				edict = chinese_industrialization
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.6.g
+country_event = {
+	id = global_edict_commander_option_events.18
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = chinese_industrialization
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.7.a
+country_event = {
+	id = global_edict_commander_option_events.19
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_manpower_in_states = yes
+		edict_commander_increase_enlistment_highest_manpower_state = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.7.b
+country_event = {
+	id = global_edict_commander_option_events.20
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_manpower_in_states = yes
+		set_variable = {
+			which = i
+			value = 5
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_increase_enlistment_highest_manpower_state = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.7.c
+country_event = {
+	id = global_edict_commander_option_events.21
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_manpower_in_states = yes
+		set_variable = {
+			which = i
+			value = 10
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_increase_enlistment_highest_manpower_state = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.7.dee
+country_event = {
+	id = global_edict_commander_option_events.22
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_manpower_in_states = yes
+		set_variable = {
+			which = i
+			value = 25
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_increase_enlistment_highest_manpower_state = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.7.e
+country_event = {
+	id = global_edict_commander_option_events.23
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = edict_promote_military_recruitment
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.8.a
+country_event = {
+	id = global_edict_commander_option_events.24
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_trade_power_in_states = yes
+		edict_commander_protect_trade_highest_trade_power_state = {
+			edict = edict_protect_trade
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.8.b
+country_event = {
+	id = global_edict_commander_option_events.25
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_trade_power_in_states = yes
+		set_variable = {
+			which = i
+			value = 5
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_protect_trade_highest_trade_power_state = {
+				edict = edict_protect_trade
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.8.c
+country_event = {
+	id = global_edict_commander_option_events.26
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_trade_power_in_states = yes
+		set_variable = {
+			which = i
+			value = 10
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_protect_trade_highest_trade_power_state = {
+				edict = edict_protect_trade
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.8.dee
+country_event = {
+	id = global_edict_commander_option_events.27
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_trade_power_in_states = yes
+		edict_commander_protect_trade_highest_trade_power_state_for_each_node = {
+			edict = edict_protect_trade
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.8.e
+country_event = {
+	id = global_edict_commander_option_events.28
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_trade_power_in_states = yes
+		set_variable = {
+			which = i
+			value = 3
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_protect_trade_highest_trade_power_state_for_each_node = {
+				edict = edict_protect_trade
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.8.f
+country_event = {
+	id = global_edict_commander_option_events.29
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_protect_trade_every_state = {
+			edict = edict_protect_trade
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.9.a
+country_event = {
+	id = global_edict_commander_option_events.30
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_religion_strength = yes
+		edict_commander_enforce_religious_unity_all_states_that_can_convert = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.9.b
+country_event = {
+	id = global_edict_commander_option_events.31
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_religion_strength = yes
+		edict_commander_enforce_religious_unity_states_with_missionary = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.9.c
+country_event = {
+	id = global_edict_commander_option_events.32
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_religion_strength = yes
+		edict_commander_enforce_religious_unity_easiest_to_convert = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.9.dee
+country_event = {
+	id = global_edict_commander_option_events.33
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_religion_strength = yes
+		set_variable = {
+			which = i
+			value = 5
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_enforce_religious_unity_easiest_to_convert = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.9.e
+country_event = {
+	id = global_edict_commander_option_events.34
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_religion_strength = yes
+		set_variable = {
+			which = i
+			value = 10
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_enforce_religious_unity_easiest_to_convert = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.9.f
+country_event = {
+	id = global_edict_commander_option_events.35
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = edict_religious_unity
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.10.a
+country_event = {
+	id = global_edict_commander_option_events.36
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_feudal_de_jure_law_any_with_unrest = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.10.b
+country_event = {
+	id = global_edict_commander_option_events.37
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_feudal_de_jure_law_calculate_state_unrest = yes
+		edict_commander_feudal_de_jure_law_highest_unrest_state = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.10.c
+country_event = {
+	id = global_edict_commander_option_events.38
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_feudal_de_jure_law_calculate_state_unrest = yes
+		set_variable = {
+			which = i
+			value = 5
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_feudal_de_jure_law_highest_unrest_state = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.10.dee
+country_event = {
+	id = global_edict_commander_option_events.39
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_feudal_de_jure_law_calculate_state_unrest = yes
+		set_variable = {
+			which = i
+			value = 10
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_feudal_de_jure_law_highest_unrest_state = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.10.e
+country_event = {
+	id = global_edict_commander_option_events.40
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = edict_feudal_de_jure_law
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.11.a
+country_event = {
+	id = global_edict_commander_option_events.41
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_religion_enforced_all_states_with_center = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.11.b
+country_event = {
+	id = global_edict_commander_option_events.42
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = edict_religion_enforced
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.12.a
+country_event = {
+	id = global_edict_commander_option_events.43
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_edict_of_absolutism_any_devastation = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.12.b
+country_event = {
+	id = global_edict_commander_option_events.44
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_edict_of_absolutism_calculate_state_devastation = yes
+		edict_commander_edict_of_absolutism_highest_devastation = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.12.c
+country_event = {
+	id = global_edict_commander_option_events.45
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_edict_of_absolutism_calculate_state_devastation = yes
+		set_variable = {
+			which = i
+			value = 5
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_edict_of_absolutism_highest_devastation = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.12.dee
+country_event = {
+	id = global_edict_commander_option_events.46
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_edict_of_absolutism_calculate_state_devastation = yes
+		set_variable = {
+			which = i
+			value = 10
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_edict_of_absolutism_highest_devastation = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.12.e
+country_event = {
+	id = global_edict_commander_option_events.47
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = edict_of_absolutism
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.13.a
+country_event = {
+	id = global_edict_commander_option_events.48
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_feudal_taxes_state_edict_calculate_province_monthly_tax = yes
+		edict_commander_feudal_taxes_state_edict_calculate_state_monthly_tax = yes
+		edict_commander_feudal_taxes_state_edict_find_highest_tax_state = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.13.b
+country_event = {
+	id = global_edict_commander_option_events.49
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_feudal_taxes_state_edict_calculate_province_monthly_tax = yes
+		edict_commander_feudal_taxes_state_edict_calculate_state_monthly_tax = yes
+		set_variable = {
+			which = i
+			value = 5
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_feudal_taxes_state_edict_find_highest_tax_state = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.13.c
+country_event = {
+	id = global_edict_commander_option_events.50
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_feudal_taxes_state_edict_calculate_province_monthly_tax = yes
+		edict_commander_feudal_taxes_state_edict_calculate_state_monthly_tax = yes
+		set_variable = {
+			which = i
+			value = 10
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_feudal_taxes_state_edict_find_highest_tax_state = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.13.dee
+country_event = {
+	id = global_edict_commander_option_events.51
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = feudal_taxes_state_edict
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.14.a
+country_event = {
+	id = global_edict_commander_option_events.52
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_state_integration_edict_any_with_separatism = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.14.b
+country_event = {
+	id = global_edict_commander_option_events.53
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_state_integration_edict_calculate_state_nationalism = yes
+		edict_commander_state_integration_edict_highest_separatism_state = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.14.c
+country_event = {
+	id = global_edict_commander_option_events.54
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_state_integration_edict_calculate_state_nationalism = yes
+		set_variable = {
+			which = i
+			value = 5
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_state_integration_edict_highest_separatism_state = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.14.dee
+country_event = {
+	id = global_edict_commander_option_events.55
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_state_integration_edict_calculate_state_nationalism = yes
+		set_variable = {
+			which = i
+			value = 10
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_state_integration_edict_highest_separatism_state = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.14.e
+country_event = {
+	id = global_edict_commander_option_events.56
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = state_integration_state_edict
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.15.a
+country_event = {
+	id = global_edict_commander_option_events.57
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_province_production_score = yes
+		edict_commander_calculate_state_production_score = yes
+		edict_commander_find_highest_production_score = {
+			edict = urbanization_state_edict
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.15.b
+country_event = {
+	id = global_edict_commander_option_events.58
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_province_production_score = yes
+		edict_commander_calculate_state_production_score = yes
+		set_variable = {
+			which = i
+			value = 5
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_find_highest_production_score = {
+				edict = urbanization_state_edict
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.15.c
+country_event = {
+	id = global_edict_commander_option_events.59
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_province_production_score = yes
+		edict_commander_calculate_state_production_score = yes
+		set_variable = {
+			which = i
+			value = 10
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_find_highest_production_score = {
+				edict = urbanization_state_edict
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.15.dee
+country_event = {
+	id = global_edict_commander_option_events.60
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = urbanization_state_edict
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.16.a
+country_event = {
+	id = global_edict_commander_option_events.61
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_french_infrastructure_network_all_enabled_regions = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.16.b
+country_event = {
+	id = global_edict_commander_option_events.62
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = french_infrastructure_network
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.17.a
+country_event = {
+	id = global_edict_commander_option_events.63
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_trade_power_in_states = yes
+		edict_commander_protect_trade_highest_trade_power_state = {
+			edict = protect_trade_empowered
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.17.b
+country_event = {
+	id = global_edict_commander_option_events.64
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_trade_power_in_states = yes
+		set_variable = {
+			which = i
+			value = 5
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_protect_trade_highest_trade_power_state = {
+				edict = protect_trade_empowered
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.17.c
+country_event = {
+	id = global_edict_commander_option_events.65
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_trade_power_in_states = yes
+		set_variable = {
+			which = i
+			value = 10
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_protect_trade_highest_trade_power_state = {
+				edict = protect_trade_empowered
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.17.dee
+country_event = {
+	id = global_edict_commander_option_events.66
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_trade_power_in_states = yes
+		edict_commander_protect_trade_highest_trade_power_state_for_each_node = {
+			edict = protect_trade_empowered
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.17.e
+country_event = {
+	id = global_edict_commander_option_events.67
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_calculate_trade_power_in_states = yes
+		set_variable = {
+			which = i
+			value = 3
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_protect_trade_highest_trade_power_state_for_each_node = {
+				edict = protect_trade_empowered
+			}
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.17.f
+country_event = {
+	id = global_edict_commander_option_events.68
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_protect_trade_every_state = {
+			edict = protect_trade_empowered
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.18.a
+country_event = {
+	id = global_edict_commander_option_events.69
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_edict_of_governance_calculate_province_gov_cost = yes
+		edict_commander_edict_of_governance_calculate_state_gov_cost = yes
+		edict_commander_edict_of_governance_highest_governing_cost_state = yes
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.18.b
+country_event = {
+	id = global_edict_commander_option_events.70
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_edict_of_governance_calculate_province_gov_cost = yes
+		edict_commander_edict_of_governance_calculate_state_gov_cost = yes
+		set_variable = {
+			which = i
+			value = 5
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_edict_of_governance_highest_governing_cost_state = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.18.c
+country_event = {
+	id = global_edict_commander_option_events.71
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_edict_of_governance_calculate_province_gov_cost = yes
+		edict_commander_edict_of_governance_calculate_state_gov_cost = yes
+		set_variable = {
+			which = i
+			value = 10
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = i
+					value = 1
+				}
+			}
+			edict_commander_edict_of_governance_highest_governing_cost_state = yes
+			subtract_variable = {
+				which = i
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}
+
+# Corresponds to global_edicts_commander_events.18.dee
+country_event = {
+	id = global_edict_commander_option_events.72
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		edict_commander_set_edict_every_state = {
+			edict = edict_of_governance
+		}
+	}
+	option = {
+		name = "OK"
+	}
+	# Dummy option
+}

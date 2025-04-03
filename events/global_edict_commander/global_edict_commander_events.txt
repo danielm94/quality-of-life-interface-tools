@@ -1,3 +1,4 @@
+# Original Edict Selection Events (Refactored)
 namespace = global_edicts_commander_events
 country_event = {
 	id = global_edicts_commander_events.1
@@ -12,17 +13,22 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.1.a
-		highlight = yes
-		edict_commander_advancement_effort_only_with_growth = yes
-	}
-	option = {
-		name = global_edicts_commander_events.1.b
-		edict_commander_set_edict_every_state = {
-			edict = edict_advancement_effort
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.1
+			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.1.c
+		name = global_edicts_commander_events.1.b
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.2
+			}
+		}
+	}
+	option = {
+		name = global_edicts_commander_events.1.c		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -44,19 +50,22 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.2.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_centralization_effort_only_with_excess_autonomy = yes
+			country_event = {
+				id = global_edict_commander_option_events.3
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.2.b
-		edict_commander_set_edict_every_state = {
-			edict = edict_centralization_effort
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.4
+			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.2.c
+		name = global_edicts_commander_events.2.c		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -78,29 +87,32 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.3.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_defensive_edict_only_with_forts = yes
+			country_event = {
+				id = global_edict_commander_option_events.5
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.3.b
-		highlight = yes
 		custom_tooltip = global_edicts_commander_events.3.b.tt
 		hidden_effect = {
+			# This now calls the moved event 4 logic
 			country_event = {
-				id = global_edicts_commander_events.4
+				id = global_edict_commander_option_events.6
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.3.c
-		edict_commander_set_edict_every_state = {
-			edict = edict_defensive_edict
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.7
+			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.3.dee
+		name = global_edicts_commander_events.3.dee		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -109,83 +121,7 @@ country_event = {
 	}
 }
 
-#So error.log doesn't shit itself talking about missing event targets.
-country_event = {
-	id = global_edicts_commander_events.4
-	title = global_edicts_commander_events.3.t
-	desc = global_edicts_commander_events.3.d
-	hidden = yes
-	picture = COURT_eventPicture
-	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					is_state = yes
-					can_change_state_edict = yes
-					NOT = {
-						has_state_edict = edict_defensive_edict
-					}
-					any_province_in_state = {
-						has_fort_building_trigger = yes
-					}
-				}
-				save_event_target_as = province_to_check
-				event_target:province_to_check = {
-					if = {
-						limit = {
-							has_siege = yes
-						}
-						edict_commander_set_edict_for_state = {
-							edict = edict_defensive_edict
-						}
-					}
-					else_if = {
-						limit = {
-							any_neighbor_province = {
-								has_rebels_in_province = yes
-							}
-						}
-						edict_commander_set_edict_for_state = {
-							edict = edict_defensive_edict
-						}
-					}
-					else_if = {
-						limit = {
-							owner = {
-								is_at_war = yes
-							}
-						}
-						owner = {
-							every_war_enemy_country = {
-								save_event_target_as = war_enemy
-								event_target:province_to_check = {
-									if = {
-										limit = {
-											any_neighbor_province = {
-												num_of_units_in_province = {
-													amount = 1
-													who = event_target:war_enemy
-												}
-											}
-										}
-										edict_commander_set_edict_for_state = {
-											edict = edict_defensive_edict
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = global_edicts_commander_events.3.a
-	}
-}
-
+# Event 4 is removed from here and moved to the other file.
 country_event = {
 	id = global_edicts_commander_events.5
 	title = global_edicts_commander_events.5.t
@@ -199,71 +135,38 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.5.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_find_cheapest_province_to_develop = {
-				edict = edict_encourage_development
+			country_event = {
+				id = global_edict_commander_option_events.8
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.5.b
-		highlight = yes
 		hidden_effect = {
-			set_variable = {
-				which = i
-				value = 5
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_find_cheapest_province_to_develop = {
-					edict = edict_encourage_development
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.9
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.5.c
-		highlight = yes
 		hidden_effect = {
-			set_variable = {
-				which = i
-				value = 10
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_find_cheapest_province_to_develop = {
-					edict = edict_encourage_development
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.10
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.5.dee
-		edict_commander_set_edict_every_state = {
-			edict = edict_encourage_development
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.11
+			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.5.e
+		name = global_edicts_commander_events.5.e		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -285,145 +188,72 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.6.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_find_cheapest_province_to_develop = {
-				edict = chinese_industrialization
+			country_event = {
+				id = global_edict_commander_option_events.12
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.6.b
-		highlight = yes
 		hidden_effect = {
-			set_variable = {
-				which = i
-				value = 6
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_find_cheapest_province_to_develop = {
-					edict = chinese_industrialization
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.13
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.6.c
-		highlight = yes
 		hidden_effect = {
-			set_variable = {
-				which = i
-				value = 10
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_find_cheapest_province_to_develop = {
-					edict = chinese_industrialization
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.14
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.6.dee
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_province_production_score = yes
-			edict_commander_calculate_state_production_score = yes
-			edict_commander_find_highest_production_score = {
-				edict = chinese_industrialization
+			country_event = {
+				id = global_edict_commander_option_events.15
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.6.e
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_province_production_score = yes
-			edict_commander_calculate_state_production_score = yes
-			set_variable = {
-				which = i
-				value = 5
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_find_highest_production_score = {
-					edict = chinese_industrialization
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.16
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.6.f
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_province_production_score = yes
-			edict_commander_calculate_state_production_score = yes
-			set_variable = {
-				which = i
-				value = 10
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_find_highest_production_score = {
-					edict = chinese_industrialization
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.17
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.6.g
-		edict_commander_set_edict_every_state = {
-			edict = chinese_industrialization
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.18
+			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.6.h
+		name = global_edicts_commander_events.6.h		# Use Encourage Development instead
 		custom_tooltip = global_edicts_commander_events.6.h.tt
 		hidden_effect = {
 			country_event = {
 				id = global_edicts_commander_events.5
 			}
+			# Calls another config event
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.6.i
+		name = global_edicts_commander_events.6.i		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -445,92 +275,46 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.7.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_manpower_in_states = yes
-			edict_commander_increase_enlistment_highest_manpower_state = yes
+			country_event = {
+				id = global_edict_commander_option_events.19
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.7.b
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_manpower_in_states = yes
-			set_variable = {
-				which = i
-				value = 5
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_increase_enlistment_highest_manpower_state = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.20
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.7.c
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_manpower_in_states = yes
-			set_variable = {
-				which = i
-				value = 10
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_increase_enlistment_highest_manpower_state = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.21
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.7.dee
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_manpower_in_states = yes
-			set_variable = {
-				which = i
-				value = 25
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_increase_enlistment_highest_manpower_state = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.22
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.7.e
-		edict_commander_set_edict_every_state = {
-			edict = edict_promote_military_recruitment
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.23
+			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.7.f
+		name = global_edicts_commander_events.7.f		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -552,110 +336,54 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.8.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_trade_power_in_states = yes
-			edict_commander_protect_trade_highest_trade_power_state = {
-				edict = edict_protect_trade
+			country_event = {
+				id = global_edict_commander_option_events.24
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.8.b
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_trade_power_in_states = yes
-			set_variable = {
-				which = i
-				value = 5
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_protect_trade_highest_trade_power_state = {
-					edict = edict_protect_trade
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.25
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.8.c
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_trade_power_in_states = yes
-			set_variable = {
-				which = i
-				value = 10
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_protect_trade_highest_trade_power_state = {
-					edict = edict_protect_trade
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.26
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.8.dee
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_trade_power_in_states = yes
-			edict_commander_protect_trade_highest_trade_power_state_for_each_node = {
-				edict = edict_protect_trade
+			country_event = {
+				id = global_edict_commander_option_events.27
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.8.e
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_trade_power_in_states = yes
-			set_variable = {
-				which = i
-				value = 3
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_protect_trade_highest_trade_power_state_for_each_node = {
-					edict = edict_protect_trade
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.28
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.8.f
-		edict_commander_protect_trade_every_state = {
-			edict = edict_protect_trade
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.29
+			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.8.g
+		name = global_edicts_commander_events.8.g		# Advanced Config
 		hidden_effect = {
 			country_event = {
 				id = global_edicts_commander_trade_config_events.1
@@ -663,7 +391,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.8.h
+		name = global_edicts_commander_events.8.h		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -685,89 +413,59 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.9.a
-		highlight = yes
 		custom_tooltip = global_edicts_commander_events.9.a.tt
 		hidden_effect = {
-			edict_commander_calculate_religion_strength = yes
-			edict_commander_enforce_religious_unity_all_states_that_can_convert = yes
+			country_event = {
+				id = global_edict_commander_option_events.30
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.9.b
 		custom_tooltip = global_edicts_commander_events.9.a.tt
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_religion_strength = yes
-			edict_commander_enforce_religious_unity_states_with_missionary = yes
+			country_event = {
+				id = global_edict_commander_option_events.31
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.9.c
 		custom_tooltip = global_edicts_commander_events.9.a.tt
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_religion_strength = yes
-			edict_commander_enforce_religious_unity_easiest_to_convert = yes
+			country_event = {
+				id = global_edict_commander_option_events.32
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.9.dee
 		custom_tooltip = global_edicts_commander_events.9.a.tt
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_religion_strength = yes
-			set_variable = {
-				which = i
-				value = 5
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_enforce_religious_unity_easiest_to_convert = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.33
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.9.e
 		custom_tooltip = global_edicts_commander_events.9.a.tt
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_religion_strength = yes
-			set_variable = {
-				which = i
-				value = 10
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_enforce_religious_unity_easiest_to_convert = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.34
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.9.f
-		edict_commander_set_edict_every_state = {
-			edict = edict_religious_unity
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.35
+			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.9.g
+		name = global_edicts_commander_events.9.g		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -789,77 +487,46 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.10.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_feudal_de_jure_law_any_with_unrest = yes
+			country_event = {
+				id = global_edict_commander_option_events.36
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.10.b
-		highlight = yes
 		hidden_effect = {
-			edict_commander_feudal_de_jure_law_calculate_state_unrest = yes
-			edict_commander_feudal_de_jure_law_highest_unrest_state = yes
+			country_event = {
+				id = global_edict_commander_option_events.37
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.10.c
-		highlight = yes
 		hidden_effect = {
-			edict_commander_feudal_de_jure_law_calculate_state_unrest = yes
-			set_variable = {
-				which = i
-				value = 5
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_feudal_de_jure_law_highest_unrest_state = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.38
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.10.dee
-		highlight = yes
 		hidden_effect = {
-			edict_commander_feudal_de_jure_law_calculate_state_unrest = yes
-			set_variable = {
-				which = i
-				value = 10
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_feudal_de_jure_law_highest_unrest_state = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.39
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.10.e
 		hidden_effect = {
-			edict_commander_set_edict_every_state = {
-				edict = edict_feudal_de_jure_law
+			country_event = {
+				id = global_edict_commander_option_events.40
 			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.10.f
+		name = global_edicts_commander_events.10.f		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -881,21 +548,22 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.11.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_religion_enforced_all_states_with_center = yes
+			country_event = {
+				id = global_edict_commander_option_events.41
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.11.b
 		hidden_effect = {
-			edict_commander_set_edict_every_state = {
-				edict = edict_religion_enforced
+			country_event = {
+				id = global_edict_commander_option_events.42
 			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.11.c
+		name = global_edicts_commander_events.11.c		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -917,74 +585,46 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.12.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_edict_of_absolutism_any_devastation = yes
+			country_event = {
+				id = global_edict_commander_option_events.43
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.12.b
 		hidden_effect = {
-			edict_commander_edict_of_absolutism_calculate_state_devastation = yes
-			edict_commander_edict_of_absolutism_highest_devastation = yes
+			country_event = {
+				id = global_edict_commander_option_events.44
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.12.c
 		hidden_effect = {
-			edict_commander_edict_of_absolutism_calculate_state_devastation = yes
-			set_variable = {
-				which = i
-				value = 5
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_edict_of_absolutism_highest_devastation = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.45
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.12.dee
 		hidden_effect = {
-			edict_commander_edict_of_absolutism_calculate_state_devastation = yes
-			set_variable = {
-				which = i
-				value = 10
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_edict_of_absolutism_highest_devastation = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.46
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.12.e
 		hidden_effect = {
-			edict_commander_set_edict_every_state = {
-				edict = edict_of_absolutism
+			country_event = {
+				id = global_edict_commander_option_events.47
 			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.12.f
+		name = global_edicts_commander_events.12.f		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -1006,71 +646,38 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.13.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_feudal_taxes_state_edict_calculate_province_monthly_tax = yes
-			edict_commander_feudal_taxes_state_edict_calculate_state_monthly_tax = yes
-			edict_commander_feudal_taxes_state_edict_find_highest_tax_state = yes
+			country_event = {
+				id = global_edict_commander_option_events.48
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.13.b
 		hidden_effect = {
-			edict_commander_feudal_taxes_state_edict_calculate_province_monthly_tax = yes
-			edict_commander_feudal_taxes_state_edict_calculate_state_monthly_tax = yes
-			set_variable = {
-				which = i
-				value = 5
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_feudal_taxes_state_edict_find_highest_tax_state = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.49
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.13.c
 		hidden_effect = {
-			edict_commander_feudal_taxes_state_edict_calculate_province_monthly_tax = yes
-			edict_commander_feudal_taxes_state_edict_calculate_state_monthly_tax = yes
-			set_variable = {
-				which = i
-				value = 10
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_feudal_taxes_state_edict_find_highest_tax_state = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.50
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.13.dee
 		hidden_effect = {
-			edict_commander_set_edict_every_state = {
-				edict = feudal_taxes_state_edict
+			country_event = {
+				id = global_edict_commander_option_events.51
 			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.13.e
+		name = global_edicts_commander_events.13.e		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -1092,77 +699,46 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.14.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_state_integration_edict_any_with_separatism = yes
+			country_event = {
+				id = global_edict_commander_option_events.52
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.14.b
-		highlight = yes
 		hidden_effect = {
-			edict_commander_state_integration_edict_calculate_state_nationalism = yes
-			edict_commander_state_integration_edict_highest_separatism_state = yes
+			country_event = {
+				id = global_edict_commander_option_events.53
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.14.c
-		highlight = yes
 		hidden_effect = {
-			edict_commander_state_integration_edict_calculate_state_nationalism = yes
-			set_variable = {
-				which = i
-				value = 5
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_state_integration_edict_highest_separatism_state = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.54
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.14.dee
-		highlight = yes
 		hidden_effect = {
-			edict_commander_state_integration_edict_calculate_state_nationalism = yes
-			set_variable = {
-				which = i
-				value = 10
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_state_integration_edict_highest_separatism_state = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.55
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.14.e
 		hidden_effect = {
-			edict_commander_set_edict_every_state = {
-				edict = state_integration_state_edict
+			country_event = {
+				id = global_edict_commander_option_events.56
 			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.14.f
+		name = global_edicts_commander_events.14.f		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -1184,79 +760,38 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.15.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_province_production_score = yes
-			edict_commander_calculate_state_production_score = yes
-			edict_commander_find_highest_production_score = {
-				edict = urbanization_state_edict
+			country_event = {
+				id = global_edict_commander_option_events.57
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.15.b
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_province_production_score = yes
-			edict_commander_calculate_state_production_score = yes
-			set_variable = {
-				which = i
-				value = 5
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_find_highest_production_score = {
-					edict = urbanization_state_edict
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.58
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.15.c
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_province_production_score = yes
-			edict_commander_calculate_state_production_score = yes
-			set_variable = {
-				which = i
-				value = 10
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_find_highest_production_score = {
-					edict = urbanization_state_edict
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.59
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.15.dee
 		hidden_effect = {
-			edict_commander_set_edict_every_state = {
-				edict = urbanization_state_edict
+			country_event = {
+				id = global_edict_commander_option_events.60
 			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.15.e
+		name = global_edicts_commander_events.15.e		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -1278,21 +813,22 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.16.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_french_infrastructure_network_all_enabled_regions = yes
+			country_event = {
+				id = global_edict_commander_option_events.61
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.16.b
 		hidden_effect = {
-			edict_commander_set_edict_every_state = {
-				edict = french_infrastructure_network
+			country_event = {
+				id = global_edict_commander_option_events.62
 			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.16.c
+		name = global_edicts_commander_events.16.c		# Advanced Options
 		hidden_effect = {
 			country_event = {
 				id = global_edicts_commander_movement_config_events.1
@@ -1300,7 +836,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.16.dee
+		name = global_edicts_commander_events.16.dee		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -1322,110 +858,54 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.17.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_trade_power_in_states = yes
-			edict_commander_protect_trade_highest_trade_power_state = {
-				edict = protect_trade_empowered
+			country_event = {
+				id = global_edict_commander_option_events.63
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.17.b
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_trade_power_in_states = yes
-			set_variable = {
-				which = i
-				value = 5
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_protect_trade_highest_trade_power_state = {
-					edict = protect_trade_empowered
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.64
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.17.c
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_trade_power_in_states = yes
-			set_variable = {
-				which = i
-				value = 10
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_protect_trade_highest_trade_power_state = {
-					edict = protect_trade_empowered
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.65
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.17.dee
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_trade_power_in_states = yes
-			edict_commander_protect_trade_highest_trade_power_state_for_each_node = {
-				edict = protect_trade_empowered
+			country_event = {
+				id = global_edict_commander_option_events.66
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.17.e
-		highlight = yes
 		hidden_effect = {
-			edict_commander_calculate_trade_power_in_states = yes
-			set_variable = {
-				which = i
-				value = 3
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_protect_trade_highest_trade_power_state_for_each_node = {
-					edict = protect_trade_empowered
-				}
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.67
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.17.f
-		edict_commander_protect_trade_every_state = {
-			edict = protect_trade_empowered
+		hidden_effect = {
+			country_event = {
+				id = global_edict_commander_option_events.68
+			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.17.g
+		name = global_edicts_commander_events.17.g		# Advanced Config
 		hidden_effect = {
 			country_event = {
 				id = global_edicts_commander_trade_config_events.1
@@ -1433,7 +913,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.17.h
+		name = global_edicts_commander_events.17.h		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
@@ -1455,73 +935,38 @@ country_event = {
 	}
 	option = {
 		name = global_edicts_commander_events.18.a
-		highlight = yes
 		hidden_effect = {
-			edict_commander_edict_of_governance_calculate_province_gov_cost = yes
-			edict_commander_edict_of_governance_calculate_state_gov_cost = yes
-			edict_commander_edict_of_governance_highest_governing_cost_state = yes
+			country_event = {
+				id = global_edict_commander_option_events.69
+			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.18.b
-		highlight = yes
 		hidden_effect = {
-			edict_commander_edict_of_governance_calculate_province_gov_cost = yes
-			edict_commander_edict_of_governance_calculate_state_gov_cost = yes
-			set_variable = {
-				which = i
-				value = 5
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_edict_of_governance_highest_governing_cost_state = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.70
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.18.c
-		highlight = yes
 		hidden_effect = {
-			edict_commander_edict_of_governance_calculate_province_gov_cost = yes
-			edict_commander_edict_of_governance_calculate_state_gov_cost = yes
-			set_variable = {
-				which = i
-				value = 10
-			}
-			while = {
-				limit = {
-					check_variable = {
-						which = i
-						value = 1
-					}
-				}
-				edict_commander_edict_of_governance_highest_governing_cost_state = yes
-				subtract_variable = {
-					which = i
-					value = 1
-				}
+			country_event = {
+				id = global_edict_commander_option_events.71
 			}
 		}
 	}
 	option = {
 		name = global_edicts_commander_events.18.dee
 		hidden_effect = {
-			edict_commander_set_edict_every_state = {
-				edict = edict_of_governance
+			country_event = {
+				id = global_edict_commander_option_events.72
 			}
 		}
 	}
 	option = {
-		name = global_edicts_commander_events.18.e
+		name = global_edicts_commander_events.18.e		# Nevermind
 	}
 	after = {
 		safe_clr_country_flag = {
