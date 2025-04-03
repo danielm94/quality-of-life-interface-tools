@@ -86,10 +86,28 @@ custom_button = {
 		}
 	}
 	effect = {
-		FROM = {
-			hidden_effect = {
-				country_event = {
-					id = global_edicts_commander_events.1
+		hidden_effect = {
+			FROM = {
+				if = {
+					limit = {
+						has_country_flag = quick_select_advancement_effort_1
+					}
+					country_event = {
+						id = global_edict_commander_option_events.1
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_flag = quick_select_advancement_effort_2
+					}
+					country_event = {
+						id = global_edict_commander_option_events.2
+					}
+				}
+				else = {
+					country_event = {
+						id = global_edicts_commander_events.1
+					}
 				}
 			}
 		}
@@ -782,7 +800,257 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		hidden_trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = edict_event_enabled
+				}
+			}
+		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = global_edict_commander_settings_events.1
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_1_slot_1_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_advancement_effort_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_1_slot_2_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_centralization_effort_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_1_slot_3_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_defensive_edict_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_1_slot_4_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			OR = {
+				AND = {
+					has_encourage_development_quick_select = yes
+					OR = {
+						NOT = {
+							has_country_flag = enable_industrialisation_flag
+						}
+						NOT = {
+							is_emperor_of_china = yes
+						}
+					}
+				}
+				AND = {
+					has_rapid_industrialization_quick_select = yes
+					has_country_flag = enable_industrialisation_flag
+					is_emperor_of_china = yes
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_2_slot_1_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_increased_enlistment_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_2_slot_2_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			OR = {
+				AND = {
+					has_protect_trade_quick_select = yes
+					NOT = {
+						has_country_flag = fra_improve_trade_power_state_edict_flag
+					}
+				}
+				AND = {
+					has_promote_trade_quick_select = yes
+					has_country_flag = fra_improve_trade_power_state_edict_flag
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_2_slot_3_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			has_enforce_religious_unity_quick_select = yes
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_2_slot_4_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			OR = {
+				AND = {
+					current_age = age_of_discovery
+					has_country_flag = feudal_de_jure_law
+					has_feudal_de_jure_law_quick_select = yes
+				}
+				AND = {
+					current_age = age_of_reformation
+					has_country_flag = religion_enforced_edict
+					has_religion_enforced_quick_select = yes
+				}
+				AND = {
+					current_age = age_of_absolutism
+					has_country_flag = edict_of_absolutism
+					has_edict_of_absolutism_quick_select = yes
+				}
+				AND = {
+					current_age = age_of_revolutions
+					has_government_attribute = unlock_special_state_edicts
+					has_urbanization_edict_quick_select = yes
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_3_slot_1_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			OR = {
+				AND = {
+					current_age = age_of_discovery
+					has_government_attribute = unlock_special_state_edicts
+					has_feudal_taxes_edict_quick_select = yes
+				}
+				AND = {
+					current_age = age_of_absolutism
+					has_government_attribute = unlock_special_state_edicts
+					has_state_integration_edict_quick_select = yes
+				}
+				OR = {
+					AND = {
+						current_age = age_of_revolutions
+						has_country_flag = fra_enable_infrastructure_network_flag
+						has_french_infrastructure_network_quick_select = yes
+					}
+					AND = {
+						current_age = age_of_revolutions
+						has_country_flag = hab_prosperity_edict
+						NOT = {
+							has_country_flag = fra_enable_infrastructure_network_flag
+						}
+						has_edict_of_governance_quick_select = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_3_slot_2_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			OR = {
+				AND = {
+					NOT = {
+						current_age = age_of_revolutions
+					}
+					has_country_flag = fra_enable_infrastructure_network_flag
+					has_french_infrastructure_network_quick_select = yes
+				}
+				AND = {
+					NOT = {
+						current_age = age_of_revolutions
+					}
+					NOT = {
+						has_country_flag = fra_enable_infrastructure_network_flag
+					}
+					has_country_flag = hab_prosperity_edict
+					has_edict_of_governance_quick_select = yes
+				}
+				AND = {
+					current_age = age_of_revolutions
+					has_country_flag = fra_enable_infrastructure_network_flag
+					has_country_flag = hab_prosperity_edict
+					has_edict_of_governance_quick_select = yes
+				}
+			}
+		}
+	}
+}
+
+custom_icon = {
+	name = edict_commander_row_3_slot_3_glow
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = edict_event_enabled
+			}
+			NOT = {
+				current_age = age_of_revolutions
+			}
+			has_country_flag = fra_enable_infrastructure_network_flag
+			has_country_flag = hab_prosperity_edict
+			has_edict_of_governance_quick_select = yes
+		}
 	}
 }
