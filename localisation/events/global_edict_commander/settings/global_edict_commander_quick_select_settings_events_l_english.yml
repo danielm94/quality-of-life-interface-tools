@@ -1,6 +1,6 @@
 ﻿l_english:
  global_edict_commander_quick_select_settings_event.1.t: "Quick Select Edict Settings"
- global_edict_commander_quick_select_settings_event.1.d: "Instead of going through an event everytime you want to set an edict, you can set an event option to be applied immediately when you click the edict's button.\nIf the option is green, then a quick select option has been enabled for that edict."
+ global_edict_commander_quick_select_settings_event.1.d: "Instead of going through an event prompt every time you want to set an edict, you can pre-select an option here. Your choice will then be applied immediately when you click that edict's button.\nIf an edict below is §Ghighlighted green§!, a quick select option is currently enabled for it."
  global_edict_commander_quick_select_settings_event.go_back: "Go Back"
  global_edict_commander_quick_select_settings_event.1.advancement: "Advancement Effort"
  global_edict_commander_quick_select_settings_event.1.centralization: "Centralization Effort"
