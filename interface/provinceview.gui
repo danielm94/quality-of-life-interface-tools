@@ -1627,6 +1627,102 @@ guiTypes = {
 				}	
 			}
 
+			windowType = {
+				name = "autonomy_macro_window"
+				#scripted=yes
+				backGround=""
+				position = { x=462 y=284 }
+				size = { x=283 y=243}
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+				moveable = 0
+
+				iconType = {
+				name ="autonomy_macro_background"
+				spriteType = "GFX_autonomy_macro_background"
+				position = { x = 0 y = 0 }
+				}
+				instantTextBoxType = {
+					name = "autonomy_macro_title"
+					position = { x = 31 y = 7 }
+					textureFile = ""
+					font = "vic_22s"
+					borderSize = {x = 2 y = 2}
+					text = autonomy_macro_title_text
+					maxWidth = 285
+					maxHeight = 20
+					format = center
+				}
+				guiButtonType = {
+					name = "autonomy_macro_lower_autonomy_button"
+					position = { x= 74 y=186 }
+					quadTextureSprite = "GFX_autonomy_macro_lower_autonomy_button"
+				}
+				
+				guiButtonType = {
+					name = "autonomy_macro_lower_button"
+					position = { x= 76 y=109 }
+					quadTextureSprite = "GFX_autonomy_macro_lower_button"
+				}
+				guiButtonType = {
+					name = "autonomy_macro_raise_button"
+					position = { x= 224 y=109 }
+					quadTextureSprite = "GFX_autonomy_macro_raise_button"
+				}
+				instantTextBoxType = {
+					name = "autonomy_macro_min_autonomy_text"
+					position = { x = 25 y = 50 }
+					textureFile = ""
+					font = "vic_29s"
+					borderSize = {x = 2 y = 2}
+					text = autonomy_macro_min_autonomy_text_loc
+					maxWidth = 300
+					maxHeight = 20
+					format = center
+				}
+				instantTextBoxType = {
+					name = "autonomy_macro_min_autonomy_status_text"
+					position = { x = 142 y = 120 }
+					textureFile = ""
+					font = "vic_29s"
+					borderSize = {x = 2 y = 2}
+					text = autonomy_macro_min_autonomy_status_text_loc
+					maxWidth = 60
+					maxHeight = 20
+					format = center
+				}
+				guiButtonType = {
+					name = "autonomy_macro_calculate_button"
+					position = { x= 40 y=199 }
+					quadTextureSprite = "GFX_autonomy_macro_calculate_button"
+				}
+				guiButtonType = {
+					name = "autonomy_macro_close_button"
+					#scripted=yes
+					position = { x = 290 y = 0 }
+					quadTextureSprite ="GFX_closebutton2"
+					clicksound = close_window
+				}	
+				iconType = {
+					name ="autonomy_macro_lower_autonomy_button_glow"
+					spriteType = "GFX_autonomy_macro_lower_autonomy_button_glow"
+					#scripted = yes
+					position = { x= 74 y=186 }
+				}
+				instantTextBoxType = {
+					name = "autonomy_macro_lower_autonomy_button_text"
+					position = { x = 103 y = 203 }
+					textureFile = ""
+					font = "vic_22s"
+					borderSize = {x = 2 y = 2}
+					text = autonomy_macro_lower_autonomy_button_text_loc
+					maxWidth = 135
+					maxHeight = 20
+					format = center
+				}
+			}
 			iconType = {
 				name ="defensiveness_icon"
 				spriteType = "GFX_fort_defense_icon"
