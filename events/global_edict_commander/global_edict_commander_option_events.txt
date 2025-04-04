@@ -1,8 +1,10 @@
-# Hidden Events Containing Edict Application Logic
 namespace = global_edict_commander_option_events
 # Corresponds to global_edicts_commander_events.1.a
 country_event = {
 	id = global_edict_commander_option_events.1
+	title = global_edict_commander_option_events.1.t
+	desc = global_edict_commander_option_events.1.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -17,6 +19,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.1.b
 country_event = {
 	id = global_edict_commander_option_events.2
+	title = global_edict_commander_option_events.2.t
+	desc = global_edict_commander_option_events.2.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -33,6 +38,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.2.a
 country_event = {
 	id = global_edict_commander_option_events.3
+	title = global_edict_commander_option_events.3.t
+	desc = global_edict_commander_option_events.3.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -47,6 +55,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.2.b
 country_event = {
 	id = global_edict_commander_option_events.4
+	title = global_edict_commander_option_events.4.t
+	desc = global_edict_commander_option_events.4.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -63,6 +74,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.3.a
 country_event = {
 	id = global_edict_commander_option_events.5
+	title = global_edict_commander_option_events.5.t
+	desc = global_edict_commander_option_events.5.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -77,6 +91,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.3.b (Moved logic from original event 4)
 country_event = {
 	id = global_edict_commander_option_events.6
+	title = global_edict_commander_option_events.6.t
+	desc = global_edict_commander_option_events.6.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -150,6 +167,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.3.c
 country_event = {
 	id = global_edict_commander_option_events.7
+	title = global_edict_commander_option_events.7.t
+	desc = global_edict_commander_option_events.7.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -166,6 +186,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.5.a
 country_event = {
 	id = global_edict_commander_option_events.8
+	title = global_edict_commander_option_events.8.t
+	desc = global_edict_commander_option_events.8.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -182,6 +205,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.5.b
 country_event = {
 	id = global_edict_commander_option_events.9
+	title = global_edict_commander_option_events.9.t
+	desc = global_edict_commander_option_events.9.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -214,6 +240,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.5.c
 country_event = {
 	id = global_edict_commander_option_events.10
+	title = global_edict_commander_option_events.10.t
+	desc = global_edict_commander_option_events.10.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -246,6 +275,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.5.dee
 country_event = {
 	id = global_edict_commander_option_events.11
+	title = global_edict_commander_option_events.11.t
+	desc = global_edict_commander_option_events.11.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -262,6 +294,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.6.a
 country_event = {
 	id = global_edict_commander_option_events.12
+	title = global_edict_commander_option_events.12.t
+	desc = global_edict_commander_option_events.12.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -278,6 +313,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.6.b
 country_event = {
 	id = global_edict_commander_option_events.13
+	title = global_edict_commander_option_events.13.t
+	desc = global_edict_commander_option_events.13.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -311,6 +349,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.6.c
 country_event = {
 	id = global_edict_commander_option_events.14
+	title = global_edict_commander_option_events.14.t
+	desc = global_edict_commander_option_events.14.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -343,6 +384,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.6.dee
 country_event = {
 	id = global_edict_commander_option_events.15
+	title = global_edict_commander_option_events.15.t
+	desc = global_edict_commander_option_events.15.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -361,6 +405,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.6.e
 country_event = {
 	id = global_edict_commander_option_events.16
+	title = global_edict_commander_option_events.16.t
+	desc = global_edict_commander_option_events.16.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -395,6 +442,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.6.f
 country_event = {
 	id = global_edict_commander_option_events.17
+	title = global_edict_commander_option_events.17.t
+	desc = global_edict_commander_option_events.17.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -429,6 +479,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.6.g
 country_event = {
 	id = global_edict_commander_option_events.18
+	title = global_edict_commander_option_events.18.t
+	desc = global_edict_commander_option_events.18.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -445,6 +498,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.7.a
 country_event = {
 	id = global_edict_commander_option_events.19
+	title = global_edict_commander_option_events.19.t
+	desc = global_edict_commander_option_events.19.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -460,6 +516,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.7.b
 country_event = {
 	id = global_edict_commander_option_events.20
+	title = global_edict_commander_option_events.20.t
+	desc = global_edict_commander_option_events.20.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -491,6 +550,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.7.c
 country_event = {
 	id = global_edict_commander_option_events.21
+	title = global_edict_commander_option_events.21.t
+	desc = global_edict_commander_option_events.21.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -522,6 +584,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.7.dee
 country_event = {
 	id = global_edict_commander_option_events.22
+	title = global_edict_commander_option_events.22.t
+	desc = global_edict_commander_option_events.22.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -553,6 +618,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.7.e
 country_event = {
 	id = global_edict_commander_option_events.23
+	title = global_edict_commander_option_events.23.t
+	desc = global_edict_commander_option_events.23.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -569,6 +637,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.8.a
 country_event = {
 	id = global_edict_commander_option_events.24
+	title = global_edict_commander_option_events.24.t
+	desc = global_edict_commander_option_events.24.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -586,6 +657,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.8.b
 country_event = {
 	id = global_edict_commander_option_events.25
+	title = global_edict_commander_option_events.25.t
+	desc = global_edict_commander_option_events.25.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -619,6 +693,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.8.c
 country_event = {
 	id = global_edict_commander_option_events.26
+	title = global_edict_commander_option_events.26.t
+	desc = global_edict_commander_option_events.26.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -652,6 +729,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.8.dee
 country_event = {
 	id = global_edict_commander_option_events.27
+	title = global_edict_commander_option_events.27.t
+	desc = global_edict_commander_option_events.27.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -669,6 +749,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.8.e
 country_event = {
 	id = global_edict_commander_option_events.28
+	title = global_edict_commander_option_events.28.t
+	desc = global_edict_commander_option_events.28.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -702,6 +785,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.8.f
 country_event = {
 	id = global_edict_commander_option_events.29
+	title = global_edict_commander_option_events.29.t
+	desc = global_edict_commander_option_events.29.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -718,6 +804,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.9.a
 country_event = {
 	id = global_edict_commander_option_events.30
+	title = global_edict_commander_option_events.30.t
+	desc = global_edict_commander_option_events.30.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -733,6 +822,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.9.b
 country_event = {
 	id = global_edict_commander_option_events.31
+	title = global_edict_commander_option_events.31.t
+	desc = global_edict_commander_option_events.31.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -748,6 +840,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.9.c
 country_event = {
 	id = global_edict_commander_option_events.32
+	title = global_edict_commander_option_events.32.t
+	desc = global_edict_commander_option_events.32.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -763,6 +858,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.9.dee
 country_event = {
 	id = global_edict_commander_option_events.33
+	title = global_edict_commander_option_events.33.t
+	desc = global_edict_commander_option_events.33.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -794,6 +892,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.9.e
 country_event = {
 	id = global_edict_commander_option_events.34
+	title = global_edict_commander_option_events.34.t
+	desc = global_edict_commander_option_events.34.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -825,6 +926,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.9.f
 country_event = {
 	id = global_edict_commander_option_events.35
+	title = global_edict_commander_option_events.35.t
+	desc = global_edict_commander_option_events.35.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -841,6 +945,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.10.a
 country_event = {
 	id = global_edict_commander_option_events.36
+	title = global_edict_commander_option_events.36.t
+	desc = global_edict_commander_option_events.36.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -855,6 +962,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.10.b
 country_event = {
 	id = global_edict_commander_option_events.37
+	title = global_edict_commander_option_events.37.t
+	desc = global_edict_commander_option_events.37.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -870,6 +980,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.10.c
 country_event = {
 	id = global_edict_commander_option_events.38
+	title = global_edict_commander_option_events.38.t
+	desc = global_edict_commander_option_events.38.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -901,6 +1014,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.10.dee
 country_event = {
 	id = global_edict_commander_option_events.39
+	title = global_edict_commander_option_events.39.t
+	desc = global_edict_commander_option_events.39.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -932,6 +1048,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.10.e
 country_event = {
 	id = global_edict_commander_option_events.40
+	title = global_edict_commander_option_events.40.t
+	desc = global_edict_commander_option_events.40.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -948,6 +1067,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.11.a
 country_event = {
 	id = global_edict_commander_option_events.41
+	title = global_edict_commander_option_events.41.t
+	desc = global_edict_commander_option_events.41.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -962,6 +1084,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.11.b
 country_event = {
 	id = global_edict_commander_option_events.42
+	title = global_edict_commander_option_events.42.t
+	desc = global_edict_commander_option_events.42.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -978,6 +1103,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.12.a
 country_event = {
 	id = global_edict_commander_option_events.43
+	title = global_edict_commander_option_events.43.t
+	desc = global_edict_commander_option_events.43.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -992,6 +1120,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.12.b
 country_event = {
 	id = global_edict_commander_option_events.44
+	title = global_edict_commander_option_events.44.t
+	desc = global_edict_commander_option_events.44.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1007,6 +1138,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.12.c
 country_event = {
 	id = global_edict_commander_option_events.45
+	title = global_edict_commander_option_events.45.t
+	desc = global_edict_commander_option_events.45.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1038,6 +1172,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.12.dee
 country_event = {
 	id = global_edict_commander_option_events.46
+	title = global_edict_commander_option_events.46.t
+	desc = global_edict_commander_option_events.46.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1069,6 +1206,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.12.e
 country_event = {
 	id = global_edict_commander_option_events.47
+	title = global_edict_commander_option_events.47.t
+	desc = global_edict_commander_option_events.47.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1085,6 +1225,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.13.a
 country_event = {
 	id = global_edict_commander_option_events.48
+	title = global_edict_commander_option_events.48.t
+	desc = global_edict_commander_option_events.48.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1101,6 +1244,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.13.b
 country_event = {
 	id = global_edict_commander_option_events.49
+	title = global_edict_commander_option_events.49.t
+	desc = global_edict_commander_option_events.49.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1133,6 +1279,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.13.c
 country_event = {
 	id = global_edict_commander_option_events.50
+	title = global_edict_commander_option_events.50.t
+	desc = global_edict_commander_option_events.50.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1165,6 +1314,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.13.dee
 country_event = {
 	id = global_edict_commander_option_events.51
+	title = global_edict_commander_option_events.51.t
+	desc = global_edict_commander_option_events.51.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1181,6 +1333,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.14.a
 country_event = {
 	id = global_edict_commander_option_events.52
+	title = global_edict_commander_option_events.52.t
+	desc = global_edict_commander_option_events.52.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1195,6 +1350,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.14.b
 country_event = {
 	id = global_edict_commander_option_events.53
+	title = global_edict_commander_option_events.53.t
+	desc = global_edict_commander_option_events.53.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1210,6 +1368,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.14.c
 country_event = {
 	id = global_edict_commander_option_events.54
+	title = global_edict_commander_option_events.54.t
+	desc = global_edict_commander_option_events.54.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1241,6 +1402,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.14.dee
 country_event = {
 	id = global_edict_commander_option_events.55
+	title = global_edict_commander_option_events.55.t
+	desc = global_edict_commander_option_events.55.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1272,6 +1436,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.14.e
 country_event = {
 	id = global_edict_commander_option_events.56
+	title = global_edict_commander_option_events.56.t
+	desc = global_edict_commander_option_events.56.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1288,6 +1455,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.15.a
 country_event = {
 	id = global_edict_commander_option_events.57
+	title = global_edict_commander_option_events.57.t
+	desc = global_edict_commander_option_events.57.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1306,6 +1476,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.15.b
 country_event = {
 	id = global_edict_commander_option_events.58
+	title = global_edict_commander_option_events.58.t
+	desc = global_edict_commander_option_events.58.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1340,6 +1513,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.15.c
 country_event = {
 	id = global_edict_commander_option_events.59
+	title = global_edict_commander_option_events.59.t
+	desc = global_edict_commander_option_events.59.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1374,6 +1550,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.15.dee
 country_event = {
 	id = global_edict_commander_option_events.60
+	title = global_edict_commander_option_events.60.t
+	desc = global_edict_commander_option_events.60.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1390,6 +1569,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.16.a
 country_event = {
 	id = global_edict_commander_option_events.61
+	title = global_edict_commander_option_events.61.t
+	desc = global_edict_commander_option_events.61.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1404,6 +1586,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.16.b
 country_event = {
 	id = global_edict_commander_option_events.62
+	title = global_edict_commander_option_events.62.t
+	desc = global_edict_commander_option_events.62.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1420,6 +1605,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.17.a
 country_event = {
 	id = global_edict_commander_option_events.63
+	title = global_edict_commander_option_events.63.t
+	desc = global_edict_commander_option_events.63.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1437,6 +1625,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.17.b
 country_event = {
 	id = global_edict_commander_option_events.64
+	title = global_edict_commander_option_events.64.t
+	desc = global_edict_commander_option_events.64.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1470,6 +1661,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.17.c
 country_event = {
 	id = global_edict_commander_option_events.65
+	title = global_edict_commander_option_events.65.t
+	desc = global_edict_commander_option_events.65.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1503,6 +1697,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.17.dee
 country_event = {
 	id = global_edict_commander_option_events.66
+	title = global_edict_commander_option_events.66.t
+	desc = global_edict_commander_option_events.66.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1520,6 +1717,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.17.e
 country_event = {
 	id = global_edict_commander_option_events.67
+	title = global_edict_commander_option_events.67.t
+	desc = global_edict_commander_option_events.67.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1553,6 +1753,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.17.f
 country_event = {
 	id = global_edict_commander_option_events.68
+	title = global_edict_commander_option_events.68.t
+	desc = global_edict_commander_option_events.68.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1569,6 +1772,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.18.a
 country_event = {
 	id = global_edict_commander_option_events.69
+	title = global_edict_commander_option_events.69.t
+	desc = global_edict_commander_option_events.69.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1585,6 +1791,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.18.b
 country_event = {
 	id = global_edict_commander_option_events.70
+	title = global_edict_commander_option_events.70.t
+	desc = global_edict_commander_option_events.70.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1617,6 +1826,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.18.c
 country_event = {
 	id = global_edict_commander_option_events.71
+	title = global_edict_commander_option_events.71.t
+	desc = global_edict_commander_option_events.71.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
@@ -1649,6 +1861,9 @@ country_event = {
 # Corresponds to global_edicts_commander_events.18.dee
 country_event = {
 	id = global_edict_commander_option_events.72
+	title = global_edict_commander_option_events.72.t
+	desc = global_edict_commander_option_events.72.d
+	picture = BIG_BOOK_eventPicture
 	hidden = yes
 	is_triggered_only = yes
 	immediate = {
