@@ -3,3 +3,8 @@
  autonomy_macro_lower_autonomy_button_text_loc: "Lower Autonomy"
  autonomy_macro_min_autonomy_status_text_loc: "[From.minimum_autonomy_difference.GetValue]"
  autonomy_macro_min_autonomy_text_loc: "§YMinimum Difference§!"
+ autonomy_macro_lower_autonomy_button_tt: ""
+ autonomy_macro_lower_button_tt: ""
+ autonomy_macro_raise_button_tt: ""
+ autonomy_macro_calculate_button_tt: ""
+ autonomy_macro_close_button_tt: "Close This Window"

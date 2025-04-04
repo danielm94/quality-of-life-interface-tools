@@ -1,7 +1,75 @@
-﻿custom_button = {
-	name = x
-	tooltip = x
-	potential = { }
-	trigger = { }
-	effect = { }
+﻿custom_window = {
+	name = autonomy_macro_window
+	potential = {
+		has_country_flag = autonomy_macro_window_open
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_lower_autonomy_button
+	tooltip = autonomy_macro_lower_autonomy_button_tt
+	potential = {
+		always = no
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_lower_button
+	tooltip = autonomy_macro_lower_button_tt
+	potential = {
+		always = no
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_raise_button
+	tooltip = autonomy_macro_raise_button_tt
+	potential = {
+		always = no
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_calculate_button
+	tooltip = autonomy_macro_calculate_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = autonomy_macro_close_button
+	tooltip = autonomy_macro_close_button_tt
+	potential = {
+		always = no
+	}
+	trigger = {
+	}
+	effect = {
+		FROM = {
+			clr_country_flag = autonomy_macro_window_open
+		}
+	}
+}
+
+custom_icon = {
+	name = autonomy_macro_lower_autonomy_button_glow
+	potential = {
+		always = no
+	}
 }
