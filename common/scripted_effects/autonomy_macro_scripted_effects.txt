@@ -1,0 +1,10 @@
+setup_autonomy_macro = {
+	set_variable = {
+		which = minimum_autonomy_difference
+		value = 25
+	}
+	set_variable = {
+		which = provinces_that_can_lower_autonomy
+		value = -1
+	}
+}

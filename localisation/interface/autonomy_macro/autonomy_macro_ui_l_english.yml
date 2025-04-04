@@ -1,5 +1,5 @@
 ﻿l_english:
  autonomy_macro_title_text: "Lower Autonomy Globally"
  autonomy_macro_lower_autonomy_button_text_loc: "Lower Autonomy"
- autonomy_macro_min_autonomy_status_text_loc: "5"
+ autonomy_macro_min_autonomy_status_text_loc: "[From.minimum_autonomy_difference.GetValue]"
  autonomy_macro_min_autonomy_text_loc: "§YMinimum Difference§!"
