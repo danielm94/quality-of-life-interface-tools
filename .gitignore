@@ -10,3 +10,8 @@ gfx/interface/buttons/no_edict.psd
 gfx/interface/buttons/lock_button.psd
 common/event_modifiers/debug.txt
 gfx/interface/buttons/animated_edict_frame.psd
+gfx/interface/buttons/autonomy_macro/calculate.psd
+gfx/interface/buttons/autonomy_macro/lower_autonomy_button.psd
+gfx/interface/buttons/autonomy_macro/lower_button.psd
+gfx/interface/buttons/autonomy_macro/raise_buton.psd
+gfx/interface/autonomy_macro_bg.psd
