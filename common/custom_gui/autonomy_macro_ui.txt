@@ -1,4 +1,4 @@
-﻿custom_window = {
+custom_window = {
 	name = autonomy_macro_window
 	potential = {
 		has_country_flag = autonomy_macro_window_open
