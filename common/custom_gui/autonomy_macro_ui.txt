@@ -9,7 +9,6 @@ custom_button = {
 	name = autonomy_macro_lower_autonomy_button
 	tooltip = autonomy_macro_lower_autonomy_button_tt
 	potential = {
-		always = no
 	}
 	trigger = {
 	}
@@ -21,7 +20,6 @@ custom_button = {
 	name = autonomy_macro_lower_button
 	tooltip = autonomy_macro_lower_button_tt
 	potential = {
-		always = no
 	}
 	trigger = {
 	}
@@ -33,7 +31,6 @@ custom_button = {
 	name = autonomy_macro_raise_button
 	tooltip = autonomy_macro_raise_button_tt
 	potential = {
-		always = no
 	}
 	trigger = {
 	}
@@ -56,7 +53,6 @@ custom_button = {
 	name = autonomy_macro_close_button
 	tooltip = autonomy_macro_close_button_tt
 	potential = {
-		always = no
 	}
 	trigger = {
 	}
