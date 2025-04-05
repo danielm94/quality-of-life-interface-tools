@@ -141,6 +141,22 @@ edict_commander_centralization_effort_only_with_excess_autonomy = {
 			}
 		}
 		export_to_variable = {
+			which = min_local_autonomy
+			value = modifier:min_local_autonomy
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = min_local_autonomy
+					which = autonomy_floor
+				}
+			}
+			set_variable = {
+				which = autonomy_floor
+				which = min_local_autonomy
+			}
+		}
+		export_to_variable = {
 			which = curr_autonomy
 			value = local_autonomy
 		}
