@@ -1,69 +1,283 @@
-#Created by some talented person in the Missions Expanded mod team.
-variable_use_in_effect_effect = { #effect #variable
-	hidden_effect = { set_variable = { which = temp which = $variable$ } }
+variable_use_in_effect_effect = {
+	#effect #variable
+	hidden_effect = {
+		set_variable = {
+			which = temp
+			which = $variable$
+		}
+	}
 	if = {
 		limit = {
-			check_variable = { which = temp value = 0 }
+			check_variable = {
+				which = temp
+				value = 0
+			}
 		}
-		var_effect_h = { effect = $effect$ sign = + num = 83886.08 }
-		var_effect_h = { effect = $effect$ sign = + num = 41943.04 }
-		var_effect_h = { effect = $effect$ sign = + num = 20971.52 }
-		var_effect_h = { effect = $effect$ sign = + num = 10485.76 }
-		var_effect_h = { effect = $effect$ sign = + num = 5242.88 }
-		var_effect_h = { effect = $effect$ sign = + num = 2621.44 }
-		var_effect_h = { effect = $effect$ sign = + num = 1310.72 }
-		var_effect_h = { effect = $effect$ sign = + num = 655.36 }
-		var_effect_h = { effect = $effect$ sign = + num = 327.68 }
-		var_effect_h = { effect = $effect$ sign = + num = 163.84 }
-		var_effect_h = { effect = $effect$ sign = + num = 81.92 }
-		var_effect_h = { effect = $effect$ sign = + num = 40.96 }
-		var_effect_h = { effect = $effect$ sign = + num = 20.48 }
-		var_effect_h = { effect = $effect$ sign = + num = 10.24 }
-		var_effect_h = { effect = $effect$ sign = + num = 5.12 }
-		var_effect_h = { effect = $effect$ sign = + num = 2.56 }
-		var_effect_h = { effect = $effect$ sign = + num = 1.28 }
-		var_effect_h = { effect = $effect$ sign = + num = 0.64 }
-		var_effect_h = { effect = $effect$ sign = + num = 0.32 }
-		var_effect_h = { effect = $effect$ sign = + num = 0.16 }
-		var_effect_h = { effect = $effect$ sign = + num = 0.08 }
-		var_effect_h = { effect = $effect$ sign = + num = 0.04 }
-		var_effect_h = { effect = $effect$ sign = + num = 0.02 }
-		var_effect_h = { effect = $effect$ sign = + num = 0.01 }
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 83886.08
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 41943.04
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 20971.52
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 10485.76
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 5242.88
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 2621.44
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 1310.72
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 655.36
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 327.68
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 163.84
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 81.92
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 40.96
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 20.48
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 10.24
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 5.12
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 2.56
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 1.28
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 0.64
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 0.32
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 0.16
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 0.08
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 0.04
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 0.02
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = +
+			num = 0.01
+		}
 	}
 	else = {
-		hidden_effect = { multiply_variable = { which = temp value = -1 } }
-		var_effect_h = { effect = $effect$ sign = - num = 83886.08 }
-		var_effect_h = { effect = $effect$ sign = - num = 41943.04 }
-		var_effect_h = { effect = $effect$ sign = - num = 20971.52 }
-		var_effect_h = { effect = $effect$ sign = - num = 10485.76 }
-		var_effect_h = { effect = $effect$ sign = - num = 5242.88 }
-		var_effect_h = { effect = $effect$ sign = - num = 2621.44 }
-		var_effect_h = { effect = $effect$ sign = - num = 1310.72 }
-		var_effect_h = { effect = $effect$ sign = - num = 655.36 }
-		var_effect_h = { effect = $effect$ sign = - num = 327.68 }
-		var_effect_h = { effect = $effect$ sign = - num = 163.84 }
-		var_effect_h = { effect = $effect$ sign = - num = 81.92 }
-		var_effect_h = { effect = $effect$ sign = - num = 40.96 }
-		var_effect_h = { effect = $effect$ sign = - num = 20.48 }
-		var_effect_h = { effect = $effect$ sign = - num = 10.24 }
-		var_effect_h = { effect = $effect$ sign = - num = 5.12 }
-		var_effect_h = { effect = $effect$ sign = - num = 2.56 }
-		var_effect_h = { effect = $effect$ sign = - num = 1.28 }
-		var_effect_h = { effect = $effect$ sign = - num = 0.64 }
-		var_effect_h = { effect = $effect$ sign = - num = 0.32 }
-		var_effect_h = { effect = $effect$ sign = - num = 0.16 }
-		var_effect_h = { effect = $effect$ sign = - num = 0.08 }
-		var_effect_h = { effect = $effect$ sign = - num = 0.04 }
-		var_effect_h = { effect = $effect$ sign = - num = 0.02 }
-		var_effect_h = { effect = $effect$ sign = - num = 0.01 }
+		hidden_effect = {
+			multiply_variable = {
+				which = temp
+				value = -1
+			}
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 83886.08
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 41943.04
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 20971.52
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 10485.76
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 5242.88
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 2621.44
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 1310.72
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 655.36
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 327.68
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 163.84
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 81.92
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 40.96
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 20.48
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 10.24
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 5.12
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 2.56
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 1.28
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 0.64
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 0.32
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 0.16
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 0.08
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 0.04
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 0.02
+		}
+		var_effect_h = {
+			effect = $effect$
+			sign = -
+			num = 0.01
+		}
 	}
 }
+
 var_effect_h = {
 	if = {
 		limit = {
-			check_variable = { which = temp value = $num$ }
+			check_variable = {
+				which = temp
+				value = $num$
+			}
 		}
-		hidden_effect = { subtract_variable = { which = temp value = $num$ } }
+		hidden_effect = {
+			subtract_variable = {
+				which = temp
+				value = $num$
+			}
+		}
 		$effect$ = $sign$$num$
 	}
 }

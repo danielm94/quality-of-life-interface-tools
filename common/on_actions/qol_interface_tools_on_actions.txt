@@ -209,3 +209,15 @@ on_mil_development = {
 		}
 	}
 }
+
+on_adm_exploited = {
+	set_province_flag = province_exploited
+}
+
+on_dip_exploited = {
+	set_province_flag = province_exploited
+}
+
+on_mil_exploited = {
+	set_province_flag = province_exploited
+}
