@@ -564,7 +564,358 @@ guiTypes = {
 
 			### Core
 
+			guiButtonType = {
+				name = "fort_macro_button"
+				position = { x=478 y=472}
+				quadTextureSprite ="GFX_fort_macro_tab"
+				scripted = yes
+				shortcut = "shift+f"
+			}
+			guiButtonType = {
+				name = "exploit_tab"
+				position = { x=478 y=550}
+				quadTextureSprite ="GFX_exploit_tab"
+				scripted = yes
+				shortcut = "shift+e"
+			}
+			guiButtonType = {
+				name = "autonomy_macro_tab"
+				position = { x=478 y=511}
+				quadTextureSprite ="GFX_autonomy_macro_tab"
+				scripted = yes
+				shortcut = "CTRL+a"
+			}
 
+			windowType = {
+				name = "fort_macro_window"
+				scripted=yes
+				backGround=""
+				position = { x=479 y=413 }
+				size = { x=225 y=189}
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+				moveable = 0
+
+				iconType = {
+				name ="fort_macro_window_background"
+				spriteType = "GFX_fort_macro_window_background"
+				position = { x = 0 y = 0 }
+				}
+
+
+				instantTextBoxType = {
+					name = "fort_macro_title"
+					position = { x = -80 y = 22 }
+					textureFile = ""
+					font = "vic_22s"
+					borderSize = {x = 2 y = 2}
+					text = fort_macro_title_text
+					maxWidth = 380
+					maxHeight = 20
+					format = center
+				}
+
+				instantTextBoxType = {
+					name = "fort_macro_whitelist"
+					position = { x = 80 y = 77 }
+					textureFile = ""
+					font = "vic_22s"
+					borderSize = {x = 2 y = 2}
+					text = fort_macro_whitelist_text
+					maxWidth = 380
+					maxHeight = 20
+					format = left
+				}
+				instantTextBoxType = {
+					name = "fort_macro_delete_all_forts"
+					position = { x = 80 y = 130 }
+					textureFile = ""
+					font = "vic_22s"
+					borderSize = {x = 2 y = 2}
+					text = fort_macro_delete_all_forts_text
+					maxWidth = 380
+					maxHeight = 20
+					format = left
+				}
+
+				guiButtonType = {
+					name = "fort_macro_button_whitelisted"
+					position = { x=29 y=66}
+					quadTextureSprite ="GFX_fort_macro_button_whitelisted"
+					scripted = yes
+					shortcut = "shift+w"
+				}
+				guiButtonType = {
+					name = "fort_macro_button_blacklisted"
+					position = { x=29 y=66}
+					quadTextureSprite ="GFX_fort_macro_button_blacklisted"
+					scripted = yes
+					shortcut = "shift+w"
+				}
+
+				guiButtonType = {
+					name = "fort_macro_button_delete_all_forts"
+					position = { x=29 y=119}
+					quadTextureSprite ="GFX_fort_macro_button_delete_all_forts"
+					scripted = yes
+					shortcut = "DELETE"
+				}
+
+				guiButtonType = {
+					name = "fort_macro_close_button"
+					scripted=yes
+					position = { x = 190 y = -5 }
+					quadTextureSprite ="GFX_closebutton2"
+					clicksound = close_window
+				}	
+			}
+			windowType = {
+				name = "autonomy_macro_window"
+				scripted=yes
+				backGround=""
+				position = { x=463 y=233 }
+				size = { x=283 y=243}
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+				moveable = 0
+
+				iconType = {
+				name ="autonomy_macro_background"
+				spriteType = "GFX_autonomy_macro_background"
+				position = { x = 0 y = 0 }
+				}
+				instantTextBoxType = {
+					name = "autonomy_macro_title"
+					position = { x = 31 y = 7 }
+					textureFile = ""
+					font = "vic_22s"
+					borderSize = {x = 2 y = 2}
+					text = autonomy_macro_title_text
+					maxWidth = 285
+					maxHeight = 20
+					format = center
+				}
+		
+				guiButtonType = {
+					name = "autonomy_macro_lower_autonomy_button"
+					position = { x= 74 y=295 }
+					quadTextureSprite = "GFX_autonomy_macro_lower_autonomy_button"
+					scripted = yes
+					#vvv use these to test text centering vvv
+					#buttonText = autonomy_macro_lower_autonomy_button_text_loc 
+					#buttonFont = "vic_22s"
+				}
+				iconType = {
+					name ="autonomy_macro_lower_autonomy_button_glow"
+					spriteType = "GFX_autonomy_macro_lower_autonomy_button_glow"
+					scripted = yes
+					position = { x= 74 y=295 }
+				}
+				instantTextBoxType = {
+					name = "autonomy_macro_lower_autonomy_button_text"
+					position = { x = 31 y = 7 }
+					textureFile = ""
+					font = "vic_22s"
+					borderSize = {x = 0 y = 305}
+					text = autonomy_macro_lower_autonomy_button_text_loc
+					maxWidth = 285
+					maxHeight = 20
+					format = center
+				}
+				guiButtonType = {
+					name = "autonomy_macro_min_development_lower_5_button"
+					position = { x= 76 y= 83}
+					quadTextureSprite = "GFX_autonomy_macro_empty_button"
+					scripted = yes
+					shortcut = "shift+."
+				}
+				guiButtonType = {
+					name = "autonomy_macro_min_development_lower_10_button"
+					position = { x= 76 y= 83}
+					quadTextureSprite = "GFX_autonomy_macro_empty_button"
+					scripted = yes
+					shortcut = "CTRL+shift+."
+				}
+				guiButtonType = {
+					name = "autonomy_macro_min_development_lower_button"
+					position = { x= 76 y= 83}
+					quadTextureSprite = "GFX_autonomy_macro_lower_button"
+					scripted = yes
+					shortcut = "."
+				}
+				guiButtonType = {
+					name = "autonomy_macro_min_development_raise_5_button"
+					position = { x= 224 y=83}
+					quadTextureSprite = "GFX_autonomy_macro_empty_button"
+					shortcut="shift+/"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "autonomy_macro_min_development_raise_10_button"
+					position = { x= 224 y=83}
+					quadTextureSprite = "GFX_autonomy_macro_empty_button"
+					shortcut="CTRL+shift+/"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "autonomy_macro_min_development_raise_button"
+					position = { x= 224 y=83}
+					quadTextureSprite = "GFX_autonomy_macro_raise_button"
+					scripted = yes
+					shortcut = "/"
+				}
+
+				guiButtonType = {
+					name = "autonomy_macro_min_difference_lower_button"
+					position = { x= 76 y=218 }
+					quadTextureSprite = "GFX_autonomy_macro_lower_button"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "autonomy_macro_min_difference_raise_button"
+					position = { x= 224 y=218 }
+					quadTextureSprite = "GFX_autonomy_macro_raise_button"
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "autonomy_macro_min_development_text"
+					position = { x = 25 y =32}
+					textureFile = ""
+					font = "vic_29s"
+					borderSize = {x = 2 y = 2}
+					text = autonomy_macro_min_development_text_loc
+					maxWidth = 300
+					maxHeight = 20
+					format = center
+				}
+				instantTextBoxType = {
+					name = "autonomy_macro_min_autonomy_text"
+					position = { x = 25 y = 167 }
+					textureFile = ""
+					font = "vic_29s"
+					borderSize = {x = 2 y = 2}
+					text = autonomy_macro_min_difference_text_loc
+					maxWidth = 300
+					maxHeight = 20
+					format = center
+				}
+				instantTextBoxType = {
+					name = "autonomy_macro_min_development_status_text"
+					position = { x = 142 y = 94 }
+					textureFile = ""
+					font = "vic_29s"
+					borderSize = {x = 2 y = 2}
+					text = autonomy_macro_min_development_status_text_loc
+					maxWidth = 60
+					maxHeight = 20
+					format = center
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "autonomy_macro_min_difference_status_text"
+					position = { x = 142 y = 229 }
+					textureFile = ""
+					font = "vic_29s"
+					borderSize = {x = 2 y = 2}
+					text = autonomy_macro_min_difference_status_text_loc
+					maxWidth = 60
+					maxHeight = 20
+					format = center
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "autonomy_macro_calculate_button"
+					position = { x= 40 y=308 }
+					quadTextureSprite = "GFX_autonomy_macro_calculate_button"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "autonomy_macro_close_button"
+					scripted=yes
+					position = { x = 290 y = 0 }
+					quadTextureSprite ="GFX_closebutton2"
+					clicksound = close_window
+				}	
+			}
+			windowType = {
+				name = "exploit_dev_macro_window"
+				scripted=yes
+				backGround=""
+				position = { x=463 y=409 }
+				size = { x=283 y=243}
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+				moveable = 0
+
+				iconType = {
+				name ="exploit_dev_macro_background"
+				spriteType = "GFX_exploit_dev_window_background"
+				position = { x = 0 y = 0 }
+				}
+				instantTextBoxType = {
+					name = "exploit_dev_macro_title"
+					position = { x = 31 y = 15 }
+					textureFile = ""
+					font = "vic_22s"
+					borderSize = {x = 2 y = 2}
+					text = exploit_dev_macro_title_loc
+					maxWidth = 285
+					maxHeight = 20
+					format = center
+				}
+				guiButtonType = {
+					name = "exploit_dev_macro_close_button"
+					scripted=yes
+					position = { x = 290 y = 9}
+					quadTextureSprite ="GFX_closebutton2"
+					clicksound = close_window
+				}
+				guiButtonType = {
+					name = "exploit_dev_tax_button"
+					scripted=yes
+					position = { x = 40 y = 106}
+					quadTextureSprite ="GFX_exploit_dev_tax_button"
+					clicksound = burncolony
+				
+				}
+				guiButtonType = {
+					name = "exploit_dev_production_button"
+					scripted=yes
+					position = { x = 142 y = 106}
+					quadTextureSprite ="GFX_exploit_dev_production_button"
+					clicksound = burncolony
+				}
+				guiButtonType = {
+					name = "exploit_dev_manpower_button"
+					scripted=yes
+					position = { x = 246 y = 106}
+					quadTextureSprite ="GFX_exploit_dev_manpower_button"
+					clicksound = burncolony
+				}
+				guiButtonType = {
+					name = "exploit_dev_include_territories"
+					position = { x=50 y=56 }
+					quadTextureSprite ="GFX_exploit_dev_include_territories"
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "exploit_dev_include_territories_text"
+					position = { x = 70 y = 55 }
+					textureFile = ""
+					font = "vic_29s"
+					borderSize = {x = 2 y = 2}
+					text = exploit_dev_include_territories_text_loc
+					maxWidth = 200
+					maxHeight = 20
+					format = center
+				}
+			}
 			iconType =
 			{
 				name ="tax_base_icon"
@@ -1533,277 +1884,6 @@ guiTypes = {
 				quadTextureSprite = "GFX_maintenance_checkbox"
 			}
 
-			guiButtonType = {
-				name = "fort_macro_button"
-				position = { x=478 y=420}
-				quadTextureSprite ="GFX_fort_macro_tab"
-				scripted = yes
-				shortcut = "shift+f"
-			}
-
-			windowType = {
-				name = "fort_macro_window"
-				scripted=yes
-				backGround=""
-				position = { x=479 y=413 }
-				size = { x=225 y=189}
-				dontRender = ""
-				horizontalBorder= ""
-				verticalBorder= ""
-				fullScreen = no
-				moveable = 0
-
-				iconType = {
-				name ="fort_macro_window_background"
-				spriteType = "GFX_fort_macro_window_background"
-				position = { x = 0 y = 0 }
-				}
-
-
-				instantTextBoxType = {
-					name = "fort_macro_title"
-					position = { x = -80 y = 22 }
-					textureFile = ""
-					font = "vic_22s"
-					borderSize = {x = 2 y = 2}
-					text = fort_macro_title_text
-					maxWidth = 380
-					maxHeight = 20
-					format = center
-				}
-
-				instantTextBoxType = {
-					name = "fort_macro_whitelist"
-					position = { x = 80 y = 77 }
-					textureFile = ""
-					font = "vic_22s"
-					borderSize = {x = 2 y = 2}
-					text = fort_macro_whitelist_text
-					maxWidth = 380
-					maxHeight = 20
-					format = left
-				}
-				instantTextBoxType = {
-					name = "fort_macro_delete_all_forts"
-					position = { x = 80 y = 130 }
-					textureFile = ""
-					font = "vic_22s"
-					borderSize = {x = 2 y = 2}
-					text = fort_macro_delete_all_forts_text
-					maxWidth = 380
-					maxHeight = 20
-					format = left
-				}
-
-				guiButtonType = {
-					name = "fort_macro_button_whitelisted"
-					position = { x=29 y=66}
-					quadTextureSprite ="GFX_fort_macro_button_whitelisted"
-					scripted = yes
-					shortcut = "shift+w"
-				}
-				guiButtonType = {
-					name = "fort_macro_button_blacklisted"
-					position = { x=29 y=66}
-					quadTextureSprite ="GFX_fort_macro_button_blacklisted"
-					scripted = yes
-					shortcut = "shift+w"
-				}
-
-				guiButtonType = {
-					name = "fort_macro_button_delete_all_forts"
-					position = { x=29 y=119}
-					quadTextureSprite ="GFX_fort_macro_button_delete_all_forts"
-					scripted = yes
-					shortcut = "DELETE"
-				}
-
-				guiButtonType = {
-					name = "fort_macro_close_button"
-					scripted=yes
-					position = { x = 190 y = -5 }
-					quadTextureSprite ="GFX_closebutton2"
-					clicksound = close_window
-				}	
-			}
-			guiButtonType = {
-				name = "autonomy_macro_tab"
-				position = { x=478 y=382}
-				quadTextureSprite ="GFX_autonomy_macro_tab"
-				scripted = yes
-				shortcut = "CTRL+a"
-			}
-			windowType = {
-				name = "autonomy_macro_window"
-				scripted=yes
-				backGround=""
-				position = { x=463 y=233 }
-				size = { x=283 y=243}
-				dontRender = ""
-				horizontalBorder= ""
-				verticalBorder= ""
-				fullScreen = no
-				moveable = 0
-
-				iconType = {
-				name ="autonomy_macro_background"
-				spriteType = "GFX_autonomy_macro_background"
-				position = { x = 0 y = 0 }
-				}
-				instantTextBoxType = {
-					name = "autonomy_macro_title"
-					position = { x = 31 y = 7 }
-					textureFile = ""
-					font = "vic_22s"
-					borderSize = {x = 2 y = 2}
-					text = autonomy_macro_title_text
-					maxWidth = 285
-					maxHeight = 20
-					format = center
-				}
-		
-				guiButtonType = {
-					name = "autonomy_macro_lower_autonomy_button"
-					position = { x= 74 y=295 }
-					quadTextureSprite = "GFX_autonomy_macro_lower_autonomy_button"
-					scripted = yes
-					#vvv use these to test text centering vvv
-					#buttonText = autonomy_macro_lower_autonomy_button_text_loc 
-					#buttonFont = "vic_22s"
-				}
-				iconType = {
-					name ="autonomy_macro_lower_autonomy_button_glow"
-					spriteType = "GFX_autonomy_macro_lower_autonomy_button_glow"
-					scripted = yes
-					position = { x= 74 y=295 }
-				}
-				instantTextBoxType = {
-					name = "autonomy_macro_lower_autonomy_button_text"
-					position = { x = 31 y = 7 }
-					textureFile = ""
-					font = "vic_22s"
-					borderSize = {x = 0 y = 305}
-					text = autonomy_macro_lower_autonomy_button_text_loc
-					maxWidth = 285
-					maxHeight = 20
-					format = center
-				}
-				guiButtonType = {
-					name = "autonomy_macro_min_development_lower_5_button"
-					position = { x= 76 y= 83}
-					quadTextureSprite = "GFX_autonomy_macro_empty_button"
-					scripted = yes
-					shortcut = "shift+."
-				}
-				guiButtonType = {
-					name = "autonomy_macro_min_development_lower_10_button"
-					position = { x= 76 y= 83}
-					quadTextureSprite = "GFX_autonomy_macro_empty_button"
-					scripted = yes
-					shortcut = "CTRL+shift+."
-				}
-				guiButtonType = {
-					name = "autonomy_macro_min_development_lower_button"
-					position = { x= 76 y= 83}
-					quadTextureSprite = "GFX_autonomy_macro_lower_button"
-					scripted = yes
-					shortcut = "."
-				}
-				guiButtonType = {
-					name = "autonomy_macro_min_development_raise_5_button"
-					position = { x= 224 y=83}
-					quadTextureSprite = "GFX_autonomy_macro_empty_button"
-					shortcut="shift+/"
-					scripted = yes
-				}
-				guiButtonType = {
-					name = "autonomy_macro_min_development_raise_10_button"
-					position = { x= 224 y=83}
-					quadTextureSprite = "GFX_autonomy_macro_empty_button"
-					shortcut="CTRL+shift+/"
-					scripted = yes
-				}
-				guiButtonType = {
-					name = "autonomy_macro_min_development_raise_button"
-					position = { x= 224 y=83}
-					quadTextureSprite = "GFX_autonomy_macro_raise_button"
-					scripted = yes
-					shortcut = "/"
-				}
-
-				guiButtonType = {
-					name = "autonomy_macro_min_difference_lower_button"
-					position = { x= 76 y=218 }
-					quadTextureSprite = "GFX_autonomy_macro_lower_button"
-					scripted = yes
-				}
-				guiButtonType = {
-					name = "autonomy_macro_min_difference_raise_button"
-					position = { x= 224 y=218 }
-					quadTextureSprite = "GFX_autonomy_macro_raise_button"
-					scripted = yes
-				}
-				instantTextBoxType = {
-					name = "autonomy_macro_min_development_text"
-					position = { x = 25 y =32}
-					textureFile = ""
-					font = "vic_29s"
-					borderSize = {x = 2 y = 2}
-					text = autonomy_macro_min_development_text_loc
-					maxWidth = 300
-					maxHeight = 20
-					format = center
-				}
-				instantTextBoxType = {
-					name = "autonomy_macro_min_autonomy_text"
-					position = { x = 25 y = 167 }
-					textureFile = ""
-					font = "vic_29s"
-					borderSize = {x = 2 y = 2}
-					text = autonomy_macro_min_difference_text_loc
-					maxWidth = 300
-					maxHeight = 20
-					format = center
-				}
-				instantTextBoxType = {
-					name = "autonomy_macro_min_development_status_text"
-					position = { x = 142 y = 94 }
-					textureFile = ""
-					font = "vic_29s"
-					borderSize = {x = 2 y = 2}
-					text = autonomy_macro_min_development_status_text_loc
-					maxWidth = 60
-					maxHeight = 20
-					format = center
-					scripted = yes
-				}
-				instantTextBoxType = {
-					name = "autonomy_macro_min_difference_status_text"
-					position = { x = 142 y = 229 }
-					textureFile = ""
-					font = "vic_29s"
-					borderSize = {x = 2 y = 2}
-					text = autonomy_macro_min_difference_status_text_loc
-					maxWidth = 60
-					maxHeight = 20
-					format = center
-					scripted = yes
-				}
-				guiButtonType = {
-					name = "autonomy_macro_calculate_button"
-					position = { x= 40 y=308 }
-					quadTextureSprite = "GFX_autonomy_macro_calculate_button"
-					scripted = yes
-				}
-				guiButtonType = {
-					name = "autonomy_macro_close_button"
-					scripted=yes
-					position = { x = 290 y = 0 }
-					quadTextureSprite ="GFX_closebutton2"
-					clicksound = close_window
-				}	
-
-			}
 			iconType = {
 				name ="defensiveness_icon"
 				spriteType = "GFX_fort_defense_icon"
