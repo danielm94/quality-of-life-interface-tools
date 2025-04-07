@@ -235,7 +235,6 @@ calculate_average_autonomy_reduction = {
 	}
 }
 
-
 reduce_autonomy_globally = {
 	set_variable = {
 		which = num_of_times_autonomy_lowered
@@ -293,9 +292,9 @@ reduce_autonomy_globally = {
 			}
 		}
 	}
-	variable_use_in_effect_effect = {
+	variable_effect = {
+		var = absolutism_gain
 		effect = add_absolutism
-		variable = absolutism_gain
 	}
 	if = {
 		limit = {

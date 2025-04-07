@@ -1,6 +1,7 @@
 custom_window = {
 	name = autonomy_macro_window
 	potential = {
+		owned_by = FROM
 		FROM = {
 			has_country_flag = autonomy_macro_window_open
 		}
@@ -11,6 +12,7 @@ custom_button = {
 	name = autonomy_macro_tab
 	tooltip = autonomy_macro_tab_tt
 	potential = {
+		owned_by = FROM
 	}
 	trigger = {
 	}
@@ -389,6 +391,7 @@ custom_button = {
 	effect = {
 		hidden_effect = {
 			FROM = {
+				play_sound = calculate_autonomy
 				set_variable = {
 					which = average_autonomy_reduction
 					value = 0

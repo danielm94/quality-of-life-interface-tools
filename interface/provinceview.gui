@@ -705,6 +705,7 @@ guiTypes = {
 					position = { x= 74 y=295 }
 					quadTextureSprite = "GFX_autonomy_macro_lower_autonomy_button"
 					scripted = yes
+					shortcut = "a"
 					#vvv use these to test text centering vvv
 					#buttonText = autonomy_macro_lower_autonomy_button_text_loc 
 					#buttonFont = "vic_22s"
@@ -731,34 +732,34 @@ guiTypes = {
 					position = { x= 76 y= 83}
 					quadTextureSprite = "GFX_autonomy_macro_empty_button"
 					scripted = yes
-					shortcut = "shift+."
+					shortcut = "shift+;"
 				}
 				guiButtonType = {
 					name = "autonomy_macro_min_development_lower_10_button"
 					position = { x= 76 y= 83}
 					quadTextureSprite = "GFX_autonomy_macro_empty_button"
 					scripted = yes
-					shortcut = "CTRL+shift+."
+					shortcut = "CTRL+shift+;"
 				}
 				guiButtonType = {
 					name = "autonomy_macro_min_development_lower_button"
 					position = { x= 76 y= 83}
 					quadTextureSprite = "GFX_autonomy_macro_lower_button"
 					scripted = yes
-					shortcut = "."
+					shortcut = ";"
 				}
 				guiButtonType = {
 					name = "autonomy_macro_min_development_raise_5_button"
 					position = { x= 224 y=83}
 					quadTextureSprite = "GFX_autonomy_macro_empty_button"
-					shortcut="shift+/"
+					shortcut="shift+'"
 					scripted = yes
 				}
 				guiButtonType = {
 					name = "autonomy_macro_min_development_raise_10_button"
 					position = { x= 224 y=83}
 					quadTextureSprite = "GFX_autonomy_macro_empty_button"
-					shortcut="CTRL+shift+/"
+					shortcut="CTRL+shift+'"
 					scripted = yes
 				}
 				guiButtonType = {
@@ -766,7 +767,7 @@ guiTypes = {
 					position = { x= 224 y=83}
 					quadTextureSprite = "GFX_autonomy_macro_raise_button"
 					scripted = yes
-					shortcut = "/"
+					shortcut = "'"
 				}
 
 				guiButtonType = {
@@ -774,12 +775,14 @@ guiTypes = {
 					position = { x= 76 y=218 }
 					quadTextureSprite = "GFX_autonomy_macro_lower_button"
 					scripted = yes
+					shortcut = "."
 				}
 				guiButtonType = {
 					name = "autonomy_macro_min_difference_raise_button"
 					position = { x= 224 y=218 }
 					quadTextureSprite = "GFX_autonomy_macro_raise_button"
 					scripted = yes
+					shortcut = "/"
 				}
 				instantTextBoxType = {
 					name = "autonomy_macro_min_development_text"
@@ -832,6 +835,7 @@ guiTypes = {
 					position = { x= 40 y=308 }
 					quadTextureSprite = "GFX_autonomy_macro_calculate_button"
 					scripted = yes
+					shortcut = "c"
 				}
 				guiButtonType = {
 					name = "autonomy_macro_close_button"
