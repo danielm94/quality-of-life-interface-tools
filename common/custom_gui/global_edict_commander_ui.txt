@@ -991,8 +991,8 @@ custom_button = {
 		}
 	}
 	trigger = {
-		FROM = {
-			hidden_trigger = {
+		hidden_trigger = {
+			FROM = {
 				NOT = {
 					has_country_flag = edict_event_enabled
 				}
