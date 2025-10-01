@@ -1,0 +1,202 @@
+#Before opening the upgrade building macro window
+custom_button = {
+	name = upgrade_building_macro_tab_window_closed
+	tooltip = fort_macro_button_tt
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = upgrade_building_macro_open
+			}
+		}
+	}
+	trigger = {
+	}
+	effect = {
+		FROM = {
+			set_country_flag = upgrade_building_macro_open
+		}
+	}
+}
+
+#After opening the upgrade building macro window
+#We do this because the macro window obstructs the tab to open it.
+custom_button = {
+	name = upgrade_building_macro_tab_window_opened
+	tooltip = fort_macro_button_tt
+	potential = {
+		FROM = {
+			has_country_flag = upgrade_building_macro_open
+		}
+	}
+	trigger = {
+	}
+	frame = {
+		number = 2
+		trigger = {
+			FROM = {
+				has_country_flag = upgrade_building_macro_open
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			clr_country_flag = upgrade_building_macro_open
+		}
+	}
+}
+
+custom_window = {
+	name = upgrade_building_macro_window
+	potential = {
+		FROM = {
+			has_country_flag = upgrade_building_macro_open
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_to_trade_depot_button
+	tooltip = upgrade_to_trade_depot_button_tt
+	potential = {
+	}
+	trigger = {
+		any_owned_province = {
+			has_building = marketplace
+			can_build = trade_depot
+		}
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = upgrade_to_stock_exchange_button
+	tooltip = upgrade_to_stock_exchange_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = upgrade_to_town_hall_button
+	tooltip = upgrade_to_town_hall_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = upgrade_to_drydock_button
+	tooltip = upgrade_to_drydock_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = upgrade_to_grand_shipyard_button
+	tooltip = upgrade_to_grand_shipyard_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = upgrade_to_counting_house_button
+	tooltip = upgrade_to_counting_house_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = upgrade_to_training_fields_button
+	tooltip = upgrade_to_training_fields_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = upgrade_to_conscription_center_button
+	tooltip = upgrade_to_conscription_center_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = upgrade_to_cathedral_button
+	tooltip = upgrade_to_cathedral_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = upgrade_to_fort_16th_button
+	tooltip = upgrade_to_fort_16th_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = upgrade_to_fort_17th_button
+	tooltip = upgrade_to_fort_17th_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = upgrade_to_fort_18th_button
+	tooltip = upgrade_to_fort_18th_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
+
+custom_button = {
+	name = upgrade_to_naval_battery_button
+	tooltip = upgrade_to_naval_battery_button_tt
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+	}
+}
