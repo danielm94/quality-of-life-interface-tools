@@ -4562,7 +4562,6 @@ guiTypes = {
 					horizontalBorder= ""
 					verticalBorder= ""
 					fullscreen = no
-					scripted = yes
 
 					iconType = {
 						name = "trade_banner"
@@ -4595,13 +4594,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "marketplace_cost"
+						name = "build_building_marketplace_cost"
 						position = {x = 9 y = 82 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -4612,13 +4612,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "trade_depot_cost"
+						name = "build_building_trade_depot_cost"
 						position = {x = 61 y = 82 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					iconType = {
@@ -4635,13 +4636,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "stock_exchange_cost"
+						name = "build_building_stock_exchange_cost"
 						position = {x = 113 y = 82 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					iconType = {
@@ -4681,13 +4683,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "town_hall_cost"
+						name = "build_building_town_hall_cost"
 						position = {x = 268 y = 82 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -4698,13 +4701,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "courthouse_cost"
+						name = "build_building_courthouse_cost"
 						position = {x = 216 y = 82 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					iconType = {
@@ -4721,13 +4725,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "university_cost"
+						name = "build_building_university_cost"
 						position = {x = 320 y = 82 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 
@@ -4765,13 +4770,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "dock_cost"
+						name = "build_building_dock_cost"
 						position = {x = 9 y = 179 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -4782,13 +4788,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "drydock_cost"
+						name = "build_building_drydock_cost"
 						position = {x = 61 y = 179 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					iconType = {
@@ -4805,13 +4812,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "shipyard_cost"
+						name = "build_building_shipyard_cost"
 						position = {x = 113 y = 179 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -4822,13 +4830,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "grand_shipyard_cost"
+						name = "build_building_grand_shipyard_cost"
 						position = {x = 165 y = 179 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					iconType = {
@@ -4868,13 +4877,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "workshop_cost"
+						name = "build_building_workshop_cost"
 						position = {x = 268 y = 179 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -4885,13 +4895,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "counting_house_cost"
+						name = "build_building_counting_house_cost"
 						position = {x = 320 y = 179 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					iconType = {
@@ -4935,13 +4946,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "barracks_cost"
+						name = "build_building_barracks_cost"
 						position = {x = 9 y = 276 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -4952,13 +4964,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "training_fields_cost"
+						name = "build_building_training_fields_cost"
 						position = {x = 61 y = 276 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					iconType = {
@@ -4975,13 +4988,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "regimental_camp_cost"
+						name = "build_building_regimental_camp_cost"
 						position = {x = 113 y = 276 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -4992,13 +5006,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "conscription_center_cost"
+						name = "build_building_conscription_center_cost"
 						position = {x = 165 y = 276 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					iconType = {
@@ -5038,13 +5053,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "temple_cost"
+						name = "build_building_temple_cost"
 						position = {x = 268 y = 276 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -5055,13 +5071,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "cathedral_cost"
+						name = "build_building_cathedral_cost"
 						position = {x = 320 y = 276 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					iconType = {
@@ -5105,13 +5122,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "fort_15th_cost"
+						name = "build_building_fort_15th_cost"
 						position = {x = 9 y = 373 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -5122,13 +5140,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "fort_16th_cost"
+						name = "build_building_fort_16th_cost"
 						position = {x = 61 y = 373 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					iconType = {
@@ -5145,13 +5164,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "fort_17th_cost"
+						name = "build_building_fort_17th_cost"
 						position = {x = 113 y = 373 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					iconType = {
@@ -5168,13 +5188,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "fort_18th_cost"
+						name = "build_building_fort_18th_cost"
 						position = {x = 165 y = 373 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					iconType = {
@@ -5216,13 +5237,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "coastal_defence_cost"
+						name = "build_building_coastal_defence_cost"
 						position = {x = 268 y = 372 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -5233,13 +5255,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "naval_battery_cost"
+						name = "build_building_naval_battery_cost"
 						position = {x = 320 y = 372 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					iconType = {
@@ -5282,13 +5305,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "manufactory_cost"
+						name = "build_building_manufactory_cost"
 						position = {x = 9 y = 470 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -5299,13 +5323,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "ramparts_cost"
+						name = "build_building_ramparts_cost"
 						position = {x = 61 y = 470 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -5316,13 +5341,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "impressment_offices_cost"
+						name = "build_building_impressment_offices_cost"
 						position = {x = 113 y = 470 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -5333,13 +5359,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "state_house_cost"
+						name = "build_building_state_house_cost"
 						position = {x = 165 y = 470 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000�"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -5350,13 +5377,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "soldier_households_cost"
+						name = "build_building_soldier_households_cost"
 						position = {x = 217 y = 470 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 
 					guiButtonType = {
@@ -5367,13 +5395,14 @@ guiTypes = {
 					}
 
 					instantTextBoxType={
-						name = "furnace_cost"
+						name = "build_building_furnace_cost"
 						position = {x = 269 y = 470 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						maxWidth = 128
 						maxHeight = 18
-						text = "2000¤"
+						text = "§RERROR§!"
+						scripted = yes
 					}
 				}
 			}	
