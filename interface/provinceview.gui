@@ -4564,6 +4564,13 @@ guiTypes = {
 					verticalBorder= ""
 					fullscreen = no
 
+					guiButtonType = {
+						name = "hidden_upgrade_building_macro_close_button"
+						position = { x = 0 y = 0 }
+						quadTextureSprite = "GFX_autonomy_macro_empty_button"
+						scripted = yes
+						shortcut = "ESCAPE"
+					}
 					iconType = {
 						name = "building_upgrade_macro_trade_banner"
 						position = { x = 4 y = 0 }
@@ -4594,33 +4601,12 @@ guiTypes = {
 						scripted = yes
 					}
 
-					instantTextBoxType={
-						name = "upgrade_to_trade_depot_cost"
-						position = {x = 9 y = 82 }
-						font = "vic_18"
-						borderSize = {x = 0 y = 0}
-						maxWidth = 128
-						maxHeight = 18
-						text = "2000¤"
-					}
-
 					guiButtonType = {
 						name = "upgrade_to_stock_exchange_button"
 						position = { x = 61 y = 32 }
 						quadTextureSprite = "GFX_stock_exchange"
 						scripted = yes
 					}
-
-					instantTextBoxType={
-						name = "upgrade_to_stock_exchange_cost"
-						position = {x = 61 y = 82 }
-						font = "vic_18"
-						borderSize = {x = 0 y = 0}
-						maxWidth = 128
-						maxHeight = 18
-						text = "2000¤"
-					}
-					
 					iconType = {
 						name = "government_banner"
 						position = { x = 240 y = 0 }
@@ -4649,16 +4635,6 @@ guiTypes = {
 						position = { x = 295 y = 32 }
 						quadTextureSprite = "GFX_town_hall"
 						scripted = yes
-					}
-
-					instantTextBoxType={
-						name = "upgrade_to_town_hall_cost"
-						position = {x = 295 y = 82 }
-						font = "vic_18"
-						borderSize = {x = 0 y = 0}
-						maxWidth = 128
-						maxHeight = 18
-						text = "2000¤"
 					}
 
 					iconType = {
@@ -4690,32 +4666,11 @@ guiTypes = {
 						quadTextureSprite = "GFX_drydock"
 						scripted = yes
 					}
-
-					instantTextBoxType={
-						name = "upgrade_to_drydock_cost"
-						position = {x = 9 y = 179 }
-						font = "vic_18"
-						borderSize = {x = 0 y = 0}
-						maxWidth = 128
-						maxHeight = 18
-						text = "2000¤"
-					}
-
 					guiButtonType = {
 						name = "upgrade_to_grand_shipyard_button"
 						position = { x = 61 y = 129 }
 						quadTextureSprite = "GFX_grand_shipyard"
 						scripted = yes
-					}
-
-					instantTextBoxType={
-						name = "upgrade_to_grand_shipyard_cost"
-						position = {x = 61 y = 179 }
-						font = "vic_18"
-						borderSize = {x = 0 y = 0}
-						maxWidth = 128
-						maxHeight = 18
-						text = "2000¤"
 					}
 
 					iconType = {
@@ -4748,16 +4703,6 @@ guiTypes = {
 						scripted = yes
 					}
 
-					instantTextBoxType={
-						name = "upgrade_to_counting_house_cost"
-						position = {x = 295 y = 179 }
-						font = "vic_18"
-						borderSize = {x = 0 y = 0}
-						maxWidth = 128
-						maxHeight = 18
-						text = "2000¤"
-					}
-
 					iconType = {
 						name = "army_banner"
 						position = { x = 4 y = 194 }
@@ -4788,31 +4733,11 @@ guiTypes = {
 						scripted = yes
 					}
 
-					instantTextBoxType={
-						name = "upgrade_to_training_fields_cost"
-						position = {x = 9 y = 276 }
-						font = "vic_18"
-						borderSize = {x = 0 y = 0}
-						maxWidth = 128
-						maxHeight = 18
-						text = "2000¤"
-					}
-
 					guiButtonType = {
 						name = "upgrade_to_conscription_center_button"
 						position = { x = 61 y = 226 }
 						quadTextureSprite = "GFX_conscription_center"
 						scripted = yes
-					}
-
-					instantTextBoxType={
-						name = "upgrade_to_conscription_center_cost"
-						position = {x = 61 y = 276 }
-						font = "vic_18"
-						borderSize = {x = 0 y = 0}
-						maxWidth = 128
-						maxHeight = 18
-						text = "2000¤"
 					}
 
 					iconType = {
@@ -4845,16 +4770,6 @@ guiTypes = {
 						scripted = yes
 					}
 
-					instantTextBoxType={
-						name = "upgrade_to_cathedral_cost"
-						position = {x = 295 y = 276 }
-						font = "vic_18"
-						borderSize = {x = 0 y = 0}
-						maxWidth = 128
-						maxHeight = 18
-						text = "2000¤"
-					}
-
 					iconType = {
 						name = "defense_banner"
 						position = { x = 4 y = 291 }
@@ -4885,31 +4800,11 @@ guiTypes = {
 						scripted = yes
 					}
 
-					instantTextBoxType={
-						name = "upgrade_to_fort_16th_cost"
-						position = {x = 9 y = 373 }
-						font = "vic_18"
-						borderSize = {x = 0 y = 0}
-						maxWidth = 128
-						maxHeight = 18
-						text = "2000¤"
-					}
-
 					guiButtonType = {
 						name = "upgrade_to_fort_17th_button"
 						position = { x = 61 y = 323 }
 						quadTextureSprite = "GFX_fort_17th"
 						scripted = yes
-					}
-
-					instantTextBoxType={
-						name = "upgrade_to_fort_17th_cost"
-						position = {x = 61 y = 373 }
-						font = "vic_18"
-						borderSize = {x = 0 y = 0}
-						maxWidth = 128
-						maxHeight = 18
-						text = "2000¤"
 					}
 
 					guiButtonType = {
@@ -4918,17 +4813,6 @@ guiTypes = {
 						quadTextureSprite = "GFX_fort_18th"
 						scripted = yes
 					}
-
-					instantTextBoxType={
-						name = "upgrade_to_fort_18th_cost"
-						position = {x = 113 y = 373 }
-						font = "vic_18"
-						borderSize = {x = 0 y = 0}
-						maxWidth = 128
-						maxHeight = 18
-						text = "2000¤"
-					}
-
 					
 					iconType = {
 						name = "naval_defense_banner"
@@ -4961,16 +4845,6 @@ guiTypes = {
 						quadTextureSprite = "GFX_naval_battery"
 						scripted = yes
 					}
-
-					instantTextBoxType={
-						name = "upgrade_to_naval_battery_cost"
-						position = {x = 295 y = 372 }
-						font = "vic_18"
-						borderSize = {x = 0 y = 0}
-						maxWidth = 128
-						maxHeight = 18
-						text = "2000¤"
-					}		
 				}
 			}
 		}
