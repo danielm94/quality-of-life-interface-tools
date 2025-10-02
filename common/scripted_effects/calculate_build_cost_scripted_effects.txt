@@ -17,8 +17,13 @@ calculate_building_action_cost = {
 		which = base_cost
 	}
 }
+
 #SCOPE = COUNTRY
 calculate_trade_depot_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
 	calculate_building_action_cost = {
 		base_cost = 200
 		var_name = trade_depot_upgrade_cost
@@ -28,6 +33,10 @@ calculate_trade_depot_upgrade_cost = {
 
 #SCOPE = COUNTRY
 calculate_stock_exchange_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
 	calculate_building_action_cost = {
 		base_cost = 300
 		var_name = stock_exchange_upgrade_cost
@@ -37,6 +46,10 @@ calculate_stock_exchange_upgrade_cost = {
 
 #SCOPE = COUNTRY
 calculate_town_hall_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
 	calculate_building_action_cost = {
 		base_cost = 100
 		var_name = town_hall_upgrade_cost
@@ -46,6 +59,10 @@ calculate_town_hall_upgrade_cost = {
 
 #SCOPE = COUNTRY
 calculate_dry_dock_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
 	calculate_building_action_cost = {
 		base_cost = 200
 		var_name = dry_dock_upgrade_cost
@@ -55,6 +72,10 @@ calculate_dry_dock_upgrade_cost = {
 
 #SCOPE = COUNTRY
 calculate_grand_shipyard_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
 	calculate_building_action_cost = {
 		base_cost = 200
 		var_name = grand_shipyard_upgrade_cost
@@ -64,6 +85,10 @@ calculate_grand_shipyard_upgrade_cost = {
 
 #SCOPE = COUNTRY
 calculate_counting_house_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
 	calculate_building_action_cost = {
 		base_cost = 300
 		var_name = counting_house_upgrade_cost
@@ -73,6 +98,10 @@ calculate_counting_house_upgrade_cost = {
 
 #SCOPE = COUNTRY
 calculate_training_fields_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
 	calculate_building_action_cost = {
 		base_cost = 200
 		var_name = training_fields_upgrade_cost
@@ -82,6 +111,10 @@ calculate_training_fields_upgrade_cost = {
 
 #SCOPE = COUNTRY
 calculate_conscription_center_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
 	calculate_building_action_cost = {
 		base_cost = 200
 		var_name = conscription_center_upgrade_cost
@@ -91,6 +124,10 @@ calculate_conscription_center_upgrade_cost = {
 
 #SCOPE = COUNTRY
 calculate_cathedral_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
 	calculate_building_action_cost = {
 		base_cost = 200
 		var_name = cathedral_upgrade_cost
@@ -100,6 +137,10 @@ calculate_cathedral_upgrade_cost = {
 
 #SCOPE = COUNTRY
 calculate_bastion_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
 	calculate_building_action_cost = {
 		base_cost = 200
 		var_name = bastion_upgrade_cost
@@ -109,6 +150,10 @@ calculate_bastion_upgrade_cost = {
 
 #SCOPE = COUNTRY
 calculate_star_fort_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
 	calculate_building_action_cost = {
 		base_cost = 400
 		var_name = star_fort_upgrade_cost
@@ -118,6 +163,10 @@ calculate_star_fort_upgrade_cost = {
 
 #SCOPE = COUNTRY
 calculate_fortress_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
 	calculate_building_action_cost = {
 		base_cost = 600
 		var_name = fortress_upgrade_cost
@@ -127,6 +176,10 @@ calculate_fortress_upgrade_cost = {
 
 #SCOPE = COUNTRY
 calculate_naval_battery_upgrade_cost = {
+	export_to_variable = {
+		which = country_build_cost
+		value = modifier:build_cost
+	}
 	calculate_building_action_cost = {
 		base_cost = 100
 		var_name = naval_battery_upgrade_cost
@@ -137,10 +190,6 @@ calculate_naval_battery_upgrade_cost = {
 #SCOPE = COUNTRY
 calculate_building_upgrade_costs = {
 	hidden_effect = {
-		export_to_variable = {
-			which = country_build_cost
-			value = modifier:build_cost
-		}
 		calculate_trade_depot_upgrade_cost = yes
 		calculate_stock_exchange_upgrade_cost = yes
 		calculate_town_hall_upgrade_cost = yes
