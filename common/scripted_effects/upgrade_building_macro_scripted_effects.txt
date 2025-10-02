@@ -1,15 +1,8 @@
 #SCOPE = COUNTRY
 upgrade_all_trade_buildings_to_trade_depots = {
-	export_to_variable = {
-		which = treasury_var
-		value = treasury
-	}
 	while = {
 		limit = {
-			check_variable = {
-				which = treasury_var
-				value = 0
-			}
+			treasury = 0
 			any_owned_province = {
 				has_building = marketplace
 				NOT = {
@@ -18,10 +11,6 @@ upgrade_all_trade_buildings_to_trade_depots = {
 			}
 		}
 		upgrade_highest_trade_value_province_to_trade_depot = yes
-		export_to_variable = {
-			which = treasury_var
-			value = treasury
-		}
 	}
 }
 
@@ -68,16 +57,9 @@ upgrade_highest_trade_value_province_to_trade_depot = {
 
 #SCOPE = COUNTRY
 upgrade_all_trade_buildings_to_stock_exchanges = {
-	export_to_variable = {
-		which = treasury_var
-		value = treasury
-	}
 	while = {
 		limit = {
-			check_variable = {
-				which = treasury_var
-				value = 0
-			}
+			treasury = 0
 			any_owned_province = {
 				OR = {
 					has_building = marketplace
@@ -89,10 +71,6 @@ upgrade_all_trade_buildings_to_stock_exchanges = {
 			}
 		}
 		upgrade_highest_trade_value_province_to_stock_exchange = yes
-		export_to_variable = {
-			which = treasury_var
-			value = treasury
-		}
 	}
 }
 
@@ -142,16 +120,9 @@ upgrade_highest_trade_value_province_to_stock_exchange = {
 
 #SCOPE = COUNTRY
 upgrade_all_government_buildings_to_town_halls = {
-	export_to_variable = {
-		which = treasury_var
-		value = treasury
-	}
 	while = {
 		limit = {
-			check_variable = {
-				which = treasury_var
-				value = 0
-			}
+			treasury = 0
 			any_owned_province = {
 				has_building = courthouse
 				NOT = {
@@ -160,10 +131,6 @@ upgrade_all_government_buildings_to_town_halls = {
 			}
 		}
 		upgrade_highest_gov_cost_province_to_town_hall = yes
-		export_to_variable = {
-			which = treasury_var
-			value = treasury
-		}
 	}
 }
 
@@ -230,16 +197,9 @@ upgrade_highest_gov_cost_province_to_town_hall = {
 
 #SCOPE = COUNTRY
 upgrade_all_dock_buildings_to_dry_docks = {
-	export_to_variable = {
-		which = treasury_var
-		value = treasury
-	}
 	while = {
 		limit = {
-			check_variable = {
-				which = treasury_var
-				value = 0
-			}
+			treasury = 0
 			any_owned_province = {
 				has_building = dock
 				NOT = {
@@ -248,10 +208,6 @@ upgrade_all_dock_buildings_to_dry_docks = {
 			}
 		}
 		upgrade_highest_sailor_province_to_dry_dock = yes
-		export_to_variable = {
-			which = treasury_var
-			value = treasury
-		}
 	}
 }
 
@@ -327,16 +283,9 @@ upgrade_highest_sailor_province_to_dry_dock = {
 
 #SCOPE = COUNTRY
 upgrade_all_shipyard_buildings_to_grand_shipyards = {
-	export_to_variable = {
-		which = treasury_var
-		value = treasury
-	}
 	while = {
 		limit = {
-			check_variable = {
-				which = treasury_var
-				value = 0
-			}
+			treasury = 0
 			any_owned_province = {
 				has_building = shipyard
 				NOT = {
@@ -345,10 +294,6 @@ upgrade_all_shipyard_buildings_to_grand_shipyards = {
 			}
 		}
 		upgrade_lowest_autonomy_province_to_grand_shipyard = yes
-		export_to_variable = {
-			which = treasury_var
-			value = treasury
-		}
 	}
 }
 
@@ -397,16 +342,9 @@ upgrade_lowest_autonomy_province_to_grand_shipyard = {
 
 #SCOPE = COUNTRY
 upgrade_all_workshop_buildings_to_counting_houses = {
-	export_to_variable = {
-		which = treasury_var
-		value = treasury
-	}
 	while = {
 		limit = {
-			check_variable = {
-				which = treasury_var
-				value = 0
-			}
+			treasury = 0
 			any_owned_province = {
 				has_building = workshop
 				NOT = {
@@ -415,10 +353,6 @@ upgrade_all_workshop_buildings_to_counting_houses = {
 			}
 		}
 		upgrade_highest_production_province_to_counting_house = yes
-		export_to_variable = {
-			which = treasury_var
-			value = treasury
-		}
 	}
 }
 
@@ -481,16 +415,9 @@ upgrade_highest_production_province_to_counting_house = {
 
 #SCOPE = COUNTRY
 upgrade_all_manpower_buildings_to_training_fields = {
-	export_to_variable = {
-		which = treasury_var
-		value = treasury
-	}
 	while = {
 		limit = {
-			check_variable = {
-				which = treasury_var
-				value = 0
-			}
+			treasury = 0
 			any_owned_province = {
 				has_building = barracks
 				NOT = {
@@ -499,10 +426,6 @@ upgrade_all_manpower_buildings_to_training_fields = {
 			}
 		}
 		upgrade_highest_manpower_province_to_training_fields = yes
-		export_to_variable = {
-			which = treasury_var
-			value = treasury
-		}
 	}
 }
 
@@ -590,16 +513,9 @@ upgrade_highest_manpower_province_to_training_fields = {
 
 #SCOPE = COUNTRY
 upgrade_all_force_limit_buildings_to_conscription_center = {
-	export_to_variable = {
-		which = treasury_var
-		value = treasury
-	}
 	while = {
 		limit = {
-			check_variable = {
-				which = treasury_var
-				value = 0
-			}
+			treasury = 0
 			any_owned_province = {
 				has_building = regimental_camp
 				NOT = {
@@ -608,10 +524,6 @@ upgrade_all_force_limit_buildings_to_conscription_center = {
 			}
 		}
 		upgrade_lowest_autonomy_province_to_conscription_center = yes
-		export_to_variable = {
-			which = treasury_var
-			value = treasury
-		}
 	}
 }
 
@@ -660,16 +572,9 @@ upgrade_lowest_autonomy_province_to_conscription_center = {
 
 #SCOPE = COUNTRY
 upgrade_all_tax_buildings_to_cathedrals = {
-	export_to_variable = {
-		which = treasury_var
-		value = treasury
-	}
 	while = {
 		limit = {
-			check_variable = {
-				which = treasury_var
-				value = 0
-			}
+			treasury = 0
 			any_owned_province = {
 				has_building = temple
 				NOT = {
@@ -678,10 +583,6 @@ upgrade_all_tax_buildings_to_cathedrals = {
 			}
 		}
 		upgrade_highest_tax_province_to_cathedral = yes
-		export_to_variable = {
-			which = treasury_var
-			value = treasury
-		}
 	}
 }
 
@@ -785,16 +686,9 @@ upgrade_highest_tax_province_to_cathedral = {
 
 #SCOPE = COUNTRY
 upgrade_all_fort_buildings_to_level_4_fort = {
-	export_to_variable = {
-		which = treasury_var
-		value = treasury
-	}
 	while = {
 		limit = {
-			check_variable = {
-				which = treasury_var
-				value = 0
-			}
+			treasury = 0
 			any_owned_province = {
 				has_building = fort_15th
 				NOT = {
@@ -820,10 +714,6 @@ upgrade_all_fort_buildings_to_level_4_fort = {
 		}
 		else = {
 			upgrade_least_defensive_province_to_level_4_fort = yes
-		}
-		export_to_variable = {
-			which = treasury_var
-			value = treasury
 		}
 	}
 }
@@ -873,16 +763,9 @@ upgrade_least_defensive_province_to_level_4_fort = {
 
 #SCOPE = COUNTRY
 upgrade_all_fort_buildings_to_level_6_fort = {
-	export_to_variable = {
-		which = treasury_var
-		value = treasury
-	}
 	while = {
 		limit = {
-			check_variable = {
-				which = treasury_var
-				value = 0
-			}
+			treasury = 0
 			any_owned_province = {
 				OR = {
 					has_building = fort_15th
@@ -914,10 +797,6 @@ upgrade_all_fort_buildings_to_level_6_fort = {
 		}
 		else = {
 			upgrade_least_defensive_province_to_level_6_fort = yes
-		}
-		export_to_variable = {
-			which = treasury_var
-			value = treasury
 		}
 	}
 }
@@ -970,16 +849,9 @@ upgrade_least_defensive_province_to_level_6_fort = {
 
 #SCOPE = COUNTRY
 upgrade_all_fort_buildings_to_level_8_fort = {
-	export_to_variable = {
-		which = treasury_var
-		value = treasury
-	}
 	while = {
 		limit = {
-			check_variable = {
-				which = treasury_var
-				value = 0
-			}
+			treasury = 0
 			any_owned_province = {
 				OR = {
 					has_building = fort_15th
@@ -1013,10 +885,6 @@ upgrade_all_fort_buildings_to_level_8_fort = {
 		}
 		else = {
 			upgrade_least_defensive_province_to_level_8_fort = yes
-		}
-		export_to_variable = {
-			which = treasury_var
-			value = treasury
 		}
 	}
 }
@@ -1070,16 +938,9 @@ upgrade_least_defensive_province_to_level_8_fort = {
 
 #SCOPE = COUNTRY
 upgrade_all_coastal_defenses_to_naval_battery = {
-	export_to_variable = {
-		which = treasury_var
-		value = treasury
-	}
 	while = {
 		limit = {
-			check_variable = {
-				which = treasury_var
-				value = 0
-			}
+			treasury = 0
 			any_owned_province = {
 				has_building = coastal_defence
 				NOT = {
@@ -1115,10 +976,6 @@ upgrade_all_coastal_defenses_to_naval_battery = {
 					building = naval_battery
 				}
 			}
-		}
-		export_to_variable = {
-			which = treasury_var
-			value = treasury
 		}
 	}
 }
