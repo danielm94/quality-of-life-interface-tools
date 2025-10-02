@@ -1,7 +1,7 @@
 #Before opening the upgrade building macro window
 custom_button = {
 	name = upgrade_building_macro_tab_window_closed
-	tooltip = fort_macro_button_tt
+	tooltip = upgrade_building_macro_closed_tt
 	potential = {
 		FROM = {
 			NOT = {
@@ -22,7 +22,7 @@ custom_button = {
 #We do this because the macro window obstructs the tab to open it.
 custom_button = {
 	name = upgrade_building_macro_tab_window_opened
-	tooltip = fort_macro_button_tt
+	tooltip = upgrade_building_macro_open_tt
 	potential = {
 		FROM = {
 			has_country_flag = upgrade_building_macro_open
@@ -47,10 +47,13 @@ custom_button = {
 
 custom_button = {
 	name = hidden_upgrade_building_macro_close_button
+	tooltip = empty_text
 	potential = {
 		FROM = {
 			has_country_flag = upgrade_building_macro_open
 		}
+	}
+	trigger = {
 	}
 	effect = {
 		FROM = {
@@ -86,6 +89,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = upgrade_to_trade_depot_effect_tt
 		hidden_effect = {
 			FROM = {
 				upgrade_all_trade_buildings_to_trade_depots = yes
@@ -115,6 +119,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = upgrade_to_stock_exchange_effect_tt
 		hidden_effect = {
 			FROM = {
 				upgrade_all_trade_buildings_to_stock_exchanges = yes
@@ -141,6 +146,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = upgrade_to_town_hall_effect_tt
 		hidden_effect = {
 			FROM = {
 				upgrade_all_government_buildings_to_town_halls = yes
@@ -167,6 +173,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = upgrade_to_drydock_effect_tt
 		hidden_effect = {
 			FROM = {
 				upgrade_all_dock_buildings_to_dry_docks = yes
@@ -193,6 +200,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = upgrade_to_grand_shipyard_effect_tt
 		hidden_effect = {
 			FROM = {
 				upgrade_all_shipyard_buildings_to_grand_shipyards = yes
@@ -219,6 +227,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = upgrade_to_counting_house_effect_tt
 		hidden_effect = {
 			FROM = {
 				upgrade_all_workshop_buildings_to_counting_houses = yes
@@ -245,6 +254,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = upgrade_to_training_fields_effect_tt
 		hidden_effect = {
 			FROM = {
 				upgrade_all_manpower_buildings_to_training_fields = yes
@@ -271,6 +281,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = upgrade_to_conscription_center_effect_tt
 		hidden_effect = {
 			FROM = {
 				upgrade_all_force_limit_buildings_to_conscription_center = yes
@@ -297,6 +308,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = upgrade_to_cathedral_effect_tt
 		hidden_effect = {
 			FROM = {
 				upgrade_all_tax_buildings_to_cathedrals = yes
@@ -323,6 +335,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = upgrade_to_fort_16th_effect_tt
 		hidden_effect = {
 			FROM = {
 				upgrade_all_fort_buildings_to_level_4_fort = yes
@@ -352,6 +365,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = upgrade_to_fort_17th_effect_tt
 		hidden_effect = {
 			FROM = {
 				upgrade_all_fort_buildings_to_level_6_fort = yes
@@ -382,6 +396,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = upgrade_to_fort_18th_effect_tt
 		hidden_effect = {
 			FROM = {
 				upgrade_all_fort_buildings_to_level_8_fort = yes
@@ -408,6 +423,7 @@ custom_button = {
 		}
 	}
 	effect = {
+		custom_tooltip = upgrade_to_naval_battery_effect_tt
 		hidden_effect = {
 			FROM = {
 				upgrade_all_coastal_defenses_to_naval_battery = yes
