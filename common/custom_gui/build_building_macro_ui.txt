@@ -1,7 +1,7 @@
 #Before opening the upgrade building macro window
 custom_button = {
 	name = build_building_macro_tab_window_closed
-	tooltip = upgrade_building_macro_closed_tt
+	tooltip = build_building_macro_closed_tt
 	potential = {
 		FROM = {
 			NOT = {
@@ -23,7 +23,7 @@ custom_button = {
 #We do this because the macro window obstructs the tab to open it.
 custom_button = {
 	name = build_building_macro_tab_window_opened
-	tooltip = upgrade_building_macro_open_tt
+	tooltip = build_building_macro_open_tt
 	potential = {
 		FROM = {
 			OR = {

@@ -1,2 +1,5 @@
 ﻿l_english:
  build_building_macro_title: "Build Building Macro"
+ build_building_macro_closed_tt: "Click here to open the §YBuild Building Macro§! window."
+ build_building_macro_open_tt: "[build_building_macro_open_custom_loc]"
+ build_building_macro_open_switch_tab: "Click here to switch to the §YBuild Building Macro§! window."

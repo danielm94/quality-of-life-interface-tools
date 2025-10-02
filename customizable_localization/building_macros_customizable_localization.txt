@@ -11,10 +11,32 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = upgrade_building_macro_open_close_window
+		localisation_key = close_the_window
 		trigger = {
 			FROM = {
 				has_country_flag = upgrade_building_macro_open
+			}
+		}
+	}
+}
+
+defined_text = {
+	name = build_building_macro_open_custom_loc
+	text = {
+		localisation_key = build_building_macro_open_switch_tab
+		trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = build_building_macro_open
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = close_the_window
+		trigger = {
+			FROM = {
+				has_country_flag = build_building_macro_open
 			}
 		}
 	}
