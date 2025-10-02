@@ -14,6 +14,7 @@ custom_button = {
 	effect = {
 		FROM = {
 			set_country_flag = upgrade_building_macro_open
+			calculate_building_upgrade_costs = yes
 		}
 	}
 }
@@ -41,6 +42,7 @@ custom_button = {
 	effect = {
 		FROM = {
 			clr_country_flag = upgrade_building_macro_open
+			calculate_building_upgrade_costs = yes
 		}
 	}
 }
@@ -78,7 +80,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			treasury = 20
+			can_afford_to_upgrade_trade_depot = yes
 			any_owned_province = {
 				has_building = marketplace
 				can_build = trade_depot
@@ -105,7 +107,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			treasury = 30
+			can_afford_to_upgrade_stock_exchange = yes
 			any_owned_province = {
 				OR = {
 					has_building = marketplace
@@ -135,7 +137,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			treasury = 10
+			can_afford_to_upgrade_town_hall = yes
 			any_owned_province = {
 				has_building = courthouse
 				can_build = town_hall
@@ -162,7 +164,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			treasury = 20
+			can_afford_to_upgrade_drydock = yes
 			any_owned_province = {
 				has_building = dock
 				can_build = drydock
@@ -189,7 +191,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			treasury = 20
+			can_afford_to_upgrade_grand_shipyard = yes
 			any_owned_province = {
 				has_building = shipyard
 				can_build = grand_shipyard
@@ -216,7 +218,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			treasury = 30
+			can_afford_to_upgrade_counting_house = yes
 			any_owned_province = {
 				has_building = workshop
 				can_build = counting_house
@@ -243,7 +245,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			treasury = 20
+			can_afford_to_upgrade_training_fields = yes
 			any_owned_province = {
 				has_building = barracks
 				can_build = training_fields
@@ -270,7 +272,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			treasury = 20
+			can_afford_to_upgrade_conscription_center = yes
 			any_owned_province = {
 				has_building = regimental_camp
 				can_build = conscription_center
@@ -297,7 +299,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			treasury = 20
+			can_afford_to_upgrade_cathedral = yes
 			any_owned_province = {
 				has_building = temple
 				can_build = cathedral
@@ -324,7 +326,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			treasury = 20
+			can_afford_to_upgrade_fort_16th = yes
 			any_owned_province = {
 				has_building = fort_15th
 				can_build = fort_16th
@@ -351,7 +353,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			treasury = 40
+			can_afford_to_upgrade_fort_17th = yes
 			any_owned_province = {
 				OR = {
 					has_building = fort_15th
@@ -381,7 +383,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			treasury = 60
+			can_afford_to_upgrade_fort_18th = yes
 			any_owned_province = {
 				OR = {
 					has_building = fort_15th
@@ -412,7 +414,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
-			treasury = 10
+			can_afford_to_upgrade_naval_battery = yes
 			any_owned_province = {
 				has_building = coastal_defence
 				can_build = naval_battery
