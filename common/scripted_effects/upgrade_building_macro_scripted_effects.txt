@@ -374,6 +374,37 @@ upgrade_highest_production_province_to_counting_house = {
 			which = local_trade_goods_size
 		}
 		export_to_variable = {
+			which = base_prod
+			value = trigger_value:base_production
+		}
+		multiply_variable = {
+			which = local_production_score
+			which = base_prod
+		}
+		export_to_variable = {
+			which = curr_autonomy
+			value = local_autonomy
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = curr_autonomy
+						which = 0.001
+					}
+				}
+			}
+			#Prevent dividing by 0
+			set_variable = {
+				which = curr_autonomy
+				value = 0.001
+			}
+		}
+		divide_variable = {
+			which = local_production_score
+			which = curr_autonomy
+		}
+		export_to_variable = {
 			which = local_trade_goods_size_modifier
 			value = modifier:trade_goods_size_modifier
 		}
@@ -384,6 +415,18 @@ upgrade_highest_production_province_to_counting_house = {
 		multiply_variable = {
 			which = local_production_score
 			which = local_trade_goods_size_modifier
+		}
+		export_to_variable = {
+			which = local_production_mod
+			value = modifier:local_production_efficiency
+		}
+		change_variable = {
+			which = local_production_mod
+			value = 1
+		}
+		multiply_variable = {
+			which = local_production_score
+			which = local_production_mod
 		}
 		if = {
 			limit = {
