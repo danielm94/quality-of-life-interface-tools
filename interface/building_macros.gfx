@@ -1,5 +1,11 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_build_building_macro_tab"
+		texturefile = "gfx/interface/buttons/building_macros/build_building_macro_tab.dds"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
 		name = "GFX_upgrade_building_macro_tab"
 		texturefile = "gfx/interface/buttons/upgrade_building_macro/upgrade_building_macro_tab.dds"
 		noOfFrames = 2
