@@ -45,6 +45,20 @@ custom_button = {
 	}
 }
 
+custom_button = {
+	name = hidden_upgrade_building_macro_close_button
+	potential = {
+		FROM = {
+			has_country_flag = upgrade_building_macro_open
+		}
+	}
+	effect = {
+		FROM = {
+			clr_country_flag = upgrade_building_macro_open
+		}
+	}
+}
+
 custom_window = {
 	name = upgrade_building_macro_window
 	potential = {
@@ -60,12 +74,23 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		any_owned_province = {
-			has_building = marketplace
-			can_build = trade_depot
+		FROM = {
+			treasury = 20
+			any_owned_province = {
+				has_building = marketplace
+				can_build = trade_depot
+				NOT = {
+					has_construction = any
+				}
+			}
 		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				upgrade_all_trade_buildings_to_trade_depots = yes
+			}
+		}
 	}
 }
 
@@ -75,8 +100,26 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			treasury = 30
+			any_owned_province = {
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+				}
+				can_build = stock_exchange
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				upgrade_all_trade_buildings_to_stock_exchanges = yes
+			}
+		}
 	}
 }
 
@@ -86,8 +129,23 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			treasury = 10
+			any_owned_province = {
+				has_building = courthouse
+				can_build = town_hall
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				upgrade_all_government_buildings_to_town_halls = yes
+			}
+		}
 	}
 }
 
@@ -97,8 +155,23 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			treasury = 20
+			any_owned_province = {
+				has_building = dock
+				can_build = drydock
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				upgrade_all_dock_buildings_to_dry_docks = yes
+			}
+		}
 	}
 }
 
@@ -108,8 +181,23 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			treasury = 20
+			any_owned_province = {
+				has_building = shipyard
+				can_build = grand_shipyard
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				upgrade_all_shipyard_buildings_to_grand_shipyards = yes
+			}
+		}
 	}
 }
 
@@ -119,8 +207,23 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			treasury = 30
+			any_owned_province = {
+				has_building = workshop
+				can_build = counting_house
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				upgrade_all_workshop_buildings_to_counting_houses = yes
+			}
+		}
 	}
 }
 
@@ -130,8 +233,23 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			treasury = 20
+			any_owned_province = {
+				has_building = barracks
+				can_build = training_fields
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				upgrade_all_manpower_buildings_to_training_fields = yes
+			}
+		}
 	}
 }
 
@@ -141,8 +259,23 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			treasury = 20
+			any_owned_province = {
+				has_building = regimental_camp
+				can_build = conscription_center
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				upgrade_all_force_limit_buildings_to_conscription_center = yes
+			}
+		}
 	}
 }
 
@@ -152,8 +285,23 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			treasury = 20
+			any_owned_province = {
+				has_building = temple
+				can_build = cathedral
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				upgrade_all_tax_buildings_to_cathedrals = yes
+			}
+		}
 	}
 }
 
@@ -163,8 +311,23 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			treasury = 20
+			any_owned_province = {
+				has_building = fort_15th
+				can_build = fort_16th
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				upgrade_all_fort_buildings_to_level_4_fort = yes
+			}
+		}
 	}
 }
 
@@ -174,8 +337,26 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			treasury = 40
+			any_owned_province = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+				}
+				can_build = fort_17th
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				upgrade_all_fort_buildings_to_level_6_fort = yes
+			}
+		}
 	}
 }
 
@@ -185,8 +366,27 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			treasury = 60
+			any_owned_province = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+				}
+				can_build = fort_18th
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				upgrade_all_fort_buildings_to_level_8_fort = yes
+			}
+		}
 	}
 }
 
@@ -196,7 +396,22 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			treasury = 10
+			any_owned_province = {
+				has_building = coastal_defence
+				can_build = naval_battery
+				NOT = {
+					has_construction = any
+				}
+			}
+		}
 	}
 	effect = {
+		hidden_effect = {
+			FROM = {
+				upgrade_all_coastal_defenses_to_naval_battery = yes
+			}
+		}
 	}
 }
