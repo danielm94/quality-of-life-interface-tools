@@ -4540,7 +4540,7 @@ guiTypes = {
 					textureFile = ""
 					font = "vic_29s"
 					borderSize = {x = 4 y = 4}
-					text = "Piss"
+					text = upgrade_building_macro_title
 					maxWidth = 390
 					maxHeight = 32
 					format = centre
