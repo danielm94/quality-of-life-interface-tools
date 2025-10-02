@@ -26,10 +26,23 @@ custom_button = {
 	tooltip = upgrade_building_macro_open_tt
 	potential = {
 		FROM = {
-			has_country_flag = upgrade_building_macro_open
+			OR = {
+				has_country_flag = upgrade_building_macro_open
+				has_country_flag = build_building_macro_open
+			}
 		}
 	}
 	trigger = {
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = upgrade_building_macro_open
+				}
+			}
+		}
 	}
 	frame = {
 		number = 2
@@ -41,7 +54,18 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
-			clr_country_flag = upgrade_building_macro_open
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = upgrade_building_macro_open
+					}
+				}
+				clr_country_flag = build_building_macro_open
+				set_country_flag = upgrade_building_macro_open
+			}
+			else = {
+				clr_country_flag = upgrade_building_macro_open
+			}
 			calculate_building_upgrade_costs = yes
 		}
 	}
@@ -52,7 +76,10 @@ custom_button = {
 	tooltip = empty_text
 	potential = {
 		FROM = {
-			has_country_flag = upgrade_building_macro_open
+			OR = {
+				has_country_flag = upgrade_building_macro_open
+				has_country_flag = build_building_macro_open
+			}
 		}
 	}
 	trigger = {
@@ -60,6 +87,7 @@ custom_button = {
 	effect = {
 		FROM = {
 			clr_country_flag = upgrade_building_macro_open
+			clr_country_flag = build_building_macro_open
 		}
 	}
 }

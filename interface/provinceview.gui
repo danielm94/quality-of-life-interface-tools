@@ -3661,8 +3661,15 @@ guiTypes = {
 
 				#PotionSeller QOL Interface Tools
 				guiButtonType = {
-					name = "upgrade_building_macro_tab_window_closed"
+					name = "build_building_macro_tab_window_closed"
 					position = { x=313 y=45}
+					quadTextureSprite ="GFX_build_building_macro_tab"
+					scripted = yes
+					shortcut = "shift+b"
+				}
+				guiButtonType = {
+					name = "upgrade_building_macro_tab_window_closed"
+					position = { x=313 y=89}
 					quadTextureSprite ="GFX_upgrade_building_macro_tab"
 					scripted = yes
 					shortcut = "shift+u"
@@ -4500,7 +4507,876 @@ guiTypes = {
 				clicksound = close_window
 			}
 
-			#PotionSeller QOL Interface Tools		
+			#PotionSeller QOL Interface Tools
+			windowType = {
+				name = "build_building_macro_window"
+				backGround=""
+				position = { x=7 y=7 }
+				size = { x=345 y=465 }
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+				moveable = 0
+				Orientation = "UPPER_LEFT"
+				scripted = yes
+
+				iconType =
+				{
+					name ="build_building_macro_window_bg"
+					spriteType = "gfx_select_building_large_bg2"
+					position = { x= 0 y = 0 }
+					Orientation = "UPPER_LEFT"
+				}
+
+				listboxType = {
+					name = "list1"
+					position = { x = 14 y = 47 }
+					backGround=""
+					size = { x=348 y = 624}
+					Orientation = "UPPER_LEFT"
+					horizontal = 0
+					spacing = 2
+					scrollbartype = "standardlistbox_slider"
+					borderSize = {x = 0 y = 0}
+				}
+
+				instantTextBoxType = {
+					name = "window_title"
+					position = { x = 0 y = 5 }
+					textureFile = ""
+					font = "vic_29s"
+					borderSize = {x = 4 y = 4}
+					text = build_building_macro_title
+					maxWidth = 390
+					maxHeight = 32
+					format = centre
+				}
+				windowType = {
+					name = "build_building_macro_interface"
+					backGround=""
+					position = { x=14 y =47}
+					size = { x=400 y = 320}
+					moveable = 0
+					dontRender = ""
+					horizontalBorder= ""
+					verticalBorder= ""
+					fullscreen = no
+					scripted = yes
+
+					iconType = {
+						name = "trade_banner"
+						position = { x = 4 y = 0 }
+						spriteType = "GFX_banner_left_3"
+					}
+
+					instantTextBoxType={
+						name = "title_trade"
+						position = {x = 44 y = 9 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 120
+						maxHeight = 18
+						text = "TRADE"
+					}
+
+					iconType ={
+						name ="trade_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 15 y = 3}
+						frame = 1
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_marketplace"
+						position = { x = 9 y = 32 }
+						scripted = yes
+						quadTextureSprite = "GFX_marketplace"
+					}
+
+					instantTextBoxType={
+						name = "marketplace_cost"
+						position = {x = 9 y = 82 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_trade_depot"
+						position = { x = 61 y = 32 }
+						scripted = yes
+						quadTextureSprite = "GFX_trade_depot"
+					}
+
+					instantTextBoxType={
+						name = "trade_depot_cost"
+						position = {x = 61 y = 82 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					iconType = {
+						name = "marketplace_to_trade_depot_arrow"
+						position = { x = 53 y = 41 }
+						spriteType = "GFX_building_upgrade_icon"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_stock_exchange"
+						position = { x = 113 y = 32 }
+						scripted = yes
+						quadTextureSprite = "GFX_stock_exchange"
+					}
+
+					instantTextBoxType={
+						name = "stock_exchange_cost"
+						position = {x = 113 y = 82 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					iconType = {
+						name = "trade_depot_to_stock_exchange_arrow"
+						position = { x = 105 y = 41 }
+						spriteType = "GFX_building_upgrade_icon"
+					}
+
+					iconType = {
+						name = "government_banner"
+						position = { x = 188 y = 0 }
+						spriteType = "GFX_banner_right_3"
+					}
+
+					instantTextBoxType={
+						name = "title_government"
+						position = {x = 240 y = 9 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 120
+						maxHeight = 18
+						text = "GOVERNMENT"
+					}
+
+					iconType ={
+						name ="government_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 213 y = 3}
+						frame = 2
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_town_hall"
+						position = { x = 268 y = 32 }
+						scripted = yes
+						quadTextureSprite = "GFX_town_hall"
+					}
+
+					instantTextBoxType={
+						name = "town_hall_cost"
+						position = {x = 268 y = 82 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_courthouse"
+						position = { x = 216 y = 32 }
+						scripted = yes
+						quadTextureSprite = "GFX_courthouse"
+					}
+
+					instantTextBoxType={
+						name = "courthouse_cost"
+						position = {x = 216 y = 82 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					iconType = {
+						name = "town_hall_to_courthouse_arrow"
+						position = { x = 260 y = 41 }
+						spriteType = "GFX_building_upgrade_icon"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_university"
+						position = { x = 320 y = 32 }
+						scripted = yes
+						quadTextureSprite = "GFX_university"
+					}
+
+					instantTextBoxType={
+						name = "university_cost"
+						position = {x = 320 y = 82 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+
+
+
+
+					iconType = {
+						name = "navy_banner"
+						position = { x = 4 y = 97 }
+						spriteType = "GFX_banner_left_4"
+					}
+
+					instantTextBoxType={
+						name = "title_navy"
+						position = {x = 44 y = 106 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 160
+						maxHeight = 18
+						text = "NAVY"
+					}
+
+					iconType ={
+						name ="navy_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 15 y = 100}
+						frame = 3
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_dock"
+						position = { x = 9 y = 129 }
+						scripted = yes
+						quadTextureSprite = "GFX_dock"
+					}
+
+					instantTextBoxType={
+						name = "dock_cost"
+						position = {x = 9 y = 179 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_drydock"
+						position = { x = 61 y = 129 }
+						scripted = yes
+						quadTextureSprite = "GFX_drydock"
+					}
+
+					instantTextBoxType={
+						name = "drydock_cost"
+						position = {x = 61 y = 179 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					iconType = {
+						name = "dock_to_drydock_arrow"
+						position = { x = 53 y = 138 }
+						spriteType = "GFX_building_upgrade_icon"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_shipyard"
+						position = { x = 113 y = 129 }
+						scripted = yes
+						quadTextureSprite = "GFX_shipyard"
+					}
+
+					instantTextBoxType={
+						name = "shipyard_cost"
+						position = {x = 113 y = 179 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_grand_shipyard"
+						position = { x = 165 y = 129 }
+						scripted = yes
+						quadTextureSprite = "GFX_grand_shipyard"
+					}
+
+					instantTextBoxType={
+						name = "grand_shipyard_cost"
+						position = {x = 165 y = 179 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					iconType = {
+						name = "shipyard_to_grand_shipyard_arrow"
+						position = { x = 157 y = 138 }
+						spriteType = "GFX_building_upgrade_icon"
+					}
+
+					iconType = {
+						name = "production_banner"
+						position = { x = 240 y = 97 }
+						spriteType = "GFX_banner_right_2"
+					}
+
+					instantTextBoxType={
+						name = "title_production"
+						position = {x = 288 y = 106 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 80
+						maxHeight = 18
+						text = "PRODUCTION"
+					}
+
+					iconType ={
+						name ="production_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 262 y = 100}
+						frame = 4
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_workshop"
+						position = { x = 268 y = 129 }
+						scripted = yes
+						quadTextureSprite = "GFX_workshop"
+					}
+
+					instantTextBoxType={
+						name = "workshop_cost"
+						position = {x = 268 y = 179 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_counting_house"
+						position = { x = 320 y = 129 }
+						scripted = yes
+						quadTextureSprite = "GFX_counting_house"
+					}
+
+					instantTextBoxType={
+						name = "counting_house_cost"
+						position = {x = 320 y = 179 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					iconType = {
+						name = "workshop_to_counting_house_arrow"
+						position = { x = 312 y = 138 }
+						spriteType = "GFX_building_upgrade_icon"
+					}
+
+
+
+
+
+					iconType = {
+						name = "army_banner"
+						position = { x = 4 y = 194 }
+						spriteType = "GFX_banner_left_4"
+					}
+
+					instantTextBoxType={
+						name = "title_army"
+						position = {x = 44 y = 203 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 160
+						maxHeight = 18
+						text = "ARMY"
+					}
+
+					iconType ={
+						name ="army_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 15 y = 197}
+						frame = 5
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_barracks"
+						position = { x = 9 y = 226 }
+						scripted = yes
+						quadTextureSprite = "GFX_barracks"
+					}
+
+					instantTextBoxType={
+						name = "barracks_cost"
+						position = {x = 9 y = 276 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_training_fields"
+						position = { x = 61 y = 226 }
+						scripted = yes
+						quadTextureSprite = "GFX_training_fields"
+					}
+
+					instantTextBoxType={
+						name = "training_fields_cost"
+						position = {x = 61 y = 276 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					iconType = {
+						name = "barracks_to_training_fields_arrow"
+						position = { x = 53 y = 235 }
+						spriteType = "GFX_building_upgrade_icon"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_regimental_camp"
+						position = { x = 113 y = 226 }
+						scripted = yes
+						quadTextureSprite = "GFX_regimental_camp"
+					}
+
+					instantTextBoxType={
+						name = "regimental_camp_cost"
+						position = {x = 113 y = 276 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_conscription_center"
+						position = { x = 165 y = 226 }
+						scripted = yes
+						quadTextureSprite = "GFX_conscription_center"
+					}
+
+					instantTextBoxType={
+						name = "conscription_center_cost"
+						position = {x = 165 y = 276 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					iconType = {
+						name = "regimental_camp_to_conscription_center_arrow"
+						position = { x = 157 y = 235 }
+						spriteType = "GFX_building_upgrade_icon"
+					}
+
+					iconType = {
+						name = "taxation_banner"
+						position = { x = 240 y = 194 }
+						spriteType = "GFX_banner_right_2"
+					}
+
+					instantTextBoxType={
+						name = "title_taxation"
+						position = {x = 288 y = 203 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 80
+						maxHeight = 18
+						text = "TAXATION"
+					}
+
+					iconType ={
+						name ="taxation_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 262 y = 197}
+						frame = 6
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_temple"
+						position = { x = 268 y = 226 }
+						scripted = yes
+						quadTextureSprite = "GFX_temple"
+					}
+
+					instantTextBoxType={
+						name = "temple_cost"
+						position = {x = 268 y = 276 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_cathedral"
+						position = { x = 320 y = 226 }
+						scripted = yes
+						quadTextureSprite = "GFX_cathedral"
+					}
+
+					instantTextBoxType={
+						name = "cathedral_cost"
+						position = {x = 320 y = 276 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					iconType = {
+						name = "temple_to_cathedral_arrow"
+						position = { x = 312 y = 235 }
+						spriteType = "GFX_building_upgrade_icon"
+					}
+
+
+
+
+
+					iconType = {
+						name = "defense_banner"
+						position = { x = 4 y = 291 }
+						spriteType = "GFX_banner_left_4"
+					}
+
+					instantTextBoxType={
+						name = "title_defense"
+						position = {x = 44 y = 300 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 160
+						maxHeight = 18
+						text = "DEFENSE"
+					}
+
+					iconType ={
+						name ="defense_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 15 y = 294}
+						frame = 7
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_fort_15th"
+						position = { x = 9 y = 323 }
+						scripted = yes
+						quadTextureSprite = "GFX_fort_15th"
+					}
+
+					instantTextBoxType={
+						name = "fort_15th_cost"
+						position = {x = 9 y = 373 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_fort_16th"
+						position = { x = 61 y = 323 }
+						scripted = yes
+						quadTextureSprite = "GFX_fort_16th"
+					}
+
+					instantTextBoxType={
+						name = "fort_16th_cost"
+						position = {x = 61 y = 373 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					iconType = {
+						name = "fort_15th_to_fort_16th_arrow"
+						position = { x = 53 y = 332 }
+						spriteType = "GFX_building_upgrade_icon"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_fort_17th"
+						position = { x = 113 y = 323 }
+						scripted = yes
+						quadTextureSprite = "GFX_fort_17th"
+					}
+
+					instantTextBoxType={
+						name = "fort_17th_cost"
+						position = {x = 113 y = 373 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					iconType = {
+						name = "fort_16th_to_fort_17th_arrow"
+						position = { x = 105 y = 332 }
+						spriteType = "GFX_building_upgrade_icon"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_fort_18th"
+						position = { x = 165 y = 323 }
+						scripted = yes
+						quadTextureSprite = "GFX_fort_18th"
+					}
+
+					instantTextBoxType={
+						name = "fort_18th_cost"
+						position = {x = 165 y = 373 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					iconType = {
+						name = "fort_17th_to_fort_18th_arrow"
+						position = { x = 157 y = 332 }
+						spriteType = "GFX_building_upgrade_icon"
+					}
+
+
+					
+					iconType = {
+						name = "naval_defense_banner"
+						position = { x = 240 y = 291 }
+						spriteType = "GFX_banner_right_2"
+					}
+
+					instantTextBoxType={
+						name = "title_naval_defense"
+						position = {x = 284 y = 300 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 160
+						maxHeight = 18
+						text = "COASTAL_DEF"
+					}
+
+					iconType ={
+						name ="naval_defense_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 255 y = 294}
+						frame = 9
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_coastal_defence"
+						position = { x = 268 y = 322 }
+						scripted = yes
+						quadTextureSprite = "GFX_coastal_defence"
+					}
+
+					instantTextBoxType={
+						name = "coastal_defence_cost"
+						position = {x = 268 y = 372 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_naval_battery"
+						position = { x = 320 y = 322 }
+						scripted = yes
+						quadTextureSprite = "GFX_naval_battery"
+					}
+
+					instantTextBoxType={
+						name = "naval_battery_cost"
+						position = {x = 320 y = 372 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					iconType = {
+						name = "coastal_defence_to_naval_battery_arrow"
+						position = { x = 312 y = 332 }
+						spriteType = "GFX_building_upgrade_icon"
+					}
+					
+					
+
+
+					iconType = {
+						name = "manufactory_banner"
+						position = { x = 4 y = 388 }
+						spriteType = "GFX_banner_left_3"
+					}
+
+					instantTextBoxType={
+						name = "title_manufactory"
+						position = {x = 44 y = 397 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 200
+						maxHeight = 18
+						text = "MANUFACTORY"
+					}
+
+					iconType ={
+						name ="manufactory_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 15 y = 391}
+						frame = 8
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_manufactory"
+						position = { x = 9 y = 420 }
+						scripted = yes
+						quadTextureSprite = "GFX_manufactory"
+					}
+
+					instantTextBoxType={
+						name = "manufactory_cost"
+						position = {x = 9 y = 470 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_ramparts"
+						position = { x = 61 y = 420 }
+						scripted = yes
+						quadTextureSprite = "GFX_ramparts"
+					}
+
+					instantTextBoxType={
+						name = "ramparts_cost"
+						position = {x = 61 y = 470 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_impressment_offices"
+						position = { x = 113 y = 420 }
+						scripted = yes
+						quadTextureSprite = "GFX_impressment_offices"
+					}
+
+					instantTextBoxType={
+						name = "impressment_offices_cost"
+						position = {x = 113 y = 470 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_state_house"
+						position = { x = 165 y = 420 }
+						scripted = yes
+						quadTextureSprite = "GFX_state_house"
+					}
+
+					instantTextBoxType={
+						name = "state_house_cost"
+						position = {x = 165 y = 470 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000�"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_soldier_households"
+						position = { x = 217 y = 420 }
+						scripted = yes
+						quadTextureSprite = "GFX_soldier_households"
+					}
+
+					instantTextBoxType={
+						name = "soldier_households_cost"
+						position = {x = 217 y = 470 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+
+					guiButtonType = {
+						name = "building_macro_build_furnace"
+						position = { x = 269 y = 420 }
+						scripted = yes
+						quadTextureSprite = "GFX_furnace"
+					}
+
+					instantTextBoxType={
+						name = "furnace_cost"
+						position = {x = 269 y = 470 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 128
+						maxHeight = 18
+						text = "2000¤"
+					}
+				}
+			}	
 			windowType = {
 				name = "upgrade_building_macro_window"
 				backGround=""
@@ -4544,14 +5420,6 @@ guiTypes = {
 					maxWidth = 390
 					maxHeight = 32
 					format = centre
-				}
-
-				guiButtonType = {
-					name = "upgrade_building_macro_tab_window_opened"
-					position = { x=381 y=75}
-					quadTextureSprite ="GFX_upgrade_building_macro_tab"
-					scripted = yes
-					shortcut = "shift+u"
 				}
 				windowType = {
 					name = "upgrade_building_macro_interface"
@@ -4846,6 +5714,20 @@ guiTypes = {
 						scripted = yes
 					}
 				}
+			}
+			guiButtonType = {
+				name = "build_building_macro_tab_window_opened"
+				position = { x=388 y=75}
+				quadTextureSprite ="GFX_build_building_macro_tab"
+				scripted = yes
+				shortcut = "shift+b"
+			}
+			guiButtonType = {
+				name = "upgrade_building_macro_tab_window_opened"
+				position = { x=388 y=119}
+				quadTextureSprite ="GFX_upgrade_building_macro_tab"
+				scripted = yes
+				shortcut = "shift+u"
 			}
 		}
 
