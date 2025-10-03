@@ -55,3 +55,16 @@ is_province_not_whitelisted_delete_building_macro = {
 		}
 	}
 }
+
+#SCOPE = COUNTRY
+has_production_manufactory = {
+	OR = {
+		has_building = wharf
+		has_building = weapons
+		has_building = textile
+		has_building = tradecompany
+		has_building = farm_estate
+		has_building = mills
+		has_building = plantations
+	}
+}
