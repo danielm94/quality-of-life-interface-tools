@@ -461,3 +461,30 @@ custom_button = {
 		}
 	}
 }
+
+custom_button = {
+	name = upgrade_macro_cancel_button
+	tooltip = building_macro_cancel_button_tt
+	potential = {
+	}
+	trigger = {
+		FROM = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = in_building_macro_settings
+				}
+			}
+			any_owned_province = {
+				has_construction = building
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			set_country_flag = in_building_macro_settings
+			country_event = {
+				id = cancel_construction_events.1
+			}
+		}
+	}
+}

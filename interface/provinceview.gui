@@ -5757,6 +5757,17 @@ guiTypes = {
 						quadTextureSprite = "GFX_naval_battery"
 						scripted = yes
 					}
+					guiButtonType = {
+						name = "upgrade_macro_cancel_button"
+						position = { x = 15 y = 487 }
+						quadTextureSprite ="GFX_standard_button_71"
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""
+						buttonText = "Cancel"
+						buttonFont = "vic_18"
+						scripted = yes
+					}
 				}
 			}
 			guiButtonType = {
