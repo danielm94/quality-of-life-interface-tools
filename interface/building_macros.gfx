@@ -11,4 +11,10 @@ spriteTypes = {
 		noOfFrames = 2
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
+	spriteType = {
+		name = "GFX_delete_building_macro_tab"
+		texturefile = "gfx/interface/buttons/building_macros/delete_building_macro_tab.dds"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
 }
