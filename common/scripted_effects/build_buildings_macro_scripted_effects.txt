@@ -24,6 +24,7 @@ setup_build_building_macro = {
 		set_impressment_offices_trade_goods_flags = yes
 		set_state_house_trade_goods_flags = yes
 		set_soldiers_households_trade_goods_flags = yes
+		set_country_flag = enable_smart_build_building_macro
 		set_country_flag = initialized_building_macro
 	}
 }
