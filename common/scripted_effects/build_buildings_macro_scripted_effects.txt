@@ -290,7 +290,7 @@ build_state_house_macro_effect = {
 				can_afford_to_build_state_house = yes
 				any_owned_province = {
 					can_build = state_house
-					 is_enabled_trade_good_state_house_build_building_macro = yes
+					is_enabled_trade_good_state_house_build_building_macro = yes
 				}
 				if = {
 					limit = {
@@ -504,6 +504,14 @@ build_buildings_lowest_development_cost = {
 		export_to_variable = {
 			which = province_dev_cost_flat
 			value = modifier:local_development_cost
+		}
+		export_to_variable = {
+			which = province_dev_cost_modifier
+			value = modifier:local_development_cost_modifier
+		}
+		change_variable = {
+			which = province_dev_cost_flat
+			which = province_dev_cost_modifier
 		}
 		if = {
 			limit = {
@@ -1443,6 +1451,3 @@ build_soldiers_households_highest_manpower = {
 	}
 	clear_global_event_target = highest_manpower_province
 }
-
-
-#TODO: INTRODUCE GRADING SCORES FOR MANUFACTORIES IN ORDER TO PICK AND CHOOSE WHICH ONES ARE BEST
