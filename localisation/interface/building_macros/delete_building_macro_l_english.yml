@@ -1,2 +1,3 @@
 ﻿l_english:
  has_any_building_selected_for_deletion_tt: "We aren't in the process of deleting a building."
+ is_province_not_whitelisted_delete_building_macro_tt: "This province is not whitelisted."

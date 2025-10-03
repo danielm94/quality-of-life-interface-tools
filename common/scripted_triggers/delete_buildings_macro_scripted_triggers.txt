@@ -1,3 +1,4 @@
+#SCOPE = COUNTRY
 has_any_building_selected_for_deletion = {
 	custom_trigger_tooltip = {
 		tooltip = has_any_building_selected_for_deletion_tt
@@ -41,6 +42,16 @@ has_any_building_selected_for_deletion = {
 			has_country_flag = delete_building_macro_state_house
 			has_country_flag = delete_building_macro_soldier_households
 			has_country_flag = delete_building_macro_furnace
+		}
+	}
+}
+
+#SCOPE = PROVINCE
+is_province_not_whitelisted_delete_building_macro = {
+	custom_trigger_tooltip = {
+		tooltip = is_province_not_whitelisted_delete_building_macro_tt
+		NOT = {
+			has_province_flag = delete_building_macro_whitelisted_province
 		}
 	}
 }

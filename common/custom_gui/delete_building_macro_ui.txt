@@ -93,13 +93,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = marketplace
+			}
 		}
 	}
 	effect = {
@@ -120,13 +119,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = trade_depot
+			}
 		}
 	}
 	effect = {
@@ -147,13 +145,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = stock_exchange
+			}
 		}
 	}
 	effect = {
@@ -175,13 +172,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = town_hall
+			}
 		}
 	}
 	effect = {
@@ -202,13 +198,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = courthouse
+			}
 		}
 	}
 	effect = {
@@ -229,13 +224,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = university
+			}
 		}
 	}
 	effect = {
@@ -257,13 +251,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = dock
+			}
 		}
 	}
 	effect = {
@@ -284,13 +277,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = drydock
+			}
 		}
 	}
 	effect = {
@@ -311,13 +303,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = shipyard
+			}
 		}
 	}
 	effect = {
@@ -338,13 +329,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = grand_shipyard
+			}
 		}
 	}
 	effect = {
@@ -366,13 +356,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = workshop
+			}
 		}
 	}
 	effect = {
@@ -393,13 +382,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = counting_house
+			}
 		}
 	}
 	effect = {
@@ -421,13 +409,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = barracks
+			}
 		}
 	}
 	effect = {
@@ -448,13 +435,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = training_fields
+			}
 		}
 	}
 	effect = {
@@ -475,13 +461,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = regimental_camp
+			}
 		}
 	}
 	effect = {
@@ -502,13 +487,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = conscription_center
+			}
 		}
 	}
 	effect = {
@@ -530,13 +514,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = temple
+			}
 		}
 	}
 	effect = {
@@ -557,13 +540,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = cathedral
+			}
 		}
 	}
 	effect = {
@@ -585,13 +567,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = fort_15th
+			}
 		}
 	}
 	effect = {
@@ -612,13 +593,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = fort_16th
+			}
 		}
 	}
 	effect = {
@@ -639,13 +619,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = fort_17th
+			}
 		}
 	}
 	effect = {
@@ -666,13 +645,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = fort_18th
+			}
 		}
 	}
 	effect = {
@@ -694,13 +672,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = coastal_defence
+			}
 		}
 	}
 	effect = {
@@ -721,13 +698,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = naval_battery
+			}
 		}
 	}
 	effect = {
@@ -749,13 +725,13 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			# This checks for any type of manufactory, not a specific building named "manufactory"
+			any_owned_province = {
+				has_manufactory = yes
+			}
 		}
 	}
 	effect = {
@@ -776,13 +752,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = ramparts
+			}
 		}
 	}
 	effect = {
@@ -803,13 +778,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = impressment_offices
+			}
 		}
 	}
 	effect = {
@@ -830,13 +804,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = state_house
+			}
 		}
 	}
 	effect = {
@@ -857,13 +830,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = soldier_households
+			}
 		}
 	}
 	effect = {
@@ -884,13 +856,12 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
-		hidden_trigger = {
-			NOT = {
-				has_province_flag = delete_building_macro_whitelisted_province
-			}
-		}
+		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
+			any_owned_province = {
+				has_building = furnace
+			}
 		}
 	}
 	effect = {
