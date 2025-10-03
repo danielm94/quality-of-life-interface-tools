@@ -1,0 +1,87 @@
+#Before opening the upgrade building macro window
+custom_button = {
+	name = delete_building_macro_tab_window_closed
+	tooltip = delete_building_macro_closed_tt
+	potential = {
+		FROM = {
+			NOT = {
+				has_country_flag = upgrade_building_macro_open
+			}
+			NOT = {
+				has_country_flag = build_building_macro_open
+			}
+			NOT = {
+				has_country_flag = delete_building_macro_open
+			}
+		}
+	}
+	trigger = {
+	}
+	effect = {
+		FROM = {
+			set_country_flag = delete_building_macro_open
+		}
+	}
+}
+
+#After opening the upgrade building macro window
+#We do this because the macro window obstructs the tab to open it.
+custom_button = {
+	name = delete_building_macro_tab_window_opened
+	tooltip = delete_building_macro_open_tt
+	potential = {
+		FROM = {
+			OR = {
+				has_country_flag = upgrade_building_macro_open
+				has_country_flag = delete_building_macro_open
+				has_country_flag = build_building_macro_open
+			}
+		}
+	}
+	trigger = {
+	}
+	frame = {
+		number = 1
+		trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = delete_building_macro_open
+				}
+			}
+		}
+	}
+	frame = {
+		number = 2
+		trigger = {
+			FROM = {
+				has_country_flag = delete_building_macro_open
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = delete_building_macro_open
+					}
+				}
+				set_country_flag = delete_building_macro_open
+				clr_country_flag = upgrade_building_macro_open
+				clr_country_flag = build_building_macro_open
+			}
+			else = {
+				clr_country_flag = delete_building_macro_open
+			}
+		}
+	}
+}
+
+custom_window = {
+	name = delete_building_macro_window
+	potential = {
+		FROM = {
+			has_country_flag = delete_building_macro_open
+		}
+	}
+}

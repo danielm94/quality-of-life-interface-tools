@@ -3677,6 +3677,13 @@ guiTypes = {
 					scripted = yes
 					shortcut = "shift+u"
 				}
+				guiButtonType = {
+					name = "delete_building_macro_tab_window_closed"
+					position = { x=313 y=133}
+					quadTextureSprite ="GFX_delete_building_macro_tab"
+					scripted = yes
+					shortcut = "shift+d"
+				}
 			}
 
 			windowType = {
@@ -5774,6 +5781,480 @@ guiTypes = {
 					}
 				}
 			}
+			windowType = {
+				name = "delete_building_macro_window"
+				backGround=""
+				position = { x=7 y=7 }
+				size = { x=345 y=465 }
+				dontRender = ""
+				horizontalBorder= ""
+				verticalBorder= ""
+				fullScreen = no
+				moveable = 0
+				Orientation = "UPPER_LEFT"
+				scripted = yes
+
+				iconType =
+				{
+					name ="delete_building_macro_window_bg"
+					spriteType = "gfx_select_building_large_bg2"
+					position = { x= 0 y = 0 }
+					Orientation = "UPPER_LEFT"
+				}
+
+				listboxType = {
+					name = "list1"
+					position = { x = 14 y = 47 }
+					backGround=""
+					size = { x=348 y = 624}
+					Orientation = "UPPER_LEFT"
+					horizontal = 0
+					spacing = 2
+					scrollbartype = "standardlistbox_slider"
+					borderSize = {x = 0 y = 0}
+				}
+
+				instantTextBoxType = {
+					name = "window_title"
+					position = { x = 0 y = 5 }
+					textureFile = ""
+					font = "vic_29s"
+					borderSize = {x = 4 y = 4}
+					text = delete_building_macro_title # You will need to create this localization key
+					maxWidth = 390
+					maxHeight = 32
+					format = centre
+				}
+				windowType = {
+					name = "delete_building_macro_interface"
+					backGround=""
+					position = { x=14 y =47}
+					size = { x=400 y = 320}
+					moveable = 0
+					dontRender = ""
+					horizontalBorder= ""
+					verticalBorder= ""
+					fullscreen = no
+
+					iconType = {
+						name = "trade_banner"
+						position = { x = 4 y = 0 }
+						spriteType = "GFX_banner_left_3"
+					}
+
+					instantTextBoxType={
+						name = "title_trade"
+						position = {x = 44 y = 9 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 120
+						maxHeight = 18
+						text = "TRADE"
+					}
+
+					iconType ={
+						name ="trade_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 15 y = 3}
+						frame = 1
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_marketplace"
+						position = { x = 9 y = 32 }
+						scripted = yes
+						quadTextureSprite = "GFX_marketplace"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_trade_depot"
+						position = { x = 61 y = 32 }
+						scripted = yes
+						quadTextureSprite = "GFX_trade_depot"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_stock_exchange"
+						position = { x = 113 y = 32 }
+						scripted = yes
+						quadTextureSprite = "GFX_stock_exchange"
+					}
+
+					iconType = {
+						name = "government_banner"
+						position = { x = 188 y = 0 }
+						spriteType = "GFX_banner_right_3"
+					}
+
+					instantTextBoxType={
+						name = "title_government"
+						position = {x = 240 y = 9 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 120
+						maxHeight = 18
+						text = "GOVERNMENT"
+					}
+
+					iconType ={
+						name ="government_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 213 y = 3}
+						frame = 2
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_town_hall"
+						position = { x = 268 y = 32 }
+						scripted = yes
+						quadTextureSprite = "GFX_town_hall"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_courthouse"
+						position = { x = 216 y = 32 }
+						scripted = yes
+						quadTextureSprite = "GFX_courthouse"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_university"
+						position = { x = 320 y = 32 }
+						scripted = yes
+						quadTextureSprite = "GFX_university"
+					}
+
+					iconType = {
+						name = "navy_banner"
+						position = { x = 4 y = 97 }
+						spriteType = "GFX_banner_left_4"
+					}
+
+					instantTextBoxType={
+						name = "title_navy"
+						position = {x = 44 y = 106 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 160
+						maxHeight = 18
+						text = "NAVY"
+					}
+
+					iconType ={
+						name ="navy_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 15 y = 100}
+						frame = 3
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_dock"
+						position = { x = 9 y = 129 }
+						scripted = yes
+						quadTextureSprite = "GFX_dock"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_drydock"
+						position = { x = 61 y = 129 }
+						scripted = yes
+						quadTextureSprite = "GFX_drydock"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_shipyard"
+						position = { x = 113 y = 129 }
+						scripted = yes
+						quadTextureSprite = "GFX_shipyard"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_grand_shipyard"
+						position = { x = 165 y = 129 }
+						scripted = yes
+						quadTextureSprite = "GFX_grand_shipyard"
+					}
+
+					iconType = {
+						name = "production_banner"
+						position = { x = 240 y = 97 }
+						spriteType = "GFX_banner_right_2"
+					}
+
+					instantTextBoxType={
+						name = "title_production"
+						position = {x = 288 y = 106 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 80
+						maxHeight = 18
+						text = "PRODUCTION"
+					}
+
+					iconType ={
+						name ="production_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 262 y = 100}
+						frame = 4
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_workshop"
+						position = { x = 268 y = 129 }
+						scripted = yes
+						quadTextureSprite = "GFX_workshop"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_counting_house"
+						position = { x = 320 y = 129 }
+						scripted = yes
+						quadTextureSprite = "GFX_counting_house"
+					}
+
+					iconType = {
+						name = "army_banner"
+						position = { x = 4 y = 194 }
+						spriteType = "GFX_banner_left_4"
+					}
+
+					instantTextBoxType={
+						name = "title_army"
+						position = {x = 44 y = 203 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 160
+						maxHeight = 18
+						text = "ARMY"
+					}
+
+					iconType ={
+						name ="army_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 15 y = 197}
+						frame = 5
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_barracks"
+						position = { x = 9 y = 226 }
+						scripted = yes
+						quadTextureSprite = "GFX_barracks"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_training_fields"
+						position = { x = 61 y = 226 }
+						scripted = yes
+						quadTextureSprite = "GFX_training_fields"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_regimental_camp"
+						position = { x = 113 y = 226 }
+						scripted = yes
+						quadTextureSprite = "GFX_regimental_camp"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_conscription_center"
+						position = { x = 165 y = 226 }
+						scripted = yes
+						quadTextureSprite = "GFX_conscription_center"
+					}
+
+					iconType = {
+						name = "taxation_banner"
+						position = { x = 240 y = 194 }
+						spriteType = "GFX_banner_right_2"
+					}
+
+					instantTextBoxType={
+						name = "title_taxation"
+						position = {x = 288 y = 203 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 80
+						maxHeight = 18
+						text = "TAXATION"
+					}
+
+					iconType ={
+						name ="taxation_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 262 y = 197}
+						frame = 6
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_temple"
+						position = { x = 268 y = 226 }
+						scripted = yes
+						quadTextureSprite = "GFX_temple"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_cathedral"
+						position = { x = 320 y = 226 }
+						scripted = yes
+						quadTextureSprite = "GFX_cathedral"
+					}
+
+					iconType = {
+						name = "defense_banner"
+						position = { x = 4 y = 291 }
+						spriteType = "GFX_banner_left_4"
+					}
+
+					instantTextBoxType={
+						name = "title_defense"
+						position = {x = 44 y = 300 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 160
+						maxHeight = 18
+						text = "DEFENSE"
+					}
+
+					iconType ={
+						name ="defense_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 15 y = 294}
+						frame = 7
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_fort_15th"
+						position = { x = 9 y = 323 }
+						scripted = yes
+						quadTextureSprite = "GFX_fort_15th"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_fort_16th"
+						position = { x = 61 y = 323 }
+						scripted = yes
+						quadTextureSprite = "GFX_fort_16th"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_fort_17th"
+						position = { x = 113 y = 323 }
+						scripted = yes
+						quadTextureSprite = "GFX_fort_17th"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_fort_18th"
+						position = { x = 165 y = 323 }
+						scripted = yes
+						quadTextureSprite = "GFX_fort_18th"
+					}
+					
+					iconType = {
+						name = "naval_defense_banner"
+						position = { x = 240 y = 291 }
+						spriteType = "GFX_banner_right_2"
+					}
+
+					instantTextBoxType={
+						name = "title_naval_defense"
+						position = {x = 284 y = 300 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 160
+						maxHeight = 18
+						text = "COASTAL_DEF"
+					}
+
+					iconType ={
+						name ="naval_defense_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 255 y = 294}
+						frame = 9
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_coastal_defence"
+						position = { x = 268 y = 322 }
+						scripted = yes
+						quadTextureSprite = "GFX_coastal_defence"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_naval_battery"
+						position = { x = 320 y = 322 }
+						scripted = yes
+						quadTextureSprite = "GFX_naval_battery"
+					}
+					
+					iconType = {
+						name = "manufactory_banner"
+						position = { x = 4 y = 388 }
+						spriteType = "GFX_banner_left_3"
+					}
+
+					instantTextBoxType={
+						name = "title_manufactory"
+						position = {x = 44 y = 397 }
+						font = "vic_18"
+						borderSize = {x = 0 y = 0}
+						maxWidth = 200
+						maxHeight = 18
+						text = "MANUFACTORY"
+					}
+
+					iconType ={
+						name ="manufactory_icon"
+						spriteType = "GFX_macro_buildings_category_strip"
+						position = { x = 15 y = 391}
+						frame = 8
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_manufactory"
+						position = { x = 9 y = 420 }
+						scripted = yes
+						quadTextureSprite = "GFX_manufactory"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_ramparts"
+						position = { x = 61 y = 420 }
+						scripted = yes
+						quadTextureSprite = "GFX_ramparts"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_impressment_offices"
+						position = { x = 113 y = 420 }
+						scripted = yes
+						quadTextureSprite = "GFX_impressment_offices"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_state_house"
+						position = { x = 165 y = 420 }
+						scripted = yes
+						quadTextureSprite = "GFX_state_house"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_soldier_households"
+						position = { x = 217 y = 420 }
+						scripted = yes
+						quadTextureSprite = "GFX_soldier_households"
+					}
+
+					guiButtonType = {
+						name = "building_macro_delete_furnace"
+						position = { x = 269 y = 420 }
+						scripted = yes
+						quadTextureSprite = "GFX_furnace"
+					}
+				}
+			}
+
 			guiButtonType = {
 				name = "build_building_macro_tab_window_opened"
 				position = { x=388 y=75}
@@ -5787,6 +6268,13 @@ guiTypes = {
 				quadTextureSprite ="GFX_upgrade_building_macro_tab"
 				scripted = yes
 				shortcut = "shift+u"
+			}
+			guiButtonType = {
+				name = "delete_building_macro_tab_window_opened"
+				position = { x=388 y=163}
+				quadTextureSprite ="GFX_delete_building_macro_tab"
+				scripted = yes
+				shortcut = "shift+d"
 			}
 			guiButtonType = {
 					name = "building_macro_close_button"
