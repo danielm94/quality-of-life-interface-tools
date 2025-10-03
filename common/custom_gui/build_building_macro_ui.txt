@@ -410,180 +410,235 @@ custom_button = {
 	}
 }
 
+custom_button = {
+	name = building_macro_settings_button
+	tooltip = building_macro_settings_button_tt
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = in_building_macro_settings
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			FROM = {
+				set_country_flag = in_building_macro_settings
+				country_event = {
+					id = building_macro_settings_events.1
+				}
+			}
+		}
+	}
+}
+
 custom_text_box = {
 	name = build_building_marketplace_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_trade_depot_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_stock_exchange_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_town_hall_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_courthouse_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_university_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_dock_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_drydock_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_shipyard_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_grand_shipyard_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_workshop_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_counting_house_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_barracks_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_training_fields_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_regimental_camp_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_conscription_center_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_temple_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_cathedral_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_fort_15th_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_fort_16th_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_fort_17th_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_fort_18th_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_coastal_defence_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_naval_battery_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_manufactory_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_ramparts_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_impressment_offices_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_state_house_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_soldier_households_cost
 	potential = {
 	}
 	tooltip = empty_text
 }
+
 custom_text_box = {
 	name = build_building_furnace_cost
 	potential = {

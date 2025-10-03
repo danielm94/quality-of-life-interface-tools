@@ -1,0 +1,29 @@
+#SCOPE = COUNTRY
+#-1 = build until you have no money left
+set_build_building_quantity = {
+	hidden_effect = {
+		set_variable = {
+			which = build_building_quantity
+			value = $n$
+		}
+	}
+}
+
+#SCOPE = COUNTRY
+setup_build_building_macro = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = initialized_building_macro
+			}
+		}
+		set_build_building_quantity = {
+			n = -1
+		}
+		set_manufactory_trade_goods_flags = yes
+		set_impressment_offices_trade_goods_flags = yes
+		set_state_house_trade_goods_flags = yes
+		set_soldiers_households_trade_goods_flags = yes
+		set_country_flag = initialized_building_macro
+	}
+}

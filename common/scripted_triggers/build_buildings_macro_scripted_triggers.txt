@@ -1,0 +1,6 @@
+build_building_macro_quantity_equals = {
+	is_variable_equal = {
+		which = build_building_quantity
+		value = $n$
+	}
+}

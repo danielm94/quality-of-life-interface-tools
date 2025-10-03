@@ -6,3 +6,5 @@
  red: "R"
  nevermind: "Nevermind"
  close_the_window: "Click here to close the window."
+ enable_all: "Enable All"
+ disable_all: "Disable All"
