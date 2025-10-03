@@ -88,9 +88,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_marketplace = yes
+			any_owned_province = {
+				can_build = marketplace
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_marketplace
+				building = marketplace
+				build_buildings_macro_strategy = build_buildings_highest_trade_value
+			}
+		}
 	}
 }
 
@@ -102,9 +112,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_trade_depot = yes
+			any_owned_province = {
+				can_build = trade_depot
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_trade_depot
+				building = trade_depot
+				build_buildings_macro_strategy = build_buildings_highest_trade_value
+			}
+		}
 	}
 }
 
@@ -116,9 +136,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_stock_exchange = yes
+			any_owned_province = {
+				can_build = stock_exchange
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_stock_exchange
+				building = stock_exchange
+				build_buildings_macro_strategy = build_buildings_highest_trade_value
+			}
+		}
 	}
 }
 
@@ -130,9 +160,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_town_hall = yes
+			any_owned_province = {
+				can_build = town_hall
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_town_hall
+				building = town_hall
+				build_buildings_macro_strategy = build_buildings_highest_governing_cost
+			}
+		}
 	}
 }
 
@@ -144,9 +184,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_courthouse = yes
+			any_owned_province = {
+				can_build = courthouse
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_courthouse
+				building = courthouse
+				build_buildings_macro_strategy = build_buildings_highest_governing_cost
+			}
+		}
 	}
 }
 
@@ -158,9 +208,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_university = yes
+			any_owned_province = {
+				can_build = university
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_university
+				building = university
+				build_buildings_macro_strategy = build_buildings_lowest_development_cost
+			}
+		}
 	}
 }
 
@@ -172,9 +232,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_dock = yes
+			any_owned_province = {
+				can_build = dock
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_dock
+				building = dock
+				build_buildings_macro_strategy = build_buildings_most_sailors
+			}
+		}
 	}
 }
 
@@ -186,9 +256,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_drydock = yes
+			any_owned_province = {
+				can_build = drydock
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_drydock
+				building = drydock
+				build_buildings_macro_strategy = build_buildings_most_sailors
+			}
+		}
 	}
 }
 
@@ -200,9 +280,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_shipyard = yes
+			any_owned_province = {
+				can_build = shipyard
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_shipyard
+				building = shipyard
+				build_buildings_macro_strategy = build_buildings_lowest_autonomy
+			}
+		}
 	}
 }
 
@@ -214,9 +304,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_grand_shipyard = yes
+			any_owned_province = {
+				can_build = grand_shipyard
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_grand_shipyard
+				building = grand_shipyard
+				build_buildings_macro_strategy = build_buildings_lowest_autonomy
+			}
+		}
 	}
 }
 
@@ -228,9 +328,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_workshop = yes
+			any_owned_province = {
+				can_build = workshop
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_workshop
+				building = workshop
+				build_buildings_macro_strategy = build_buildings_highest_production
+			}
+		}
 	}
 }
 
@@ -242,9 +352,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_counting_house = yes
+			any_owned_province = {
+				can_build = counting_house
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_counting_house
+				building = counting_house
+				build_buildings_macro_strategy = build_buildings_highest_production
+			}
+		}
 	}
 }
 
@@ -256,9 +376,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_barracks = yes
+			any_owned_province = {
+				can_build = barracks
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_barracks
+				building = barracks
+				build_buildings_macro_strategy = build_buildings_highest_manpower
+			}
+		}
 	}
 }
 
@@ -270,9 +400,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_training_fields = yes
+			any_owned_province = {
+				can_build = training_fields
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_training_fields
+				building = training_fields
+				build_buildings_macro_strategy = build_buildings_highest_manpower
+			}
+		}
 	}
 }
 
@@ -284,9 +424,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_regimental_camp = yes
+			any_owned_province = {
+				can_build = regimental_camp
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_regimental_camp
+				building = regimental_camp
+				build_buildings_macro_strategy = build_buildings_lowest_autonomy
+			}
+		}
 	}
 }
 
@@ -298,9 +448,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_conscription_center = yes
+			any_owned_province = {
+				can_build = conscription_center
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_conscription_center
+				building = conscription_center
+				build_buildings_macro_strategy = build_buildings_lowest_autonomy
+			}
+		}
 	}
 }
 
@@ -312,9 +472,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_temple = yes
+			any_owned_province = {
+				can_build = temple
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_temple
+				building = temple
+				build_buildings_macro_strategy = build_buildings_highest_tax
+			}
+		}
 	}
 }
 
@@ -326,9 +496,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_cathedral = yes
+			any_owned_province = {
+				can_build = cathedral
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_cathedral
+				building = cathedral
+				build_buildings_macro_strategy = build_buildings_highest_tax
+			}
+		}
 	}
 }
 
@@ -340,9 +520,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_fort_15th = yes
+			any_owned_province = {
+				can_build = fort_15th
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_fort_15th
+				building = fort_15th
+				build_buildings_macro_strategy = build_buildings_most_defensive
+			}
+		}
 	}
 }
 
@@ -354,9 +544,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_fort_16th = yes
+			any_owned_province = {
+				can_build = fort_16th
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_fort_16th
+				building = fort_16th
+				build_buildings_macro_strategy = build_buildings_most_defensive
+			}
+		}
 	}
 }
 
@@ -368,9 +568,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_fort_17th = yes
+			any_owned_province = {
+				can_build = fort_17th
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_fort_17th
+				building = fort_17th
+				build_buildings_macro_strategy = build_buildings_most_defensive
+			}
+		}
 	}
 }
 
@@ -382,9 +592,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_fort_18th = yes
+			any_owned_province = {
+				can_build = fort_18th
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_fort_18th
+				building = fort_18th
+				build_buildings_macro_strategy = build_buildings_most_defensive
+			}
+		}
 	}
 }
 
@@ -396,9 +616,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_coastal_defence = yes
+			any_owned_province = {
+				can_build = coastal_defence
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_coastal_defence
+				building = coastal_defence
+				build_buildings_macro_strategy = build_buildings_anywhere_possible
+			}
+		}
 	}
 }
 
@@ -410,9 +640,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_naval_battery = yes
+			any_owned_province = {
+				can_build = naval_battery
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_naval_battery
+				building = naval_battery
+				build_buildings_macro_strategy = build_buildings_anywhere_possible
+			}
+		}
 	}
 }
 
@@ -434,6 +674,9 @@ custom_button = {
 		}
 	}
 	effect = {
+		FROM = {
+			build_manufactories_macro_effect = yes
+		}
 	}
 }
 
@@ -445,9 +688,15 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_ramparts = yes
+			any_owned_province = {
+				can_build = ramparts
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_ramparts_macro_effect = yes
+		}
 	}
 }
 
@@ -460,11 +709,15 @@ custom_button = {
 		FROM = {
 			can_afford_to_build_impressment_offices = yes
 			any_owned_province = {
+				can_build = impressment_offices
 				is_enabled_trade_good_impressment_offices_build_building_macro = yes
 			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_impressment_offices_macro_effect = yes
+		}
 	}
 }
 
@@ -477,11 +730,15 @@ custom_button = {
 		FROM = {
 			can_afford_to_build_state_house = yes
 			any_owned_province = {
+				can_build = state_house
 				is_enabled_trade_good_state_house_build_building_macro = yes
 			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_state_house_macro_effect = yes
+		}
 	}
 }
 
@@ -494,11 +751,15 @@ custom_button = {
 		FROM = {
 			can_afford_to_build_soldier_households = yes
 			any_owned_province = {
+				can_build = soldier_households
 				is_enabled_trade_good_soldiers_households_build_building_macro = yes
 			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_soldiers_households_macro_effect = yes
+		}
 	}
 }
 
@@ -510,9 +771,19 @@ custom_button = {
 	trigger = {
 		FROM = {
 			can_afford_to_build_furnace = yes
+			any_owned_province = {
+				can_build = furnace
+			}
 		}
 	}
 	effect = {
+		FROM = {
+			build_buildings_macro_effect = {
+				can_afford_to_build_trigger = can_afford_to_build_furnace
+				building = furnace
+				build_buildings_macro_strategy = build_buildings_highest_production
+			}
+		}
 	}
 }
 
