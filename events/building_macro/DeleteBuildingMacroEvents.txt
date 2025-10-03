@@ -1,0 +1,21 @@
+namespace = delete_building_macro_events
+
+
+country_event = {
+	id = delete_building_macro_events.1
+	title = delete_building_macro_events.1.t
+	desc = delete_building_macro_events.1.d
+	picture = GFX_delete_building_macro_events.1
+	is_triggered_only = yes
+	option = {
+		name = delete_building_macro_events.yes_im_sure
+		
+	}
+	option = {
+		name = nevermind
+
+	}
+	after = {
+		#clear all country flags that could have been set by the macro
+	}
+}
