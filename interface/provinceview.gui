@@ -5406,12 +5406,23 @@ guiTypes = {
 					}
 					guiButtonType = {
 						name = "building_macro_settings_button"
-						position = { x = 149 y = 487 }
+						position = { x = 283 y = 487 }
 						quadTextureSprite ="GFX_standard_button_71"
 						tooltip = ""
 						tooltipText =""
 						delayedTooltipText = ""
 						buttonText = "Settings"
+						buttonFont = "vic_18"
+						scripted = yes
+					}
+					guiButtonType = {
+						name = "building_macro_cancel_button"
+						position = { x = 15 y = 487 }
+						quadTextureSprite ="GFX_standard_button_71"
+						tooltip = ""
+						tooltipText =""
+						delayedTooltipText = ""
+						buttonText = "Cancel"
 						buttonFont = "vic_18"
 						scripted = yes
 					}
