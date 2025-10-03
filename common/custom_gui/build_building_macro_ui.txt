@@ -86,6 +86,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_marketplace = yes
+		}
 	}
 	effect = {
 	}
@@ -97,6 +100,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_trade_depot = yes
+		}
 	}
 	effect = {
 	}
@@ -108,6 +114,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_stock_exchange = yes
+		}
 	}
 	effect = {
 	}
@@ -119,6 +128,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_town_hall = yes
+		}
 	}
 	effect = {
 	}
@@ -130,6 +142,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_courthouse = yes
+		}
 	}
 	effect = {
 	}
@@ -141,6 +156,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_university = yes
+		}
 	}
 	effect = {
 	}
@@ -152,6 +170,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_dock = yes
+		}
 	}
 	effect = {
 	}
@@ -163,6 +184,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_drydock = yes
+		}
 	}
 	effect = {
 	}
@@ -174,6 +198,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_shipyard = yes
+		}
 	}
 	effect = {
 	}
@@ -185,6 +212,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_grand_shipyard = yes
+		}
 	}
 	effect = {
 	}
@@ -196,6 +226,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_workshop = yes
+		}
 	}
 	effect = {
 	}
@@ -207,6 +240,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_counting_house = yes
+		}
 	}
 	effect = {
 	}
@@ -218,6 +254,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_barracks = yes
+		}
 	}
 	effect = {
 	}
@@ -229,6 +268,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_training_fields = yes
+		}
 	}
 	effect = {
 	}
@@ -240,6 +282,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_regimental_camp = yes
+		}
 	}
 	effect = {
 	}
@@ -251,6 +296,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_conscription_center = yes
+		}
 	}
 	effect = {
 	}
@@ -262,6 +310,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_temple = yes
+		}
 	}
 	effect = {
 	}
@@ -273,6 +324,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_cathedral = yes
+		}
 	}
 	effect = {
 	}
@@ -284,6 +338,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_fort_15th = yes
+		}
 	}
 	effect = {
 	}
@@ -295,6 +352,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_fort_16th = yes
+		}
 	}
 	effect = {
 	}
@@ -306,6 +366,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_fort_17th = yes
+		}
 	}
 	effect = {
 	}
@@ -317,6 +380,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_fort_18th = yes
+		}
 	}
 	effect = {
 	}
@@ -328,6 +394,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_coastal_defence = yes
+		}
 	}
 	effect = {
 	}
@@ -339,6 +408,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_naval_battery = yes
+		}
 	}
 	effect = {
 	}
@@ -351,6 +423,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
+			can_afford_to_build_manufactory = yes
 			any_owned_province = {
 				can_build_manufactory = yes
 				NOT = {
@@ -370,6 +443,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_ramparts = yes
+		}
 	}
 	effect = {
 	}
@@ -382,6 +458,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
+			can_afford_to_build_impressment_offices = yes
 			any_owned_province = {
 				is_enabled_trade_good_impressment_offices_build_building_macro = yes
 			}
@@ -398,6 +475,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
+			can_afford_to_build_state_house = yes
 			any_owned_province = {
 				is_enabled_trade_good_state_house_build_building_macro = yes
 			}
@@ -414,6 +492,7 @@ custom_button = {
 	}
 	trigger = {
 		FROM = {
+			can_afford_to_build_soldier_households = yes
 			any_owned_province = {
 				is_enabled_trade_good_soldiers_households_build_building_macro = yes
 			}
@@ -429,6 +508,9 @@ custom_button = {
 	potential = {
 	}
 	trigger = {
+		FROM = {
+			can_afford_to_build_furnace = yes
+		}
 	}
 	effect = {
 	}
