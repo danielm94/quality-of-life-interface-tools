@@ -167,6 +167,40 @@ set_state_house_trade_goods_flags = {
 }
 
 #SCOPE = COUNTRY
+clr_state_house_trade_goods_flags = {
+	clr_country_flag = build_building_macro_state_house_grain
+	clr_country_flag = build_building_macro_state_house_wine
+	clr_country_flag = build_building_macro_state_house_wool
+	clr_country_flag = build_building_macro_state_house_cloth
+	clr_country_flag = build_building_macro_state_house_fish
+	clr_country_flag = build_building_macro_state_house_fur
+	clr_country_flag = build_building_macro_state_house_salt
+	clr_country_flag = build_building_macro_state_house_naval_supplies
+	clr_country_flag = build_building_macro_state_house_copper
+	clr_country_flag = build_building_macro_state_house_gold
+	clr_country_flag = build_building_macro_state_house_iron
+	clr_country_flag = build_building_macro_state_house_slaves
+	clr_country_flag = build_building_macro_state_house_ivory
+	clr_country_flag = build_building_macro_state_house_tea
+	clr_country_flag = build_building_macro_state_house_chinaware
+	clr_country_flag = build_building_macro_state_house_spices
+	clr_country_flag = build_building_macro_state_house_coffee
+	clr_country_flag = build_building_macro_state_house_cotton
+	clr_country_flag = build_building_macro_state_house_sugar
+	clr_country_flag = build_building_macro_state_house_tobacco
+	clr_country_flag = build_building_macro_state_house_cocoa
+	clr_country_flag = build_building_macro_state_house_silk
+	clr_country_flag = build_building_macro_state_house_dyes
+	clr_country_flag = build_building_macro_state_house_tropical_wood
+	clr_country_flag = build_building_macro_state_house_livestock
+	clr_country_flag = build_building_macro_state_house_incense
+	clr_country_flag = build_building_macro_state_house_glass
+	clr_country_flag = build_building_macro_state_house_paper
+	clr_country_flag = build_building_macro_state_house_gems
+	clr_country_flag = build_building_macro_state_house_cloves
+}
+
+#SCOPE = COUNTRY
 set_soldiers_households_trade_goods_flags = {
 	set_country_flag = build_building_macro_soldiers_households_grain
 	set_country_flag = build_building_macro_soldiers_households_wine
