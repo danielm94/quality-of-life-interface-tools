@@ -19,4 +19,6 @@
  disable_soldiers_households_goods_tt: "Disables §YGrain§!, §YFish§!, §YLivestock§!, and §YWine§!."
  enable_impressment_office_goods: "Enable trade goods that benefit Impressment Offices"
  enable_impressment_office_goods_tt: "Enables §YFish§!, §YSalt§!, §YNaval Supplies§!, and §YTropical Wood§!."
+ enable_state_house_goods: "Enable trade goods that benefit State Houses"
+ enable_state_house_goods_tt: "Enables §YPaper§!, §YGlass§!, and §YGems§!."
  
