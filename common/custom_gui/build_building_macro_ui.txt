@@ -94,6 +94,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_trade_value_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_marketplace
@@ -118,6 +130,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_trade_value_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_trade_depot
@@ -142,6 +166,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_trade_value_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_stock_exchange
@@ -166,6 +202,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_governing_cost_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_town_hall
@@ -190,6 +238,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_governing_cost_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_courthouse
@@ -214,6 +274,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_development_cost_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_university
@@ -238,6 +310,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_most_sailors_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_dock
@@ -262,6 +346,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_most_sailors_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_drydock
@@ -286,6 +382,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_autonomy_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_shipyard
@@ -310,6 +418,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_autonomy_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_grand_shipyard
@@ -334,6 +454,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_production_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_workshop
@@ -358,6 +490,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_production_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_counting_house
@@ -382,6 +526,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_manpower_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_barracks
@@ -406,6 +562,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_manpower_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_training_fields
@@ -430,6 +598,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_autonomy_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_regimental_camp
@@ -454,6 +634,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_lowest_autonomy_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_conscription_center
@@ -478,6 +670,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_tax_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_temple
@@ -502,6 +706,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_tax_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_cathedral
@@ -526,6 +742,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_most_defensive_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_fort_15th
@@ -550,6 +778,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_most_defensive_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_fort_16th
@@ -574,6 +814,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_most_defensive_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_fort_17th
@@ -598,6 +850,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_most_defensive_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_fort_18th
@@ -622,6 +886,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_coastal_defence
@@ -646,6 +922,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_naval_battery
@@ -674,6 +962,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_manufactory_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_manufactories_macro_effect = yes
 		}
@@ -694,6 +994,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_ramparts_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_ramparts_macro_effect = yes
 		}
@@ -715,6 +1027,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_impressment_offices_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_impressment_offices_macro_effect = yes
 		}
@@ -736,6 +1060,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_state_house_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_state_house_macro_effect = yes
 		}
@@ -757,6 +1093,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_soldier_households_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_soldiers_households_macro_effect = yes
 		}
@@ -777,6 +1125,18 @@ custom_button = {
 		}
 	}
 	effect = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = enable_smart_build_building_macro
+				}
+			}
+			custom_tooltip = building_macro_strategy_highest_production_tt
+		}
+		else = {
+			custom_tooltip = building_macro_strategy_anywhere_possible_tt
+		}
+		custom_tooltip = building_macro_construction_logic_tt
 		FROM = {
 			build_buildings_macro_effect = {
 				can_afford_to_build_trigger = can_afford_to_build_furnace
@@ -812,6 +1172,7 @@ custom_button = {
 		}
 	}
 }
+
 custom_button = {
 	name = building_macro_cancel_button
 	tooltip = building_macro_cancel_button_tt
@@ -830,12 +1191,10 @@ custom_button = {
 		}
 	}
 	effect = {
-		hidden_effect = {
-			FROM = {
-				set_country_flag = in_building_macro_settings
-				country_event = {
-					id = cancel_construction_events.1
-				}
+		FROM = {
+			set_country_flag = in_building_macro_settings
+			country_event = {
+				id = cancel_construction_events.1
 			}
 		}
 	}
