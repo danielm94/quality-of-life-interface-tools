@@ -1,6 +1,999 @@
+#SCOPE = COUNTRY
 build_building_macro_quantity_equals = {
 	is_variable_equal = {
 		which = build_building_quantity
 		value = $n$
+	}
+}
+
+#SCOPE = PROVINCE
+is_enabled_trade_good_manufactories_build_building_macro = {
+	OR = {
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_grain
+				}
+			}
+			trade_goods = grain
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_wine
+				}
+			}
+			trade_goods = wine
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_wool
+				}
+			}
+			trade_goods = wool
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_cloth
+				}
+			}
+			trade_goods = cloth
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_fish
+				}
+			}
+			trade_goods = fish
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_fur
+				}
+			}
+			trade_goods = fur
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_salt
+				}
+			}
+			trade_goods = salt
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_naval_supplies
+				}
+			}
+			trade_goods = naval_supplies
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_copper
+				}
+			}
+			trade_goods = copper
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_iron
+				}
+			}
+			trade_goods = iron
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_slaves
+				}
+			}
+			trade_goods = slaves
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_ivory
+				}
+			}
+			trade_goods = ivory
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_tea
+				}
+			}
+			trade_goods = tea
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_chinaware
+				}
+			}
+			trade_goods = chinaware
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_spices
+				}
+			}
+			trade_goods = spices
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_coffee
+				}
+			}
+			trade_goods = coffee
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_cotton
+				}
+			}
+			trade_goods = cotton
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_sugar
+				}
+			}
+			trade_goods = sugar
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_tobacco
+				}
+			}
+			trade_goods = tobacco
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_cocoa
+				}
+			}
+			trade_goods = cocoa
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_silk
+				}
+			}
+			trade_goods = silk
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_dyes
+				}
+			}
+			trade_goods = dyes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_tropical_wood
+				}
+			}
+			trade_goods = tropical_wood
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_livestock
+				}
+			}
+			trade_goods = livestock
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_incense
+				}
+			}
+			trade_goods = incense
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_glass
+				}
+			}
+			trade_goods = glass
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_paper
+				}
+			}
+			trade_goods = paper
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_gems
+				}
+			}
+			trade_goods = gems
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_manufactory_cloves
+				}
+			}
+			trade_goods = cloves
+		}
+	}
+}
+
+#SCOPE = PROVINCE
+is_enabled_trade_good_impressment_offices_build_building_macro = {
+	OR = {
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_grain
+				}
+			}
+			trade_goods = grain
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_wine
+				}
+			}
+			trade_goods = wine
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_wool
+				}
+			}
+			trade_goods = wool
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_cloth
+				}
+			}
+			trade_goods = cloth
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_fish
+				}
+			}
+			trade_goods = fish
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_fur
+				}
+			}
+			trade_goods = fur
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_salt
+				}
+			}
+			trade_goods = salt
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_naval_supplies
+				}
+			}
+			trade_goods = naval_supplies
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_copper
+				}
+			}
+			trade_goods = copper
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_gold
+				}
+			}
+			trade_goods = gold
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_iron
+				}
+			}
+			trade_goods = iron
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_slaves
+				}
+			}
+			trade_goods = slaves
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_ivory
+				}
+			}
+			trade_goods = ivory
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_tea
+				}
+			}
+			trade_goods = tea
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_chinaware
+				}
+			}
+			trade_goods = chinaware
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_spices
+				}
+			}
+			trade_goods = spices
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_coffee
+				}
+			}
+			trade_goods = coffee
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_cotton
+				}
+			}
+			trade_goods = cotton
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_sugar
+				}
+			}
+			trade_goods = sugar
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_tobacco
+				}
+			}
+			trade_goods = tobacco
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_cocoa
+				}
+			}
+			trade_goods = cocoa
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_silk
+				}
+			}
+			trade_goods = silk
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_dyes
+				}
+			}
+			trade_goods = dyes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_tropical_wood
+				}
+			}
+			trade_goods = tropical_wood
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_livestock
+				}
+			}
+			trade_goods = livestock
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_incense
+				}
+			}
+			trade_goods = incense
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_glass
+				}
+			}
+			trade_goods = glass
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_paper
+				}
+			}
+			trade_goods = paper
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_gems
+				}
+			}
+			trade_goods = gems
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_impressment_offices_cloves
+				}
+			}
+			trade_goods = cloves
+		}
+	}
+}
+
+#SCOPE = PROVINCE
+is_enabled_trade_good_state_house_build_building_macro = {
+	OR = {
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_grain
+				}
+			}
+			trade_goods = grain
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_wine
+				}
+			}
+			trade_goods = wine
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_wool
+				}
+			}
+			trade_goods = wool
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_cloth
+				}
+			}
+			trade_goods = cloth
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_fish
+				}
+			}
+			trade_goods = fish
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_fur
+				}
+			}
+			trade_goods = fur
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_salt
+				}
+			}
+			trade_goods = salt
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_naval_supplies
+				}
+			}
+			trade_goods = naval_supplies
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_copper
+				}
+			}
+			trade_goods = copper
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_gold
+				}
+			}
+			trade_goods = gold
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_iron
+				}
+			}
+			trade_goods = iron
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_slaves
+				}
+			}
+			trade_goods = slaves
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_ivory
+				}
+			}
+			trade_goods = ivory
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_tea
+				}
+			}
+			trade_goods = tea
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_chinaware
+				}
+			}
+			trade_goods = chinaware
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_spices
+				}
+			}
+			trade_goods = spices
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_coffee
+				}
+			}
+			trade_goods = coffee
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_cotton
+				}
+			}
+			trade_goods = cotton
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_sugar
+				}
+			}
+			trade_goods = sugar
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_tobacco
+				}
+			}
+			trade_goods = tobacco
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_cocoa
+				}
+			}
+			trade_goods = cocoa
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_silk
+				}
+			}
+			trade_goods = silk
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_dyes
+				}
+			}
+			trade_goods = dyes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_tropical_wood
+				}
+			}
+			trade_goods = tropical_wood
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_livestock
+				}
+			}
+			trade_goods = livestock
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_incense
+				}
+			}
+			trade_goods = incense
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_glass
+				}
+			}
+			trade_goods = glass
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_paper
+				}
+			}
+			trade_goods = paper
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_gems
+				}
+			}
+			trade_goods = gems
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_state_house_cloves
+				}
+			}
+			trade_goods = cloves
+		}
+	}
+}
+
+#SCOPE = PROVINCE
+is_enabled_trade_good_soldiers_households_build_building_macro = {
+	OR = {
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_grain
+				}
+			}
+			trade_goods = grain
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_wine
+				}
+			}
+			trade_goods = wine
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_wool
+				}
+			}
+			trade_goods = wool
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_cloth
+				}
+			}
+			trade_goods = cloth
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_fish
+				}
+			}
+			trade_goods = fish
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_fur
+				}
+			}
+			trade_goods = fur
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_salt
+				}
+			}
+			trade_goods = salt
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_naval_supplies
+				}
+			}
+			trade_goods = naval_supplies
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_copper
+				}
+			}
+			trade_goods = copper
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_gold
+				}
+			}
+			trade_goods = gold
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_iron
+				}
+			}
+			trade_goods = iron
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_slaves
+				}
+			}
+			trade_goods = slaves
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_ivory
+				}
+			}
+			trade_goods = ivory
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_tea
+				}
+			}
+			trade_goods = tea
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_chinaware
+				}
+			}
+			trade_goods = chinaware
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_spices
+				}
+			}
+			trade_goods = spices
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_coffee
+				}
+			}
+			trade_goods = coffee
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_cotton
+				}
+			}
+			trade_goods = cotton
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_sugar
+				}
+			}
+			trade_goods = sugar
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_tobacco
+				}
+			}
+			trade_goods = tobacco
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_cocoa
+				}
+			}
+			trade_goods = cocoa
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_silk
+				}
+			}
+			trade_goods = silk
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_dyes
+				}
+			}
+			trade_goods = dyes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_tropical_wood
+				}
+			}
+			trade_goods = tropical_wood
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_livestock
+				}
+			}
+			trade_goods = livestock
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_incense
+				}
+			}
+			trade_goods = incense
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_glass
+				}
+			}
+			trade_goods = glass
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_paper
+				}
+			}
+			trade_goods = paper
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_gems
+				}
+			}
+			trade_goods = gems
+		}
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = build_building_macro_soldiers_households_cloves
+				}
+			}
+			trade_goods = cloves
+		}
+	}
+}
+
+#SCOPE = PROVINCE
+can_build_manufactory = {
+	custom_trigger_tooltip = {
+		tooltip = can_build_manufactory_trigger_tt
+		OR = {
+			can_build = wharf
+			can_build = weapons
+			can_build = textile
+			can_build = tradecompany
+			can_build = farm_estate
+			can_build = mills
+			can_build = plantations
+		}
 	}
 }
