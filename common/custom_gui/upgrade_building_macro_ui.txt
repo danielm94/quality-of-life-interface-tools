@@ -72,7 +72,7 @@ custom_button = {
 }
 
 custom_button = {
-	name = hidden_upgrade_building_macro_close_button
+	name = building_macro_close_button
 	tooltip = empty_text
 	potential = {
 		FROM = {

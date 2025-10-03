@@ -850,6 +850,7 @@ guiTypes = {
 					position = { x = 290 y = 0 }
 					quadTextureSprite ="GFX_closebutton2"
 					clicksound = close_window
+					shortcut = "ESCAPE"
 				}	
 			}
 			windowType = {
@@ -886,6 +887,7 @@ guiTypes = {
 					position = { x = 290 y = 9}
 					quadTextureSprite ="GFX_closebutton2"
 					clicksound = close_window
+					shortcut = "ESCAPE"
 				}
 				guiButtonType = {
 					name = "exploit_dev_tax_button"
@@ -3193,6 +3195,7 @@ guiTypes = {
 					position = { x = 290 y = 30 }
 					quadTextureSprite ="GFX_closebutton2"
 					clicksound = close_window
+					shortcut = "ESCAPE"
 				}	
 		
 				guiButtonType = {
@@ -4505,6 +4508,7 @@ guiTypes = {
 				position = { x = 304 y = 120 }
 				quadTextureSprite ="GFX_closebutton2"
 				clicksound = close_window
+				shortcut = "ESCAPE"
 			}
 
 			#PotionSeller QOL Interface Tools
@@ -5785,11 +5789,12 @@ guiTypes = {
 				shortcut = "shift+u"
 			}
 			guiButtonType = {
-				name = "hidden_upgrade_building_macro_close_button"
-				position = { x = 0 y = 0 }
-				quadTextureSprite = "GFX_autonomy_macro_empty_button"
-				scripted = yes
-				shortcut = "ESCAPE"
+					name = "building_macro_close_button"
+					scripted=yes
+					position = { x = 375 y = 10 }
+					quadTextureSprite ="GFX_closebutton2"
+					clicksound = close_window
+					shortcut = "ESCAPE"
 			}
 		}
 
