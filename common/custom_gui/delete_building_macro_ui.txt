@@ -728,9 +728,8 @@ custom_button = {
 		is_province_not_whitelisted_delete_building_macro = yes
 		FROM = {
 			has_any_building_selected_for_deletion = no
-			# This checks for any type of manufactory, not a specific building named "manufactory"
 			any_owned_province = {
-				has_manufactory = yes
+				has_production_manufactory = yes
 			}
 		}
 	}
@@ -743,6 +742,7 @@ custom_button = {
 				id = delete_building_macro_events.1
 			}
 		}
+		custom_tooltip = delete_macro_manufactory_specify_tt
 	}
 }
 
@@ -871,6 +871,44 @@ custom_button = {
 			}
 			country_event = {
 				id = delete_building_macro_events.1
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = delete_building_macro_whitelist_button
+	tooltip = delete_building_macro_whitelist_button_tt
+	potential = {
+		NOT = {
+			has_province_flag = delete_building_macro_whitelisted_province
+		}
+	}
+	trigger = {
+	}
+	effect = {
+		set_province_flag = delete_building_macro_whitelisted_province
+		hidden_effect = {
+			FROM = {
+				play_sound = lock_mapmode
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = delete_building_macro_unwhitelist_button
+	tooltip = delete_building_macro_unwhitelist_button_tt
+	potential = {
+		has_province_flag = delete_building_macro_whitelisted_province
+	}
+	trigger = {
+	}
+	effect = {
+		clr_province_flag = delete_building_macro_whitelisted_province
+		hidden_effect = {
+			FROM = {
+				play_sound = unlock_mapmode
 			}
 		}
 	}

@@ -41,6 +41,27 @@ defined_text = {
 		}
 	}
 }
+defined_text = {
+	name = delete_building_macro_open_custom_loc
+	text = {
+		localisation_key = delete_building_macro_open_switch_tab
+		trigger = {
+			NOT = {
+				FROM = {
+					has_country_flag = delete_building_macro_open
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = close_the_window
+		trigger = {
+			FROM = {
+				has_country_flag = delete_building_macro_open
+			}
+		}
+	}
+}
 
 defined_text = {
 	name = build_building_macro_build_marketplace_tt_loc

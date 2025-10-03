@@ -6252,6 +6252,24 @@ guiTypes = {
 						scripted = yes
 						quadTextureSprite = "GFX_furnace"
 					}
+					guiButtonType = {
+						name ="delete_building_macro_whitelist_button"
+						quadTextureSprite = "button_type_1"
+						buttonFont = "vic_18"
+						buttonText = delete_building_macro_whitelist_button_text
+						position = { x = 117 y = 480 }
+						scripted = yes
+						shortcut = "shift+w"
+					}
+					guiButtonType = {
+						name ="delete_building_macro_unwhitelist_button"
+						quadTextureSprite = "button_type_1"
+						buttonFont = "vic_18"
+						buttonText = delete_building_macro_unwhitelist_button_text
+						position = { x = 117 y = 480 }
+						scripted = yes
+						shortcut = "shift+w"
+					}
 				}
 			}
 
