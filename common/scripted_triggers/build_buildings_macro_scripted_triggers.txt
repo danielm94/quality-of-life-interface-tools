@@ -997,3 +997,243 @@ can_build_manufactory = {
 		}
 	}
 }
+
+#SCOPE = COUNTRY
+can_afford_to_build_marketplace = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_marketplace_tt
+		price_var = marketplace_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_workshop = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_workshop_tt
+		price_var = workshop_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_temple = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_temple_tt
+		price_var = temple_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_barracks = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_barracks_tt
+		price_var = barracks_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_shipyard = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_shipyard_tt
+		price_var = shipyard_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_fort_15th = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_fort_15th_tt
+		price_var = fort_15th_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_coastal_defence = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_coastal_defence_tt
+		price_var = coastal_defence_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_courthouse = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_courthouse_tt
+		price_var = courthouse_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_dock = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_dock_tt
+		price_var = dock_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_regimental_camp = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_regimental_camp_tt
+		price_var = regimental_camp_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_fort_16th = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_fort_16th_tt
+		price_var = fort_16th_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_naval_battery = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_naval_battery_tt
+		price_var = naval_battery_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_cathedral = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_cathedral_tt
+		price_var = cathedral_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_university = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_university_tt
+		price_var = university_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_trade_depot = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_trade_depot_tt
+		price_var = trade_depot_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_grand_shipyard = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_grand_shipyard_tt
+		price_var = grand_shipyard_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_training_fields = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_training_fields_tt
+		price_var = training_fields_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_fort_17th = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_fort_17th_tt
+		price_var = fort_17th_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_stock_exchange = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_stock_exchange_tt
+		price_var = stock_exchange_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_counting_house = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_counting_house_tt
+		price_var = counting_house_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_town_hall = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_town_hall_tt
+		price_var = town_hall_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_drydock = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_drydock_tt
+		price_var = drydock_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_conscription_center = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_conscription_center_tt
+		price_var = conscription_center_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_fort_18th = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_fort_18th_tt
+		price_var = fort_18th_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_manufactory = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_manufactory_tt
+		price_var = manufactory_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_furnace = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_furnace_tt
+		price_var = furnace_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_ramparts = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_ramparts_tt
+		price_var = ramparts_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_soldier_households = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_soldier_households_tt
+		price_var = soldier_households_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_impressment_offices = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_impressment_offices_tt
+		price_var = impressment_offices_build_cost
+	}
+}
+
+#SCOPE = COUNTRY
+can_afford_to_build_state_house = {
+	can_afford_build_action = {
+		tooltip = can_afford_to_build_state_house_tt
+		price_var = state_house_build_cost
+	}
+}
