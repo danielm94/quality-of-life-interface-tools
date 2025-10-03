@@ -31,6 +31,7 @@ set_manufactory_trade_goods_flags = {
 	set_country_flag = build_building_macro_manufactory_cloves
 }
 
+#SCOPE = COUNTRY
 clr_manufactory_trade_goods_flags = {
 	clr_country_flag = build_building_macro_manufactory_grain
 	clr_country_flag = build_building_macro_manufactory_wine
@@ -97,7 +98,41 @@ set_impressment_offices_trade_goods_flags = {
 	set_country_flag = build_building_macro_impressment_offices_cloves
 }
 
-#SCOPE
+#SCOPE = COUNTRY
+clr_impressment_offices_trade_goods_flags = {
+	clr_country_flag = build_building_macro_impressment_offices_grain
+	clr_country_flag = build_building_macro_impressment_offices_wine
+	clr_country_flag = build_building_macro_impressment_offices_wool
+	clr_country_flag = build_building_macro_impressment_offices_cloth
+	clr_country_flag = build_building_macro_impressment_offices_fish
+	clr_country_flag = build_building_macro_impressment_offices_fur
+	clr_country_flag = build_building_macro_impressment_offices_salt
+	clr_country_flag = build_building_macro_impressment_offices_naval_supplies
+	clr_country_flag = build_building_macro_impressment_offices_copper
+	clr_country_flag = build_building_macro_impressment_offices_gold
+	clr_country_flag = build_building_macro_impressment_offices_iron
+	clr_country_flag = build_building_macro_impressment_offices_slaves
+	clr_country_flag = build_building_macro_impressment_offices_ivory
+	clr_country_flag = build_building_macro_impressment_offices_tea
+	clr_country_flag = build_building_macro_impressment_offices_chinaware
+	clr_country_flag = build_building_macro_impressment_offices_spices
+	clr_country_flag = build_building_macro_impressment_offices_coffee
+	clr_country_flag = build_building_macro_impressment_offices_cotton
+	clr_country_flag = build_building_macro_impressment_offices_sugar
+	clr_country_flag = build_building_macro_impressment_offices_tobacco
+	clr_country_flag = build_building_macro_impressment_offices_cocoa
+	clr_country_flag = build_building_macro_impressment_offices_silk
+	clr_country_flag = build_building_macro_impressment_offices_dyes
+	clr_country_flag = build_building_macro_impressment_offices_tropical_wood
+	clr_country_flag = build_building_macro_impressment_offices_livestock
+	clr_country_flag = build_building_macro_impressment_offices_incense
+	clr_country_flag = build_building_macro_impressment_offices_glass
+	clr_country_flag = build_building_macro_impressment_offices_paper
+	clr_country_flag = build_building_macro_impressment_offices_gems
+	clr_country_flag = build_building_macro_impressment_offices_cloves
+}
+
+#SCOPE = COUNTRY
 set_state_house_trade_goods_flags = {
 	set_country_flag = build_building_macro_state_house_grain
 	set_country_flag = build_building_macro_state_house_wine
@@ -131,6 +166,7 @@ set_state_house_trade_goods_flags = {
 	set_country_flag = build_building_macro_state_house_cloves
 }
 
+#SCOPE = COUNTRY
 set_soldiers_households_trade_goods_flags = {
 	set_country_flag = build_building_macro_soldiers_households_grain
 	set_country_flag = build_building_macro_soldiers_households_wine
